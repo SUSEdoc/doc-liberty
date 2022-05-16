@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Registering RHEL 8 or CentOS Linux 8 | SUSE Liberty Linux</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" />
-<meta name="title" content="Registering RHEL 8 or CentOS Linux 8 | SUSE Liberty Li…" />
-<meta name="description" content="This guide describes how to attach a SUSE Liberty Linux subscription to Red Hat Enterprise Linux 8 or CentOS Linux 8 using SUSE's Repository Mirroring Tool." />
-<meta name="product-name" content="SUSE Liberty Linux" />
-<meta name="book-title" content="Registering RHEL 8 or CentOS Linux 8" />
-<meta name="tracker-url" content="https://github.com/SUSE/doc-liberty/issues/new" />
-<meta name="tracker-type" content="gh" />
-<meta name="tracker-gh-assignee" content="tahliar" />
-<meta name="tracker-gh-labels" content="documentation,issue" />
-<meta name="tracker-gh-milestone" content="8" />
-<meta property="og:title" content="Registering RHEL 8 or CentOS Linux 8 | SUSE Liberty Li…" />
-<meta property="og:description" content="This guide describes how to attach a SUSE Liberty Linux subscription to Red Hat Enterprise Linux 8 or CentOS Linux 8 using SUSE's Repository Mirroring Tool." />
-<meta property="og:type" content="article" />
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Registering RHEL 8 or CentOS Linux 8 | SUSE Liberty Li…" />
-<meta name="twitter:description" content="This guide describes how to attach a SUSE Liberty Linux subscription to Red Hat Enterprise Linux 8 or CentOS Linux 8 using SUSE's Repository Mirroring Tool." />
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"/><title>Registering RHEL 8 or CentOS Linux 8 | SUSE Liberty Linux</title><link rel="stylesheet" type="text/css" href="static/css/style.css"/>
+<meta name="title" content="Registering RHEL 8 or CentOS Linux 8 | SUSE Liberty Li…"/>
+<meta name="description" content="This guide describes how to attach a SUSE Liberty Linux subscription to Red Hat Enterprise Linux 8 or CentOS Linux 8 using SUSE's Repository Mirroring Tool."/>
+<meta name="product-name" content="SUSE Liberty Linux"/>
+<meta name="book-title" content="Registering RHEL 8 or CentOS Linux 8"/>
+<meta name="tracker-url" content="https://github.com/SUSE/doc-liberty/issues/new"/>
+<meta name="tracker-type" content="gh"/>
+<meta name="tracker-gh-assignee" content="tahliar"/>
+<meta name="tracker-gh-labels" content="documentation,issue"/>
+<meta name="tracker-gh-milestone" content="8"/>
+<meta property="og:title" content="Registering RHEL 8 or CentOS Linux 8 | SUSE Liberty Li…"/>
+<meta property="og:description" content="This guide describes how to attach a SUSE Liberty Linux subscription to Red Hat Enterprise Linux 8 or CentOS Linux 8 using SUSE's Repository Mirroring Tool."/>
+<meta property="og:type" content="article"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Registering RHEL 8 or CentOS Linux 8 | SUSE Liberty Li…"/>
+<meta name="twitter:description" content="This guide describes how to attach a SUSE Liberty Linux subscription to Red Hat Enterprise Linux 8 or CentOS Linux 8 using SUSE's Repository Mirroring Tool."/>
 
 <script type="text/javascript">
 
@@ -22,7 +22,7 @@ if ( window.location.protocol.toLowerCase() != 'file:' ) {
   document.write('<link rel="stylesheet" type="text/css" href="https://documentation.suse.com/docserv/res/fonts/poppins/poppins.css"></link>');
 };
 
-</script><noscript><link rel="stylesheet" type="text/css" href="https://documentation.suse.com/docserv/res/fonts/poppins/poppins.css" /></noscript><script src="static/js/jquery-1.10.2.min.js" type="text/javascript"></script><script src="static/js/script.js" type="text/javascript"></script><script src="static/js/highlight.min.js" type="text/javascript"></script><script>
+</script><noscript><link rel="stylesheet" type="text/css" href="https://documentation.suse.com/docserv/res/fonts/poppins/poppins.css"/></noscript><script src="static/js/jquery-1.10.2.min.js" type="text/javascript"> </script><script src="static/js/script.js" type="text/javascript"> </script><script src="static/js/highlight.min.js" type="text/javascript"> </script><script>
 
 $(document).ready(function() {
   $('.verbatim-wrap.highlight').each(function(i, block) {
@@ -33,11 +33,11 @@ hljs.configure({
   useBR: false
 });
 
-</script></head><body class="draft single offline js-off" onload="$('#betawarn-button-wrap').toggle();if (document.cookie.length > 0) {if (document.cookie.indexOf('betawarn=closed') != -1){$('#betawarn').toggle()}};"><div id="betawarn" style="position:fixed;bottom:0;z-index:9025;background-color:#FDE8E8;padding:1em;margin-left:10%;margin-right:10%;display:block;border-top:.75em solid #E11;width:80%"><p style="color:#333;margin:1em 0;padding:0;">This is a draft document that was built and uploaded automatically. It may document beta software and be incomplete or even incorrect. <strong>Use this document at your own risk.</strong></p> <div id="betawarn-button-wrap" style="display:none;margin:0;padding:0;"><a href="#" onclick="$('#betawarn').toggle();var d=new Date();d.setTime(d.getTime()+(0.5*24*60*60*1000));document.cookie='betawarn=closed; expires='+d.toUTCString()+'; path=/'; return false;" style="color:#333;text-decoration:underline;float:left;margin-top:.5em;padding:1em;display:block;background-color:#FABEBE;">I understand this is a draft</a></div></div><div class="bypass-block"><a href="#_content">Jump to content</a></div><div id="_outer-wrap"><div id="_white-bg" style="background-color: #E11;"><div id="_header"><div id="_logo"><img src="static/images/logo.svg" alt="Logo" /></div><div class="crumbs inactive"><a class="single-crumb" href="#art-quickstart-8" accesskey="c"><span class="single-contents-icon"></span>Registering RHEL 8 or CentOS Linux 8</a><div class="bubble-corner active-contents"></div></div><div class="clearme"></div></div></div><div id="_fixed-header-wrap" style="background-color: #E11;" class="inactive"><div id="_fixed-header"><div class="crumbs inactive"><a class="single-crumb" href="#art-quickstart-8" accesskey="c"><span class="single-contents-icon"></span>Show Contents: Registering RHEL 8 or CentOS Linux 8</a></div><div class="buttons"><a class="top-button button" href="#">Top</a><div class="clearme"></div></div><div class="clearme"></div></div><div class="active-contents bubble"><div class="bubble-container"><div id="_bubble-toc"><ol><li class="inactive"><a href="#introduction-quickstart-8"><span class="number">1 </span><span class="name">Introduction</span></a></li><li class="inactive"><a href="#requirements-quickstart-8"><span class="number">2 </span><span class="name">Requirements</span></a></li><li class="inactive"><a href="#configure-rmt-server"><span class="number">3 </span><span class="name">Configuring the RMT server</span></a></li><li class="inactive"><a href="#mirror-repositories-with-rmt"><span class="number">4 </span><span class="name">Mirroring SUSE Liberty Linux repositories with RMT</span></a></li><li class="inactive"><a href="#register-rhel-with-rmt"><span class="number">5 </span><span class="name">Registering RHEL or CentOS Linux with RMT</span></a></li><li class="inactive"><a href="#troubleshoot-quickstart-8"><span class="number">6 </span><span class="name">Troubleshooting</span></a></li><li class="inactive"><a href="#id-1.8"><span class="number">A </span><span class="name">GNU licenses</span></a></li></ol></div><div class="clearme"></div></div></div></div><div id="_toc-bubble-wrap"></div><div id="_content" class="draft "><div class="documentation"><div xml:lang="en" class="article " id="art-quickstart-8" lang="en"><div class="titlepage"><div><h6 class="version-info"><span class="productname ">SUSE Liberty Linux</span></h6><div><h1 class="title">Registering RHEL 8 or CentOS Linux 8</h1></div><div class="abstract "><div class="abstract-title-wrap"><h6 class="abstract-title">Abstract<a title="Permalink" class="permalink" href="#id-1.1.5">#</a></h6></div><p>
+</script></head><body class="draft single normal offline js-off" onload="$('#betawarn-button-wrap').toggle();if (document.cookie.length > 0) {if (document.cookie.indexOf('betawarn=closed') != -1){$('#betawarn').toggle()}};"><div id="betawarn" style="position:fixed;bottom:0;z-index:9025;background-color:#FDE8E8;padding:1em;margin-left:10%;margin-right:10%;display:block;border-top:.75em solid #E11;width:80%"><p style="color:#333;margin:1em 0;padding:0;">This is a draft document that was built and uploaded automatically. It may document beta software and be incomplete or even incorrect. <strong>Use this document at your own risk.</strong></p> <div id="betawarn-button-wrap" style="display:none;margin:0;padding:0;"><a href="#" onclick="$('#betawarn').toggle();var d=new Date();d.setTime(d.getTime()+(0.5*24*60*60*1000));document.cookie='betawarn=closed; expires='+d.toUTCString()+'; path=/'; return false;" style="color:#333;text-decoration:underline;float:left;margin-top:.5em;padding:1em;display:block;background-color:#FABEBE;">I understand this is a draft</a></div></div><div class="bypass-block"><a href="#_content">Jump to content</a></div><header id="_mainnav"><div class="growth-inhibitor"><img src="static/images/logo.svg" alt="Logo" class="logo"/></div></header><div class="crumbs"><div class="growth-inhibitor"><a class="crumb" href="#art-quickstart-8">Registering RHEL 8 or CentOS Linux 8</a></div></div><main id="_content"><nav class="side-toc placebo" id="_side-toc-overall"> </nav><article class="documentation"><button id="_unfold-side-toc-page">On this page</button><section xml:lang="en" class="article" id="art-quickstart-8" data-id-title="Registering RHEL 8 or CentOS Linux 8"><div class="titlepage"><div><div class="big-version-info"><span class="productname">SUSE Liberty Linux</span></div><div><h1 class="title">Registering RHEL 8 or CentOS Linux 8</h1></div><div class="abstract"><p>
     This guide describes how to attach a SUSE Liberty Linux subscription to
     Red Hat Enterprise Linux 8 or CentOS Linux 8 using SUSE's Repository Mirroring Tool.
-   </p></div><div class="date"><span class="imprint-label">Publication Date: </span>April 27, 2022
-</div></div></div><div class="line"><div class="toc"><dl><dt><span class="section"><a href="#introduction-quickstart-8"><span class="number">1 </span><span class="name">Introduction</span></a></span></dt><dt><span class="section"><a href="#requirements-quickstart-8"><span class="number">2 </span><span class="name">Requirements</span></a></span></dt><dt><span class="section"><a href="#configure-rmt-server"><span class="number">3 </span><span class="name">Configuring the RMT server</span></a></span></dt><dt><span class="section"><a href="#mirror-repositories-with-rmt"><span class="number">4 </span><span class="name">Mirroring SUSE Liberty Linux repositories with RMT</span></a></span></dt><dt><span class="section"><a href="#register-rhel-with-rmt"><span class="number">5 </span><span class="name">Registering RHEL or CentOS Linux with RMT</span></a></span></dt><dt><span class="section"><a href="#troubleshoot-quickstart-8"><span class="number">6 </span><span class="name">Troubleshooting</span></a></span></dt><dt><span class="appendix"><a href="#id-1.8"><span class="number">A </span><span class="name">GNU licenses</span></a></span></dt><dd><dl><dt><span class="sect1"><a href="#id-1.8.4"><span class="number">A.1 </span><span class="name">GNU Free Documentation License</span></a></span></dt></dl></dd></dl></div></div><div><div xml:lang="en" class="legalnotice" id="id-1.1.4" lang="en"><p>
+   </p></div><div class="date"><span class="imprint-label">Publication Date: </span>May 16, 2022
+</div></div></div><div><div xml:lang="en" class="legalnotice" id="id-1.1.4"><p>
   Copyright © 2022–2022
 
   SUSE LLC and contributors. All rights reserved.
@@ -46,7 +46,7 @@ hljs.configure({
   the terms of the GNU Free Documentation License, Version 1.2 or (at your
   option) version 1.3; with the Invariant Section being this copyright notice
   and license. A copy of the license version 1.2 is included in the section
-  entitled <span class="quote">“<span class="quote ">GNU Free Documentation License</span>”</span>.
+  entitled <span class="quote">“<span class="quote">GNU Free Documentation License</span>”</span>.
  </p><p>
   For SUSE trademarks, see
   <a class="link" href="http://www.suse.com/company/legal/" target="_blank">http://www.suse.com/company/legal/</a>. All
@@ -58,52 +58,52 @@ hljs.configure({
   detail. However, this does not guarantee complete accuracy. Neither
   SUSE LLC, its affiliates, the authors nor the translators shall be
   held liable for possible errors or the consequences thereof.
- </p></div></div><div class="sect1" id="introduction-quickstart-8"><div class="titlepage"><div><div><h2 class="title"><span class="number">1 </span><span xmlns:dm="urn:x-suse:ns:docmanager" class="name">Introduction</span> <a title="Permalink" class="permalink" href="#introduction-quickstart-8">#</a><a class="report-bug" rel="nofollow" target="_blank" href="https://github.com/SUSE/doc-liberty/edit/main/xml/art-quickstart-8.xml" title="Edit the source file for this section">Edit source</a></h2><div class="doc-status"><ul><li><span class="ds-label">File Name: </span>art-quickstart-8.xml</li><li><span class="ds-label">ID: </span>introduction-quickstart-8</li></ul></div></div></div></div><p>
+ </p></div></div><section class="sect1" id="introduction-quickstart-8" data-id-title="Introduction"><div class="titlepage"><div><div><h2 class="title"><span class="title-number">1 </span><span class="title-name">Introduction</span> <a title="Permalink" class="permalink" href="#introduction-quickstart-8">#</a></h2></div></div></div><p>
     SUSE Liberty Linux is a technology and support solution for mixed Linux environments.
     With a SUSE Liberty Linux subscription, you can register and receive updates for
     Red Hat Enterprise Linux, CentOS Linux, and SUSE Linux Enterprise Server. An optional High Availability extension is also available.
-   </p><div id="id-1.2.3" class="admonition important compact"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.svg" /><p>
+   </p><div id="id-1.2.3" class="admonition important compact"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.svg"/><p>
      CentOS Stream is not supported.
     </p></div><p>
     To register Red Hat Enterprise Linux 8 or CentOS Linux 8, use SUSE's Repository Mirroring Tool (RMT).
     RMT is a proxy system for the SUSE Customer Center. The RMT server is registered with
     the SUSE Customer Center, and other systems in the network are registered with the RMT
     server and receive packages from it directly. For more information, see the
-    <a class="link" href="https://documentation.suse.com/sles/15-SP3/html/SLES-all/book-rmt.html" target="_blank"><em class="citetitle ">Repository Mirroring Tool Guide</em></a>.
+    <a class="link" href="https://documentation.suse.com/sles/15-SP3/html/SLES-all/book-rmt.html" target="_blank"><em class="citetitle">Repository Mirroring Tool Guide</em></a>.
    </p><p>
     Registering RHEL or CentOS Linux with RMT involves the following steps:
-   </p><div class="orderedlist "><ol class="orderedlist" type="1"><li class="listitem "><p>
+   </p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>
       <a class="xref" href="#requirements-quickstart-8" title="2. Requirements">Section 2, “Requirements”</a>. Make sure you have everything
       required for the following procedures.
-     </p></li><li class="listitem "><p>
+     </p></li><li class="listitem"><p>
       <a class="xref" href="#configure-rmt-server" title="3. Configuring the RMT server">Section 3, “Configuring the RMT server”</a>. This server must be installed on
       SUSE Linux Enterprise Server 15. You can skip this step if you already have an RMT server in
       your network.
-     </p></li><li class="listitem "><p>
+     </p></li><li class="listitem"><p>
       <a class="xref" href="#mirror-repositories-with-rmt" title="4. Mirroring SUSE Liberty Linux repositories with RMT">Section 4, “Mirroring SUSE Liberty Linux repositories with RMT”</a>. You can skip this step if
       SUSE Liberty Linux is already enabled and mirrored on your RMT server.
-     </p></li><li class="listitem "><p>
+     </p></li><li class="listitem"><p>
       <a class="xref" href="#register-rhel-with-rmt" title="5. Registering RHEL or CentOS Linux with RMT">Section 5, “Registering RHEL or CentOS Linux with RMT”</a>. RMT includes a setup script to
       automate the registration process.
-     </p></li></ol></div><div id="id-1.2.7" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.svg" /><h6>Note: <span class="emphasis"><em>SUSE Liberty Linux</em></span> and <span class="emphasis"><em>SUSE Linux Enterprise Server with Expanded Support</em></span></h6><p>
+     </p></li></ol></div><div id="id-1.2.7" data-id-title="SUSE Liberty Linux and SUSE Linux Enterprise Server with Expanded Support" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.svg"/><h6>Note: <span class="emphasis"><em>SUSE Liberty Linux</em></span> and <span class="emphasis"><em>SUSE Linux Enterprise Server with Expanded Support</em></span></h6><p>
      <span class="emphasis"><em>SUSE Liberty Linux</em></span> now provides what used to be covered by
      the <span class="emphasis"><em>SUSE Linux Enterprise Server with Expanded Support</em></span> subscription. Some
      components might still use the <span class="emphasis"><em>Expanded Support</em></span> name
      during the transition period.
-    </p></div></div><div class="sect1" id="requirements-quickstart-8"><div class="titlepage"><div><div><h2 class="title"><span class="number">2 </span><span xmlns:dm="urn:x-suse:ns:docmanager" class="name">Requirements</span> <a title="Permalink" class="permalink" href="#requirements-quickstart-8">#</a><a class="report-bug" rel="nofollow" target="_blank" href="https://github.com/SUSE/doc-liberty/edit/main/xml/art-quickstart-8.xml" title="Edit the source file for this section">Edit source</a></h2><div class="doc-status"><ul><li><span class="ds-label">File Name: </span>art-quickstart-8.xml</li><li><span class="ds-label">ID: </span>requirements-quickstart-8</li></ul></div></div></div></div><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+    </p></div></section><section class="sect1" id="requirements-quickstart-8" data-id-title="Requirements"><div class="titlepage"><div><div><h2 class="title"><span class="title-number">2 </span><span class="title-name">Requirements</span> <a title="Permalink" class="permalink" href="#requirements-quickstart-8">#</a></h2></div></div></div><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
      You have a SUSE Liberty Linux subscription.
-    </p></li><li class="listitem "><p>
+    </p></li><li class="listitem"><p>
      You have a <a class="link" href="https://scc.suse.com" target="_blank">SUSE Customer Center</a> account.
-    </p></li><li class="listitem "><p>
+    </p></li><li class="listitem"><p>
      The systems you want to register have been updated to the latest version of
      RHEL 8 or CentOS Linux 8.
-    </p></li><li class="listitem "><p>
+    </p></li><li class="listitem"><p>
      SUSE Linux Enterprise Server (SLES) 15 is installed and running in the same network as the
      systems you want to register. You can use the SUSE Liberty Linux subscription to
      register the SLES server. To install the latest version of SLES 15, see the
      <a class="link" href="https://documentation.suse.com/sles/15-SP3/html/SLES-all/article-installation.html" target="_blank">
-     <em class="citetitle ">Installation Quick Start</em></a>.
-    </p></li><li class="listitem "><p>
+     <em class="citetitle">Installation Quick Start</em></a>.
+    </p></li><li class="listitem"><p>
      The SLES server has enough storage available for repository mirroring.
      Downloaded packages are stored in <code class="filename">/usr/share/rmt/public/repo</code>,
      which is a symbolic link to <code class="filename">/var/lib/rmt/public/repo/</code>.
@@ -114,76 +114,76 @@ hljs.configure({
      default repositories, and an additional 735 GB if you need the
      <code class="literal">src</code> and <code class="literal">debug</code> repositories. However,
      be aware that these repositories will grow over time.
-    </p></li></ul></div></div><div xml:lang="en" class="sect1" id="configure-rmt-server" lang="en"><div class="titlepage"><div><div><h2 class="title"><span class="number">3 </span><span xmlns:dm="urn:x-suse:ns:docmanager" class="name">Configuring the RMT server</span> <a title="Permalink" class="permalink" href="#configure-rmt-server">#</a><a class="report-bug" rel="nofollow" target="_blank" href="https://github.com/SUSE/doc-liberty/edit/main/xml/configure-rmt-server.xml" title="Edit the source file for this section">Edit source</a></h2><div class="doc-status"><ul><li><span class="ds-label">File Name: </span>configure-rmt-server.xml</li><li><span class="ds-label">ID: </span>configure-rmt-server</li></ul></div></div></div></div><p>
+    </p></li></ul></div></section><section xml:lang="en" class="sect1" id="configure-rmt-server" data-id-title="Configuring the RMT server"><div class="titlepage"><div><div><h2 class="title"><span class="title-number">3 </span><span class="title-name">Configuring the RMT server</span> <a title="Permalink" class="permalink" href="#configure-rmt-server">#</a></h2></div></div></div><p>
   Use this procedure to configure the Repository Mirroring Tool (RMT) on SUSE Linux Enterprise Server 15.
- </p><div class="itemizedlist "><div class="itemizedlist-title-wrap"><h6 class="itemizedlist-title"><span class="name">Prerequisites </span><a title="Permalink" class="permalink" href="#id-1.4.4">#</a></h6></div><ul class="itemizedlist"><li class="listitem "><p>
+ </p><div class="itemizedlist"><div class="itemizedlist-title-wrap"><h6 class="itemizedlist-title"><span class="title-name">Prerequisites </span><a title="Permalink" class="permalink" href="#id-1.4.4">#</a></h6></div><ul class="itemizedlist"><li class="listitem"><p>
     SUSE Linux Enterprise Server 15 is installed and up to date.
-   </p></li><li class="listitem "><p>
+   </p></li><li class="listitem"><p>
     You have a SUSE Customer Center account and organization credentials.
-   </p></li></ul></div><div class="procedure " id="pro-configure-rmt-server"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 1: </span><span class="name">Configuring the RMT server </span><a title="Permalink" class="permalink" href="#pro-configure-rmt-server">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+   </p></li></ul></div><div class="procedure" id="pro-configure-rmt-server" data-id-title="Configuring the RMT server"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="title-number">Procedure 1: </span><span class="title-name">Configuring the RMT server </span><a title="Permalink" class="permalink" href="#pro-configure-rmt-server">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step"><p>
     Install RMT on SUSE Linux Enterprise Server 15:
-   </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">zypper in rmt-server</code></pre></div></li><li class="step "><p>
+   </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">zypper in rmt-server</code></pre></div></li><li class="step"><p>
     Start YaST with the <code class="literal">rmt</code> module:
-   </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">yast2 rmt</code></pre></div></li><li class="step "><p>
-    Enter your <span class="guimenu ">Organization Credentials</span>, then select
-    <span class="guimenu ">Next</span>.
-   </p><div id="id-1.4.5.4.2" class="admonition tip compact"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.svg" /><p>
+   </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">yast2 rmt</code></pre></div></li><li class="step"><p>
+    Enter your <span class="guimenu">Organization Credentials</span>, then select
+    <span class="guimenu">Next</span>.
+   </p><div id="id-1.4.5.4.2" class="admonition tip compact"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.svg"/><p>
      To find your organization credentials, log in to the
      <a class="link" href="https://scc.suse.com" target="_blank">SUSE Customer Center</a>, select your
-     organization from <span class="guimenu ">My Organizations</span>, and click
-     <span class="guimenu ">Proxies</span>. Your organization's <span class="guimenu ">Mirroring
+     organization from <span class="guimenu">My Organizations</span>, and click
+     <span class="guimenu">Proxies</span>. Your organization's <span class="guimenu">Mirroring
       credentials</span> are in the top right corner.
-    </p></div></li><li class="step "><p>
-    Enter <span class="guimenu ">Database Credentials</span> for a new MariaDB database user,
-    then select <span class="guimenu ">Next</span>. The new user is created.
-   </p></li><li class="step "><p>
+    </p></div></li><li class="step"><p>
+    Enter <span class="guimenu">Database Credentials</span> for a new MariaDB database user,
+    then select <span class="guimenu">Next</span>. The new user is created.
+   </p></li><li class="step"><p>
     If a password for the MariaDB root user is already set, enter the password
-    when prompted, then select <span class="guimenu ">OK</span>.
+    when prompted, then select <span class="guimenu">OK</span>.
    </p><p>
      If no password is set for the MariaDB root user, enter and confirm a new
-     password when prompted, then select <span class="guimenu ">OK</span>.
-   </p></li><li class="step "><p>
-    Enter a <span class="guimenu ">Common Name</span> for the SSL certificates. The common
+     password when prompted, then select <span class="guimenu">OK</span>.
+   </p></li><li class="step"><p>
+    Enter a <span class="guimenu">Common Name</span> for the SSL certificates. The common
     name is usually the FQDN of the server.
-   </p></li><li class="step "><p>
+   </p></li><li class="step"><p>
     If the server has other domain names or IP addresses, enter these as
-    <span class="guimenu ">Alternative common names</span>. Select <span class="guimenu ">Add</span>
-    to add new names. When all common names are entered, select <span class="guimenu ">Next</span>.
-   </p></li><li class="step "><p>
+    <span class="guimenu">Alternative common names</span>. Select <span class="guimenu">Add</span>
+    to add new names. When all common names are entered, select <span class="guimenu">Next</span>.
+   </p></li><li class="step"><p>
     If prompted, enter and confirm a password for the CA private key, then select
-    <span class="guimenu ">OK</span>.
-   </p></li><li class="step "><p>
-    Activate the check box <span class="guimenu ">Open Ports for HTTP and HTTPS in Firewall</span>,
-    then select <span class="guimenu ">Next</span>.
-   </p></li><li class="step "><p>
-    YaST displays the <span class="guimenu ">RMT Service Status</span>.
-    Select <span class="guimenu ">Next</span>.
-   </p></li><li class="step "><p>
-    Review the <span class="guimenu ">Configuration Summary</span>, then select
-    <span class="guimenu ">Finish</span> to close YaST.
+    <span class="guimenu">OK</span>.
+   </p></li><li class="step"><p>
+    Activate the check box <span class="guimenu">Open Ports for HTTP and HTTPS in Firewall</span>,
+    then select <span class="guimenu">Next</span>.
+   </p></li><li class="step"><p>
+    YaST displays the <span class="guimenu">RMT Service Status</span>.
+    Select <span class="guimenu">Next</span>.
+   </p></li><li class="step"><p>
+    Review the <span class="guimenu">Configuration Summary</span>, then select
+    <span class="guimenu">Finish</span> to close YaST.
    </p></li></ol></div></div><p>
   YaST enables and starts all RMT <code class="systemitem">systemd</code> services and timers.
- </p><div class="itemizedlist "><div class="itemizedlist-title-wrap"><h6 class="itemizedlist-title"><span class="name">More information </span><a title="Permalink" class="permalink" href="#id-1.4.7">#</a></h6></div><ul class="itemizedlist"><li class="listitem "><p>
+ </p><div class="itemizedlist"><div class="itemizedlist-title-wrap"><h6 class="itemizedlist-title"><span class="title-name">More information </span><a title="Permalink" class="permalink" href="#id-1.4.7">#</a></h6></div><ul class="itemizedlist"><li class="listitem"><p>
     <a class="link" href="https://documentation.suse.com/sles/15-SP3/html/SLES-all/cha-rmt-installation.html" target="_blank">
     RMT installation and configuration</a>
-   </p></li></ul></div></div><div xml:lang="en" class="sect1" id="mirror-repositories-with-rmt" lang="en"><div class="titlepage"><div><div><h2 class="title"><span class="number">4 </span><span xmlns:dm="urn:x-suse:ns:docmanager" class="name">Mirroring SUSE Liberty Linux repositories with RMT</span> <a title="Permalink" class="permalink" href="#mirror-repositories-with-rmt">#</a><a class="report-bug" rel="nofollow" target="_blank" href="https://github.com/SUSE/doc-liberty/edit/main/xml/mirror-repositories-with-rmt.xml" title="Edit the source file for this section">Edit source</a></h2><div class="doc-status"><ul><li><span class="ds-label">File Name: </span>mirror-repositories-with-rmt.xml</li><li><span class="ds-label">ID: </span>mirror-repositories-with-rmt</li></ul></div></div></div></div><p>
+   </p></li></ul></div></section><section xml:lang="en" class="sect1" id="mirror-repositories-with-rmt" data-id-title="Mirroring SUSE Liberty Linux repositories with RMT"><div class="titlepage"><div><div><h2 class="title"><span class="title-number">4 </span><span class="title-name">Mirroring SUSE Liberty Linux repositories with RMT</span> <a title="Permalink" class="permalink" href="#mirror-repositories-with-rmt">#</a></h2></div></div></div><p>
   Use this procedure to mirror the SUSE Liberty Linux repositories for Red Hat Enterprise Linux 8 and
   CentOS Linux 8.
- </p><div class="itemizedlist "><div class="itemizedlist-title-wrap"><h6 class="itemizedlist-title"><span class="name">Prerequisites </span><a title="Permalink" class="permalink" href="#id-1.5.4">#</a></h6></div><ul class="itemizedlist"><li class="listitem "><p>
+ </p><div class="itemizedlist"><div class="itemizedlist-title-wrap"><h6 class="itemizedlist-title"><span class="title-name">Prerequisites </span><a title="Permalink" class="permalink" href="#id-1.5.4">#</a></h6></div><ul class="itemizedlist"><li class="listitem"><p>
     <a class="xref" href="#configure-rmt-server" title="3. Configuring the RMT server">Section 3, “Configuring the RMT server”</a>
-   </p></li><li class="listitem "><p>
+   </p></li><li class="listitem"><p>
     The RMT server has enough storage available for repository mirroring.
-   </p></li><li class="listitem "><p>
+   </p></li><li class="listitem"><p>
     Your organization credentials appear correctly in <code class="filename">/etc/rmt.conf</code>.
-   </p></li><li class="listitem "><p>
+   </p></li><li class="listitem"><p>
     You have a SUSE Liberty Linux subscription activated in the SUSE Customer Center.
-   </p></li></ul></div><div class="procedure " id="pro-mirror-repositories-with-rmt"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 2: </span><span class="name">Mirroring SUSE Liberty Linux repositories with RMT </span><a title="Permalink" class="permalink" href="#pro-mirror-repositories-with-rmt">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+   </p></li></ul></div><div class="procedure" id="pro-mirror-repositories-with-rmt" data-id-title="Mirroring SUSE Liberty Linux repositories with RMT"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="title-number">Procedure 2: </span><span class="title-name">Mirroring SUSE Liberty Linux repositories with RMT </span><a title="Permalink" class="permalink" href="#pro-mirror-repositories-with-rmt">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step"><p>
     On the RMT server, update the available product and repository metadata:
    </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">rmt-cli sync</code></pre></div><p>
     Synchronization is also performed automatically by
     <code class="systemitem">rmt-server-sync.timer</code>. You can check the status and
     the next scheduled sync time with the following command:
-   </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">systemctl status rmt-server-sync.timer</code></pre></div></li><li class="step "><p>
+   </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">systemctl status rmt-server-sync.timer</code></pre></div></li><li class="step"><p>
     Enable SUSE Liberty Linux using the product ID <code class="literal">1921</code>:
    </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">rmt-cli product enable 1921</code>
 Found product by target 1921: SUSE Linux Enterprise Server with Expanded Support 8 x86_64.
@@ -193,74 +193,74 @@ Enabling SUSE Linux Enterprise Server with Expanded Support 8 x86_64:
     Enabled repository RES-AS-8-Updates.
     Enabled repository RES-CB-8-Updates.</pre></div><p>
     This enables all of the default repositories associated with the product.
-   </p></li><li class="step "><p>
+   </p></li><li class="step"><p>
     If your subscription includes the High Availability extension, enable the extension using
     the product ID <code class="literal">1922</code>:
    </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">rmt-cli product enable 1922</code>
 Found product by target 1922: SUSE Linux Enterprise High Availability Extension with Expanded Support 8 x86_64.
 Enabling SUSE Linux Enterprise High Availability Extension with Expanded Support 8 x86_64:
   SUSE Linux Enterprise High Availability Extension with Expanded Support 8 x86_64:
-    Enabled repository RES-8-HA-Updates.</pre></div><div id="id-1.5.5.4.3" class="admonition tip compact"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.svg" /><p>
+    Enabled repository RES-8-HA-Updates.</pre></div><div id="id-1.5.5.4.3" class="admonition tip compact"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.svg"/><p>
      To check whether the High Availability extension is included in your subscription, run this
      command: <code class="command">rmt-cli products list --all --name="Expanded Support" --version=8</code>
-    </p></div></li><li class="step "><p>
+    </p></div></li><li class="step"><p>
     If you also need the <code class="literal">Source</code> or <code class="literal">Debug</code>
     repositories, find and enable them with the following commands:
    </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">rmt-cli repo list --all | grep RES-</code>
-<code class="prompt root"># </code><code class="command">rmt-cli repo enable <em class="replaceable ">REPO_ID</em></code></pre></div></li><li class="step "><p>
+<code class="prompt root"># </code><code class="command">rmt-cli repo enable <em class="replaceable">REPO_ID</em></code></pre></div></li><li class="step"><p>
     Start package mirroring for the enabled repositories:
    </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">rmt-cli mirror</code></pre></div><p>
     Packages are downloaded to the RMT server once per day by
     <code class="systemitem">rmt-server-mirror.timer</code>. You can check the status
     and the next scheduled download time with the following command:
-   </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">systemctl status rmt-server-mirror.timer</code></pre></div></li></ol></div></div><div class="itemizedlist "><div class="itemizedlist-title-wrap"><h6 class="itemizedlist-title"><span class="name">More information </span><a title="Permalink" class="permalink" href="#id-1.5.6">#</a></h6></div><ul class="itemizedlist"><li class="listitem "><p>
+   </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">systemctl status rmt-server-mirror.timer</code></pre></div></li></ol></div></div><div class="itemizedlist"><div class="itemizedlist-title-wrap"><h6 class="itemizedlist-title"><span class="title-name">More information </span><a title="Permalink" class="permalink" href="#id-1.5.6">#</a></h6></div><ul class="itemizedlist"><li class="listitem"><p>
     <a class="link" href="https://documentation.suse.com/sles/15-SP3/html/SLES-all/cha-rmt-mirroring.html" target="_blank">
     Mirroring repositories on the RMT server</a>
-   </p></li></ul></div></div><div xml:lang="en" class="sect1" id="register-rhel-with-rmt" lang="en"><div class="titlepage"><div><div><h2 class="title"><span class="number">5 </span><span xmlns:dm="urn:x-suse:ns:docmanager" class="name">Registering RHEL or CentOS Linux with RMT</span> <a title="Permalink" class="permalink" href="#register-rhel-with-rmt">#</a><a class="report-bug" rel="nofollow" target="_blank" href="https://github.com/SUSE/doc-liberty/edit/main/xml/register-rhel-with-rmt.xml" title="Edit the source file for this section">Edit source</a></h2><div class="doc-status"><ul><li><span class="ds-label">File Name: </span>register-rhel-with-rmt.xml</li><li><span class="ds-label">ID: </span>register-rhel-with-rmt</li></ul></div></div></div></div><p>
+   </p></li></ul></div></section><section xml:lang="en" class="sect1" id="register-rhel-with-rmt" data-id-title="Registering RHEL or CentOS Linux with RMT"><div class="titlepage"><div><div><h2 class="title"><span class="title-number">5 </span><span class="title-name">Registering RHEL or CentOS Linux with RMT</span> <a title="Permalink" class="permalink" href="#register-rhel-with-rmt">#</a></h2></div></div></div><p>
   Use this procedure to register Red Hat Enterprise Linux 8 or CentOS Linux 8 with the RMT server.
- </p><div id="id-1.6.4" class="admonition important compact"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.svg" /><p>
+ </p><div id="id-1.6.4" class="admonition important compact"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.svg"/><p>
    CentOS Stream is not supported.
-  </p></div><div class="itemizedlist "><div class="itemizedlist-title-wrap"><h6 class="itemizedlist-title"><span class="name">Prerequisites </span><a title="Permalink" class="permalink" href="#id-1.6.5">#</a></h6></div><ul class="itemizedlist"><li class="listitem "><p>
+  </p></div><div class="itemizedlist"><div class="itemizedlist-title-wrap"><h6 class="itemizedlist-title"><span class="title-name">Prerequisites </span><a title="Permalink" class="permalink" href="#id-1.6.5">#</a></h6></div><ul class="itemizedlist"><li class="listitem"><p>
     <a class="xref" href="#configure-rmt-server" title="3. Configuring the RMT server">Section 3, “Configuring the RMT server”</a>
-   </p></li><li class="listitem "><p>
+   </p></li><li class="listitem"><p>
     <a class="xref" href="#mirror-repositories-with-rmt" title="4. Mirroring SUSE Liberty Linux repositories with RMT">Section 4, “Mirroring SUSE Liberty Linux repositories with RMT”</a>
-   </p></li><li class="listitem "><p>
+   </p></li><li class="listitem"><p>
     The system you want to register can access the RMT server.
-   </p></li><li class="listitem "><p>
+   </p></li><li class="listitem"><p>
     The system you want to register is running the latest version of RHEL 8
     or CentOS Linux 8.
-   </p></li><li class="listitem "><p>
+   </p></li><li class="listitem"><p>
     You have a SUSE Liberty Linux subscription activated in the SUSE Customer Center.
-   </p></li><li class="listitem "><p>
+   </p></li><li class="listitem"><p>
     You have removed the system from any Red Hat subscription services it was
     registered to.
-   </p></li></ul></div><div class="procedure " id="pro-register-rhel-with-rmt"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 3: </span><span class="name">Registering RHEL or CentOS Linux with RMT </span><a title="Permalink" class="permalink" href="#pro-register-rhel-with-rmt">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+   </p></li></ul></div><div class="procedure" id="pro-register-rhel-with-rmt" data-id-title="Registering RHEL or CentOS Linux with RMT"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="title-number">Procedure 3: </span><span class="title-name">Registering RHEL or CentOS Linux with RMT </span><a title="Permalink" class="permalink" href="#pro-register-rhel-with-rmt">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step"><p>
     Disable the RHEL or CentOS repositories in <code class="filename">/etc/yum.repos.d</code>
     by setting <code class="literal">enabled=0</code> in each <code class="filename">.repo</code> file.
-   </p></li><li class="step "><p>
+   </p></li><li class="step"><p>
     Download the <code class="filename">rmt-client-setup-res</code> script:
-   </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">curl http://<em class="replaceable ">RMT_SERVER</em>/tools/rmt-client-setup-res --output rmt-client-setup-res</code></pre></div></li><li class="step "><p>
+   </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">curl http://<em class="replaceable">RMT_SERVER</em>/tools/rmt-client-setup-res --output rmt-client-setup-res</code></pre></div></li><li class="step"><p>
     Run the <code class="filename">rmt-client-setup-res</code> script with
     the URL of the RMT server as a parameter:
-   </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">sh rmt-client-setup-res https://<em class="replaceable ">RMT_SERVER</em></code></pre></div><p>
+   </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">sh rmt-client-setup-res https://<em class="replaceable">RMT_SERVER</em></code></pre></div><p>
     The script performs the following tasks:
-   </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+   </p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
       Installs <code class="command">SUSEConnect</code> and its dependencies.
-     </p></li><li class="listitem "><p>
+     </p></li><li class="listitem"><p>
       Downloads and runs the <code class="filename">rmt-client-setup</code> script, which
       does the following:
-     </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+     </p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
         Downloads all keys from
-        <code class="literal">http://<em class="replaceable ">RMT_SERVER</em>/repo/keys</code>.
-       </p></li><li class="listitem "><p>
+        <code class="literal">http://<em class="replaceable">RMT_SERVER</em>/repo/keys</code>.
+       </p></li><li class="listitem"><p>
         Imports the keys with <code class="command">gpg --import</code> and
         <code class="command">rpm --import</code>.
-       </p></li><li class="listitem "><p>
+       </p></li><li class="listitem"><p>
         Downloads the CA certificate from
-        <code class="literal">https://<em class="replaceable ">RMT_SERVER</em>/rmt.crt</code>.
-       </p></li><li class="listitem "><p>
+        <code class="literal">https://<em class="replaceable">RMT_SERVER</em>/rmt.crt</code>.
+       </p></li><li class="listitem"><p>
         Imports the CA certificate to the trust store.
-       </p></li><li class="listitem "><p>
+       </p></li><li class="listitem"><p>
         Uses <code class="command">SUSEConnect</code> to register the system with the
         RMT server. Registering the system using <code class="command">SUSEConnect</code>
         adds and enables all default repositories.
@@ -268,7 +268,7 @@ Enabling SUSE Linux Enterprise High Availability Extension with Expanded Support
     If the script works, you will see <code class="literal">Successfully registered system</code>.
     If the script fails, see <a class="xref" href="#troubleshoot-quickstart-8" title="6. Troubleshooting">Section 6, “Troubleshooting”</a> for
     potential solutions.
-   </p></li><li class="step "><p>
+   </p></li><li class="step"><p>
     Verify the installed product:
    </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">SUSEConnect --status-text</code></pre></div><p>
     You should see the following output:
@@ -280,83 +280,83 @@ Enabling SUSE Linux Enterprise High Availability Extension with Expanded Support
 
   Registered
 
-------------------------------------------</pre></div></li><li class="step "><p>
+------------------------------------------</pre></div></li><li class="step"><p>
     Verify the available repositories:
    </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">dnf repolist</code></pre></div><p>
     You should see <code class="literal">RES-8-Updates</code>, <code class="literal">RES-AS-8-Updates</code>,
     and <code class="literal">RES-CB-8-Updates</code>.
-   </p></li><li class="step "><p>
+   </p></li><li class="step"><p>
     If your subscription includes the High Availability extension, activate it with the
     following command:
-   </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">SUSEConnect –p RES-HA/8/x86_64</code></pre></div><div id="id-1.6.6.7.3" class="admonition tip compact"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.svg" /><p>
+   </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">SUSEConnect –p RES-HA/8/x86_64</code></pre></div><div id="id-1.6.6.7.3" class="admonition tip compact"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.svg"/><p>
      To check whether the extension is available, run the
      <code class="command">SUSEConnect --list-extensions</code> command.
-    </p></div></li><li class="step "><p>
+    </p></div></li><li class="step"><p>
     Run the update command to make sure there are no errors:
    </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">dnf update</code></pre></div></li></ol></div></div><p>
   You can now update your system from repositories provided by SUSE Liberty Linux.
- </p></div><div class="sect1" id="troubleshoot-quickstart-8"><div class="titlepage"><div><div><h2 class="title"><span class="number">6 </span><span xmlns:dm="urn:x-suse:ns:docmanager" class="name">Troubleshooting</span> <a title="Permalink" class="permalink" href="#troubleshoot-quickstart-8">#</a><a class="report-bug" rel="nofollow" target="_blank" href="https://github.com/SUSE/doc-liberty/edit/main/xml/art-quickstart-8.xml" title="Edit the source file for this section">Edit source</a></h2><div class="doc-status"><ul><li><span class="ds-label">File Name: </span>art-quickstart-8.xml</li><li><span class="ds-label">ID: </span>troubleshoot-quickstart-8</li></ul></div></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="id-1.7.2.1"><span class="term "><code class="systemitem">nginx.service</code> is inactive after installing the
-    <span class="package ">rmt-server</span> package</span></dt><dd><p>
+ </p></section><section class="sect1" id="troubleshoot-quickstart-8" data-id-title="Troubleshooting"><div class="titlepage"><div><div><h2 class="title"><span class="title-number">6 </span><span class="title-name">Troubleshooting</span> <a title="Permalink" class="permalink" href="#troubleshoot-quickstart-8">#</a></h2></div></div></div><div class="variablelist"><dl class="variablelist"><dt id="id-1.7.2.1"><span class="term"><code class="systemitem">nginx.service</code> is inactive after installing the
+    <span class="package">rmt-server</span> package</span></dt><dd><p>
       Continue the procedure to configure RMT in YaST. This often resolves
       the issue. If that fails, Apache might be installed on your server, and
       must be disabled. Apache conflicts with NGINX because both web servers
       listen on port 80.
-     </p></dd><dt id="id-1.7.2.2"><span class="term ">SUSE Liberty Linux doesn't appear in <code class="command">rmt-cli products list</code>
+     </p></dd><dt id="id-1.7.2.2"><span class="term">SUSE Liberty Linux doesn't appear in <code class="command">rmt-cli products list</code>
      after <code class="command">rmt-cli sync</code></span></dt><dd><p>
       Check your network. If the network is down, the sync command fails without
       showing an error.
-     </p></dd><dt id="id-1.7.2.3"><span class="term ">Mirroring completes with errors</span></dt><dd><p>
+     </p></dd><dt id="id-1.7.2.3"><span class="term">Mirroring completes with errors</span></dt><dd><p>
       If some packages could not be downloaded due to timeouts, rerun the
       <code class="command">rmt-cli mirror</code> command until all packages are downloaded.
-     </p></dd><dt id="id-1.7.2.4"><span class="term ">Setup script cannot access the SUSE Liberty Linux repository</span></dt><dd><p>
+     </p></dd><dt id="id-1.7.2.4"><span class="term">Setup script cannot access the SUSE Liberty Linux repository</span></dt><dd><p>
       The <code class="filename">repodata</code> directory on the RMT server will not
       be available until all of the packages for that repository are downloaded.
       If some packages could not be downloaded to the RMT server due to timeouts
       during the first mirroring, rerun the <code class="command">rmt-cli mirror</code>
       command until all packages are downloaded.
-     </p></dd><dt id="id-1.7.2.5"><span class="term ">Setup script cannot remove the protected package
-    <span class="package ">redhat-release</span></span></dt><dd><p>
-      On RHEL, the <span class="package ">redhat-release</span> package is protected as a
-      dependency of the <span class="package ">setup</span> package. If necessary, you can
-      use the following command to remove <span class="package ">redhat-release</span>
+     </p></dd><dt id="id-1.7.2.5"><span class="term">Setup script cannot remove the protected package
+    <span class="package">redhat-release</span></span></dt><dd><p>
+      On RHEL, the <span class="package">redhat-release</span> package is protected as a
+      dependency of the <span class="package">setup</span> package. If necessary, you can
+      use the following command to remove <span class="package">redhat-release</span>
       without checking for dependencies:
-     </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">rpm -e redhat-release --nodeps</code></pre></div></dd><dt id="id-1.7.2.6"><span class="term ">Setup script cannot install <span class="package ">sles_es-release</span> because
+     </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">rpm -e redhat-release --nodeps</code></pre></div></dd><dt id="id-1.7.2.6"><span class="term">Setup script cannot install <span class="package">sles_es-release</span> because
     of package conflicts</span></dt><dd><p>
-      If <span class="package ">sles_es-release</span> conflicts with existing packages,
+      If <span class="package">sles_es-release</span> conflicts with existing packages,
       try the following workaround:
-     </p><div class="orderedlist "><ol class="orderedlist" type="1"><li class="listitem "><p>
+     </p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>
        Remove the <code class="filename">redhat-release</code> directory:
        </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">rm -r /usr/share/redhat-release</code></pre></div><p>
         On CentOS, this removes the symbolic link between
         <code class="filename">redhat-release</code> and <code class="filename">centos-release</code>.
-       </p></li><li class="listitem "><p>
+       </p></li><li class="listitem"><p>
         Edit the <code class="filename">rmt-client-setup-res</code> script to add
         <code class="literal">--allowerasing</code> to the following line:
-       </p><div class="verbatim-wrap"><pre class="screen">$DNF install ${AUTOACCEPT} SUSEConnect sles_es-release librepo-1.9.2 <span class="bold"><strong>--allowerasing</strong></span></pre></div></li></ol></div></dd><dt id="id-1.7.2.7"><span class="term ">Setup script cannot install <span class="package ">SUSEConnect</span> because of
+       </p><div class="verbatim-wrap"><pre class="screen">$DNF install ${AUTOACCEPT} SUSEConnect sles_es-release librepo-1.9.2 <span class="bold"><strong>--allowerasing</strong></span></pre></div></li></ol></div></dd><dt id="id-1.7.2.7"><span class="term">Setup script cannot install <span class="package">SUSEConnect</span> because of
     package dependencies</span></dt><dd><p>
       SUSE Liberty Linux only supports the latest version of RHEL or CentOS Linux.
-      If your system is running the latest version and <span class="package ">SUSEConnect</span>
+      If your system is running the latest version and <span class="package">SUSEConnect</span>
       still has package dependency issues, try the following workaround:
-     </p><div class="orderedlist "><ol class="orderedlist" type="1"><li class="listitem "><p>
+     </p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>
         Edit the <code class="filename">rmt-client-setup-res</code> script to add
         <code class="literal">--skip-broken</code> to the following line:
-       </p><div class="verbatim-wrap"><pre class="screen">$DNF install ${AUTOACCEPT} SUSEConnect sles_es-release librepo-1.9.2 <span class="bold"><strong>--skip-broken</strong></span></pre></div></li><li class="listitem "><p>
+       </p><div class="verbatim-wrap"><pre class="screen">$DNF install ${AUTOACCEPT} SUSEConnect sles_es-release librepo-1.9.2 <span class="bold"><strong>--skip-broken</strong></span></pre></div></li><li class="listitem"><p>
         Run the script and accept any proposed package changes.
-        <span class="package ">SUSEConnect</span> will be skipped.
-       </p></li><li class="listitem "><p>
+        <span class="package">SUSEConnect</span> will be skipped.
+       </p></li><li class="listitem"><p>
         Run the script a second time. The package changes from the first attempt
         can sometimes resolve the package dependency issues, allowing the second
-        attempt to successfully install <span class="package ">SUSEConnect</span>.
-       </p></li></ol></div></dd></dl></div></div><div class="legal-section"><div class="appendix " id="id-1.8"><div class="titlepage"><div><div><h2 class="title"><span class="number">A </span><span xmlns:dm="urn:x-suse:ns:docmanager" class="name">GNU licenses</span> <a title="Permalink" class="permalink" href="#id-1.8">#</a><a class="report-bug" rel="nofollow" target="_blank" href="https://github.com/SUSE/doc-liberty/edit/main/xml/common_legal.xml" title="Edit the source file for this section">Edit source</a></h2><div class="doc-status"><ul><li><span class="ds-label">File Name: </span>common_legal.xml</li><li><span class="ds-label">ID: </span><span class="ds-message">no ID found</span></li></ul></div></div></div></div><div class="line"></div><p>
+        attempt to successfully install <span class="package">SUSEConnect</span>.
+       </p></li></ol></div></dd></dl></div></section><div class="legal-section"><section class="appendix" id="id-1.8" data-id-title="GNU licenses"><div class="titlepage"><div><div><h2 class="title"><span class="title-number">A </span><span class="title-name">GNU licenses</span> <a title="Permalink" class="permalink" href="#id-1.8">#</a></h2></div></div></div><p>
   This appendix contains the GNU Free Documentation License version 1.2.
- </p><div class="sect1 " id="id-1.8.4"><div class="titlepage"><div><div><h2 class="title legal"><span xmlns:dm="urn:x-suse:ns:docmanager" class="name">GNU Free Documentation License</span> <a title="Permalink" class="permalink" href="#id-1.8.4">#</a><a class="report-bug" rel="nofollow" target="_blank" href="https://github.com/SUSE/doc-liberty/edit/main/xml/common_license_gfdl1.2.xml" title="Edit the source file for this section">Edit source</a></h2><div class="doc-status"><ul><li><span class="ds-label">File Name: </span>common_license_gfdl1.2.xml</li><li><span class="ds-label">ID: </span><span class="ds-message">no ID found</span></li></ul></div></div></div></div><p>
+ </p><section class="sect1" id="id-1.8.4" data-id-title="GNU Free Documentation License"><div class="titlepage"><div><div><h2 class="title legal"><span class="title-name">GNU Free Documentation License</span> <a title="Permalink" class="permalink" href="#id-1.8.4">#</a></h2></div></div></div><p>
   Copyright (C) 2000, 2001, 2002 Free Software Foundation, Inc. 51 Franklin St,
   Fifth Floor, Boston, MA 02110-1301 USA. Everyone is permitted to copy and
   distribute verbatim copies of this license document, but changing it is not
   allowed.
- </p><div xmlns:dm="urn:x-suse:ns:docmanager" class="sect4 bridgehead"><h5 class="title legal" id="id-1.8.4.3"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="id-1.8.4.3"><span class="name">
     0. PREAMBLE
-  </span><a title="Permalink" class="permalink" href="#id-1.8.4.3">#</a><a class="report-bug" rel="nofollow" target="_blank" href="https://github.com/SUSE/doc-liberty/edit/main/xml/common_license_gfdl1.2.xml" title="Edit the source file for this section">Edit source</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#id-1.8.4.3">#</a></h5></div><p>
   The purpose of this License is to make a manual, textbook, or other
   functional and useful document "free" in the sense of freedom: to assure
   everyone the effective freedom to copy and redistribute it, with or without
@@ -377,9 +377,9 @@ Enabling SUSE Linux Enterprise High Availability Extension with Expanded Support
   work, regardless of subject matter or whether it is published as a printed
   book. We recommend this License principally for works whose purpose is
   instruction or reference.
- </p><div xmlns:dm="urn:x-suse:ns:docmanager" class="sect4 bridgehead"><h5 class="title legal" id="id-1.8.4.7"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="id-1.8.4.7"><span class="name">
     1. APPLICABILITY AND DEFINITIONS
-  </span><a title="Permalink" class="permalink" href="#id-1.8.4.7">#</a><a class="report-bug" rel="nofollow" target="_blank" href="https://github.com/SUSE/doc-liberty/edit/main/xml/common_license_gfdl1.2.xml" title="Edit the source file for this section">Edit source</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#id-1.8.4.7">#</a></h5></div><p>
   This License applies to any manual or other work, in any medium, that
   contains a notice placed by the copyright holder saying it can be distributed
   under the terms of this License. Such a notice grants a world-wide,
@@ -458,9 +458,9 @@ Enabling SUSE Linux Enterprise High Availability Extension with Expanded Support
   considered to be included by reference in this License, but only as regards
   disclaiming warranties: any other implication that these Warranty Disclaimers
   may have is void and has no effect on the meaning of this License.
- </p><div xmlns:dm="urn:x-suse:ns:docmanager" class="sect4 bridgehead"><h5 class="title legal" id="id-1.8.4.18"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="id-1.8.4.18"><span class="name">
     2. VERBATIM COPYING
-  </span><a title="Permalink" class="permalink" href="#id-1.8.4.18">#</a><a class="report-bug" rel="nofollow" target="_blank" href="https://github.com/SUSE/doc-liberty/edit/main/xml/common_license_gfdl1.2.xml" title="Edit the source file for this section">Edit source</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#id-1.8.4.18">#</a></h5></div><p>
   You may copy and distribute the Document in any medium, either commercially
   or non-commercially, provided that this License, the copyright notices, and
   the license notice saying this License applies to the Document are reproduced
@@ -472,9 +472,9 @@ Enabling SUSE Linux Enterprise High Availability Extension with Expanded Support
  </p><p>
   You may also lend copies, under the same conditions stated above, and you may
   publicly display copies.
- </p><div xmlns:dm="urn:x-suse:ns:docmanager" class="sect4 bridgehead"><h5 class="title legal" id="id-1.8.4.21"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="id-1.8.4.21"><span class="name">
     3. COPYING IN QUANTITY
-  </span><a title="Permalink" class="permalink" href="#id-1.8.4.21">#</a><a class="report-bug" rel="nofollow" target="_blank" href="https://github.com/SUSE/doc-liberty/edit/main/xml/common_license_gfdl1.2.xml" title="Edit the source file for this section">Edit source</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#id-1.8.4.21">#</a></h5></div><p>
   If you publish printed copies (or copies in media that commonly have printed
   covers) of the Document, numbering more than 100, and the Document's license
   notice requires Cover Texts, you must enclose the copies in covers that
@@ -506,52 +506,52 @@ Enabling SUSE Linux Enterprise High Availability Extension with Expanded Support
   It is requested, but not required, that you contact the authors of the
   Document well before redistributing any large number of copies, to give them
   a chance to provide you with an updated version of the Document.
- </p><div xmlns:dm="urn:x-suse:ns:docmanager" class="sect4 bridgehead"><h5 class="title legal" id="id-1.8.4.26"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="id-1.8.4.26"><span class="name">
     4. MODIFICATIONS
-  </span><a title="Permalink" class="permalink" href="#id-1.8.4.26">#</a><a class="report-bug" rel="nofollow" target="_blank" href="https://github.com/SUSE/doc-liberty/edit/main/xml/common_license_gfdl1.2.xml" title="Edit the source file for this section">Edit source</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#id-1.8.4.26">#</a></h5></div><p>
   You may copy and distribute a Modified Version of the Document under the
   conditions of sections 2 and 3 above, provided that you release the Modified
   Version under precisely this License, with the Modified Version filling the
   role of the Document, thus licensing distribution and modification of the
   Modified Version to whoever possesses a copy of it. In addition, you must do
   these things in the Modified Version:
- </p><div class="orderedlist "><ol class="orderedlist" type="A"><li class="listitem "><p>
+ </p><div class="orderedlist"><ol class="orderedlist" type="A"><li class="listitem"><p>
     Use in the Title Page (and on the covers, if any) a title distinct from
     that of the Document, and from those of previous versions (which should, if
     there were any, be listed in the History section of the Document). You may
     use the same title as a previous version if the original publisher of that
     version gives permission.
-   </p></li><li class="listitem "><p>
+   </p></li><li class="listitem"><p>
     List on the Title Page, as authors, one or more persons or entities
     responsible for authorship of the modifications in the Modified Version,
     together with at least five of the principal authors of the Document (all
     of its principal authors, if it has fewer than five), unless they release
     you from this requirement.
-   </p></li><li class="listitem "><p>
+   </p></li><li class="listitem"><p>
     State on the Title page the name of the publisher of the Modified Version,
     as the publisher.
-   </p></li><li class="listitem "><p>
+   </p></li><li class="listitem"><p>
     Preserve all the copyright notices of the Document.
-   </p></li><li class="listitem "><p>
+   </p></li><li class="listitem"><p>
     Add an appropriate copyright notice for your modifications adjacent to the
     other copyright notices.
-   </p></li><li class="listitem "><p>
+   </p></li><li class="listitem"><p>
     Include, immediately after the copyright notices, a license notice giving
     the public permission to use the Modified Version under the terms of this
     License, in the form shown in the Addendum below.
-   </p></li><li class="listitem "><p>
+   </p></li><li class="listitem"><p>
     Preserve in that license notice the full lists of Invariant Sections and
     required Cover Texts given in the Document's license notice.
-   </p></li><li class="listitem "><p>
+   </p></li><li class="listitem"><p>
     Include an unaltered copy of this License.
-   </p></li><li class="listitem "><p>
+   </p></li><li class="listitem"><p>
     Preserve the section Entitled "History", Preserve its Title, and add to it
     an item stating at least the title, year, new authors, and publisher of the
     Modified Version as given on the Title Page. If there is no section
     Entitled "History" in the Document, create one stating the title, year,
     authors, and publisher of the Document as given on its Title Page, then add
     an item describing the Modified Version as stated in the previous sentence.
-   </p></li><li class="listitem "><p>
+   </p></li><li class="listitem"><p>
     Preserve the network location, if any, given in the Document for public
     access to a Transparent copy of the Document, and likewise the network
     locations given in the Document for previous versions it was based on.
@@ -559,22 +559,22 @@ Enabling SUSE Linux Enterprise High Availability Extension with Expanded Support
     location for a work that was published at least four years before the
     Document itself, or if the original publisher of the version it refers to
     gives permission.
-   </p></li><li class="listitem "><p>
+   </p></li><li class="listitem"><p>
     For any section Entitled "Acknowledgements" or "Dedications", Preserve the
     Title of the section, and preserve in the section all the substance and
     tone of each of the contributor acknowledgements and/or dedications given
     therein.
-   </p></li><li class="listitem "><p>
+   </p></li><li class="listitem"><p>
     Preserve all the Invariant Sections of the Document, unaltered in their
     text and in their titles. Section numbers or the equivalent are not
     considered part of the section titles.
-   </p></li><li class="listitem "><p>
+   </p></li><li class="listitem"><p>
     Delete any section Entitled "Endorsements". Such a section may not be
     included in the Modified Version.
-   </p></li><li class="listitem "><p>
+   </p></li><li class="listitem"><p>
     Do not retitle any existing section to be Entitled "Endorsements" or to
     conflict in title with any Invariant Section.
-   </p></li><li class="listitem "><p>
+   </p></li><li class="listitem"><p>
     Preserve any Warranty Disclaimers.
    </p></li></ol></div><p>
   If the Modified Version includes new front-matter sections or appendices that
@@ -602,9 +602,9 @@ Enabling SUSE Linux Enterprise High Availability Extension with Expanded Support
   The author(s) and publisher(s) of the Document do not by this License give
   permission to use their names for publicity for or to assert or imply
   endorsement of any Modified Version.
- </p><div xmlns:dm="urn:x-suse:ns:docmanager" class="sect4 bridgehead"><h5 class="title legal" id="id-1.8.4.33"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="id-1.8.4.33"><span class="name">
     5. COMBINING DOCUMENTS
-  </span><a title="Permalink" class="permalink" href="#id-1.8.4.33">#</a><a class="report-bug" rel="nofollow" target="_blank" href="https://github.com/SUSE/doc-liberty/edit/main/xml/common_license_gfdl1.2.xml" title="Edit the source file for this section">Edit source</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#id-1.8.4.33">#</a></h5></div><p>
   You may combine the Document with other documents released under this
   License, under the terms defined in section 4 above for modified versions,
   provided that you include in the combination all of the Invariant Sections of
@@ -625,9 +625,9 @@ Enabling SUSE Linux Enterprise High Availability Extension with Expanded Support
   various original documents, forming one section Entitled "History"; likewise
   combine any sections Entitled "Acknowledgements", and any sections Entitled
   "Dedications". You must delete all sections Entitled "Endorsements".
- </p><div xmlns:dm="urn:x-suse:ns:docmanager" class="sect4 bridgehead"><h5 class="title legal" id="id-1.8.4.37"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="id-1.8.4.37"><span class="name">
     6. COLLECTIONS OF DOCUMENTS
-  </span><a title="Permalink" class="permalink" href="#id-1.8.4.37">#</a><a class="report-bug" rel="nofollow" target="_blank" href="https://github.com/SUSE/doc-liberty/edit/main/xml/common_license_gfdl1.2.xml" title="Edit the source file for this section">Edit source</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#id-1.8.4.37">#</a></h5></div><p>
   You may make a collection consisting of the Document and other documents
   released under this License, and replace the individual copies of this
   License in the various documents with a single copy that is included in the
@@ -638,9 +638,9 @@ Enabling SUSE Linux Enterprise High Availability Extension with Expanded Support
   individually under this License, provided you insert a copy of this License
   into the extracted document, and follow this License in all other respects
   regarding verbatim copying of that document.
- </p><div xmlns:dm="urn:x-suse:ns:docmanager" class="sect4 bridgehead"><h5 class="title legal" id="id-1.8.4.40"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="id-1.8.4.40"><span class="name">
     7. AGGREGATION WITH INDEPENDENT WORKS
-  </span><a title="Permalink" class="permalink" href="#id-1.8.4.40">#</a><a class="report-bug" rel="nofollow" target="_blank" href="https://github.com/SUSE/doc-liberty/edit/main/xml/common_license_gfdl1.2.xml" title="Edit the source file for this section">Edit source</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#id-1.8.4.40">#</a></h5></div><p>
   A compilation of the Document or its derivatives with other separate and
   independent documents or works, in or on a volume of a storage or
   distribution medium, is called an "aggregate" if the copyright resulting from
@@ -655,9 +655,9 @@ Enabling SUSE Linux Enterprise High Availability Extension with Expanded Support
   the Document within the aggregate, or the electronic equivalent of covers if
   the Document is in electronic form. Otherwise they must appear on printed
   covers that bracket the whole aggregate.
- </p><div xmlns:dm="urn:x-suse:ns:docmanager" class="sect4 bridgehead"><h5 class="title legal" id="id-1.8.4.43"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="id-1.8.4.43"><span class="name">
     8. TRANSLATION
-  </span><a title="Permalink" class="permalink" href="#id-1.8.4.43">#</a><a class="report-bug" rel="nofollow" target="_blank" href="https://github.com/SUSE/doc-liberty/edit/main/xml/common_license_gfdl1.2.xml" title="Edit the source file for this section">Edit source</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#id-1.8.4.43">#</a></h5></div><p>
   Translation is considered a kind of modification, so you may distribute
   translations of the Document under the terms of section 4. Replacing
   Invariant Sections with translations requires special permission from their
@@ -673,18 +673,18 @@ Enabling SUSE Linux Enterprise High Availability Extension with Expanded Support
   If a section in the Document is Entitled "Acknowledgements", "Dedications",
   or "History", the requirement (section 4) to Preserve its Title (section 1)
   will typically require changing the actual title.
- </p><div xmlns:dm="urn:x-suse:ns:docmanager" class="sect4 bridgehead"><h5 class="title legal" id="id-1.8.4.46"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="id-1.8.4.46"><span class="name">
     9. TERMINATION
-  </span><a title="Permalink" class="permalink" href="#id-1.8.4.46">#</a><a class="report-bug" rel="nofollow" target="_blank" href="https://github.com/SUSE/doc-liberty/edit/main/xml/common_license_gfdl1.2.xml" title="Edit the source file for this section">Edit source</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#id-1.8.4.46">#</a></h5></div><p>
   You may not copy, modify, sublicense, or distribute the Document except as
   expressly provided for under this License. Any other attempt to copy, modify,
   sublicense or distribute the Document is void, and will automatically
   terminate your rights under this License. However, parties who have received
   copies, or rights, from you under this License will not have their licenses
   terminated so long as such parties remain in full compliance.
- </p><div xmlns:dm="urn:x-suse:ns:docmanager" class="sect4 bridgehead"><h5 class="title legal" id="id-1.8.4.48"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="id-1.8.4.48"><span class="name">
     10. FUTURE REVISIONS OF THIS LICENSE
-  </span><a title="Permalink" class="permalink" href="#id-1.8.4.48">#</a><a class="report-bug" rel="nofollow" target="_blank" href="https://github.com/SUSE/doc-liberty/edit/main/xml/common_license_gfdl1.2.xml" title="Edit the source file for this section">Edit source</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#id-1.8.4.48">#</a></h5></div><p>
   The Free Software Foundation may publish new, revised versions of the GNU
   Free Documentation License from time to time. Such new versions will be
   similar in spirit to the present version, but may differ in detail to address
@@ -698,9 +698,9 @@ Enabling SUSE Linux Enterprise High Availability Extension with Expanded Support
   been published (not as a draft) by the Free Software Foundation. If the
   Document does not specify a version number of this License, you may choose
   any version ever published (not as a draft) by the Free Software Foundation.
- </p><div xmlns:dm="urn:x-suse:ns:docmanager" class="sect4 bridgehead"><h5 class="title legal" id="id-1.8.4.51"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="id-1.8.4.51"><span class="name">
     ADDENDUM: How to use this License for your documents
-  </span><a title="Permalink" class="permalink" href="#id-1.8.4.51">#</a><a class="report-bug" rel="nofollow" target="_blank" href="https://github.com/SUSE/doc-liberty/edit/main/xml/common_license_gfdl1.2.xml" title="Edit the source file for this section">Edit source</a></h5></div><div class="verbatim-wrap"><pre class="screen">Copyright (c) YEAR YOUR NAME.
+  </span><a title="Permalink" class="permalink" href="#id-1.8.4.51">#</a></h5></div><div class="verbatim-wrap"><pre class="screen">Copyright (c) YEAR YOUR NAME.
 Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU Free Documentation License, Version 1.2
 or any later version published by the Free Software Foundation;
@@ -718,6 +718,5 @@ Front-Cover Texts being LIST, and with the Back-Cover Texts being LIST.</pre></d
   releasing these examples in parallel under your choice of free software
   license, such as the GNU General Public License, to permit their use in free
   software.
- </p></div></div></div></div></div><div class="page-bottom"><div class="_share-print"><div class="online-contents share"><strong>Share this page: </strong><span class="share-buttons"><span class="_share-fb bottom-button">Facebook</span><span class="spacer"> • </span><span class="_share-in bottom-button">LinkedIn</span><span class="spacer"> • </span><span class="_share-tw bottom-button">Twitter</span><span class="spacer"> • </span><span class="_share-mail bottom-button">E-Mail</span></span></div><div class="print"><span class="_print-button bottom-button">Print this page</span></div><div class="clearme"></div></div></div></div><div id="_inward"></div></div><div id="_footer-wrap"><div id="_footer"><p>©
-        2022 
-        SUSE</p><ul><li><a href="https://jobs.suse.com/" target="_top">Careers</a></li><li><a href="https://www.suse.com/company/legal/" target="_top">Legal</a></li><li><a href="https://www.suse.com/company/about/" target="_top">About</a></li><li><a href="https://www.suse.com/contact/" target="_top">Contact Us</a></li></ul></div></div></body></html>
+ </p></section></section></div></section></article><aside id="_side-toc-page" class="side-toc"><div class="side-title">On this page</div><div class="toc"><ul><li><span class="section"><a href="#introduction-quickstart-8"><span class="title-number">1 </span><span class="title-name">Introduction</span></a></span></li><li><span class="section"><a href="#requirements-quickstart-8"><span class="title-number">2 </span><span class="title-name">Requirements</span></a></span></li><li><span class="section"><a href="#configure-rmt-server"><span class="title-number">3 </span><span class="title-name">Configuring the RMT server</span></a></span></li><li><span class="section"><a href="#mirror-repositories-with-rmt"><span class="title-number">4 </span><span class="title-name">Mirroring SUSE Liberty Linux repositories with RMT</span></a></span></li><li><span class="section"><a href="#register-rhel-with-rmt"><span class="title-number">5 </span><span class="title-name">Registering RHEL or CentOS Linux with RMT</span></a></span></li><li><span class="section"><a href="#troubleshoot-quickstart-8"><span class="title-number">6 </span><span class="title-name">Troubleshooting</span></a></span></li><li><span class="appendix"><a href="#id-1.8"><span class="title-number">A </span><span class="title-name">GNU licenses</span></a></span><ul><li><span class="sect1"><a href="#id-1.8.4"><span class="title-number">A.1 </span><span class="title-name">GNU Free Documentation License</span></a></span></li></ul></li></ul></div><div class="side-title">Give feedback</div><ul class="feedback" id="_give-feedback"><li><a id="_feedback-reportbug" href="#" rel="nofollow" target="_blank">Report an issue</a></li><li><a id="_feedback-editurl" href="https://github.com/SUSE/doc-liberty/edit/main/xml/art-quickstart-8.xml" rel="nofollow" target="_blank">Edit source document</a></li></ul><div class="side-title">Share this page</div><ul class="share"><li><a id="_share-fb" href="#" title="Facebook"> </a></li><li><a id="_share-in" href="#" title="LinkedIn"> </a></li><li><a id="_share-tw" href="#" title="Twitter"> </a></li><li><a id="_share-mail" href="#" title="E-Mail"> </a></li><li><a id="_print-button" href="#" title="Print this page"> </a></li></ul> </aside></main><footer id="_footer"><div class="growth-inhibitor"><div class="copy"><span class="copy__rights">© SUSE
+                 2022</span></div></div></footer></body></html>
