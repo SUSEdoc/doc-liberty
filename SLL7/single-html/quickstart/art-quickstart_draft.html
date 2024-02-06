@@ -244,14 +244,14 @@ hljs.configure({
     add the following content:
    </p><div class="verbatim-wrap"><pre class="screen">[liberty7]
 name=SUSE Liberty Linux 7
-baseurl=http://<em class="replaceable">SMT_SERVER_URL</em>/repo/$RCE/RES7/x86_64/
+baseurl=http://<em class="replaceable">SMT_SERVER_URL</em>/repo/SUSE/Updates/RES/7/x86_64/update
 enabled=1
 gpgcheck=1</pre></div></li><li class="step"><p>
     To enable the High Availability repository, create a file called
     <code class="filename">/etc/yum.repos.d/RES7-HA.repo</code> and add the following content:
    </p><div class="verbatim-wrap"><pre class="screen">[liberty7-ha]
 name=SUSE Liberty Linux 7 HA extension
-baseurl=http://<em class="replaceable">SMT_SERVER_URL</em>/repo/$RCE/RES7-HA/x86_64/
+baseurl=http://<em class="replaceable">SMT_SERVER_URL</em>/repo/SUSE/Updates/RES-HA/7/x86_64/update
 enabled=1
 gpgcheck=1</pre></div></li><li class="step"><p>
     Install the <span class="package">suseRegisterRES</span> package:
