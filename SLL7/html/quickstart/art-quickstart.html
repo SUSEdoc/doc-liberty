@@ -365,7 +365,7 @@ sh rmt-client-setup $PARAMS</pre></div></li><li class="step"><p>
       </p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>
           Edit the <code class="filename">rmt-client-setup-res</code> script to add
           <code class="literal">--skip-broken</code> to the following line:
-        </p><div class="verbatim-wrap"><pre class="screen">$DNF install sles_es-release-server suseconnect-ng librepo <span class="bold"><strong>--skip-broken</strong></span></pre></div></li><li class="listitem"><p>
+        </p><div class="verbatim-wrap"><pre class="screen">$YUM install sles_es-release-server suseconnect-ng librepo <span class="bold"><strong>--skip-broken</strong></span></pre></div></li><li class="listitem"><p>
           Run the script and accept any proposed package changes.
           <span class="package">suseconnect-ng</span> will be skipped.
         </p></li><li class="listitem"><p>
