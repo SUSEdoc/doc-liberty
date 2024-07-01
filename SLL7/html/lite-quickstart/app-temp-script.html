@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><title>SLL-L | Registering CentOS Linux 7 with SUSE Liberty Linux Lite | RMT registration script for SUSE Liberty Linux Lite</title><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"/><link rel="stylesheet" type="text/css" href="static/css/style.css"/>
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"/><link rel="schema.DCTERMS" href="http://purl.org/dc/terms/"/>
+<meta name="title" content="RMT registration script for SUSE Liberty Linux Lite | …"/>
+<meta name="description" content="Sometimes a new registration script is available for SUSE Liberty Linux Lite, but is not yet available from the RMT server because of different relea…"/>
+<meta name="product-name" content="SUSE Liberty Linux Lite"/>
+<meta name="book-title" content="Registering CentOS Linux 7 with SUSE Liberty Linux Lite"/>
+<meta name="chapter-title" content="A. RMT registration script for SUSE Liberty Linux Lite"/>
+<meta name="tracker-url" content="https://github.com/SUSE/doc-liberty/issues/new"/>
+<meta name="tracker-type" content="gh"/>
+<meta name="tracker-gh-assignee" content="tahliar"/>
+<meta name="tracker-gh-labels" content="documentation,issue"/>
+<meta name="tracker-gh-milestone" content="7"/>
+<meta name="publisher" content="SUSE"/><meta property="og:title" content="RMT registration script for SUSE Liberty Linux Lite | …"/>
+<meta property="og:description" content="Use SUSE Liberty Linux Lite to update CentOS 7."/>
+<meta property="og:type" content="article"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="RMT registration script for SUSE Liberty Linux Lite | …"/>
+<meta name="twitter:description" content="Use SUSE Liberty Linux Lite to update CentOS 7."/>
+<script type="application/ld+json">{
+    "@context": "http://schema.org",
+    "@type": ["TechArticle"],
+    "image": "https://www.suse.com/assets/img/suse-white-logo-green.svg",
+    
+     "isPartOf": {
+      "@type": "CreativeWorkSeries",
+      "name": "Product &amp; Solutions"
+    },
+    
+    "inLanguage": "en",
+    
+
+    "headline": "RMT registration script for SUSE Liberty Linux Lite",
+  
+    "description": "RMT registration script for SUSE Liberty Linux Lite",
+      
+    "author": [
+      {
+        "@type": "Corporation",
+        "name": "SUSE Product &amp; Solution Documentation Team",
+        "url": "https://www.suse.com/assets/img/suse-white-logo-green.svg"
+      }
+    ],
+      
+    "dateModified": "2024-07-01T00:00+02:00",
+      
+    "datePublished": "2024-06-18T00:00+02:00",
+      
+
+    "about": [
+      
+    ],
+  
+    "sameAs": [
+          "https://www.facebook.com/SUSEWorldwide/about",
+          "https://www.youtube.com/channel/UCHTfqIzPKz4f_dri36lAQGA",
+          "https://twitter.com/SUSE",
+          "https://www.linkedin.com/company/suse"
+    ],
+    "publisher": {
+      "@type": "Corporation",
+      "name": "SUSE",
+      "url": "https://documentation.suse.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.suse.com/assets/img/suse-white-logo-green.svg"
+      }
+    }
+  }</script>
+<link rel="prev" href="index.html" title="Registering CentOS Linux 7 with SUSE Liberty Linux Lite"/><link rel="next" href="apb.html" title="B. GNU licenses"/><script type="text/javascript">
+
+if ( window.location.protocol.toLowerCase() != 'file:' ) {
+  document.write('<link rel="stylesheet" type="text/css" href="https://documentation.suse.com/docserv/res/fonts/poppins/poppins.css"></link>');
+};
+
+</script><noscript><link rel="stylesheet" type="text/css" href="https://documentation.suse.com/docserv/res/fonts/poppins/poppins.css"/></noscript><script src="static/js/script-purejs.js" type="text/javascript"> </script><script src="static/js/highlight.min.js" type="text/javascript"> </script><script>
+
+$(document).ready(function() {
+  $('.verbatim-wrap.highlight').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+});
+hljs.configure({
+  useBR: false
+});
+
+</script><meta name="edit-url" content="https://github.com/SUSE/doc-liberty/edit/maintenance/SLL7/xml/app-temp-script.xml"/></head><body class="draft wide offline js-off" onload="$('#betawarn-button-wrap').toggle();if (document.cookie.length > 0) {if (document.cookie.indexOf('betawarn=closed') != -1){$('#betawarn').toggle()}};"><div id="betawarn" style="position:fixed;bottom:0;z-index:9025;background-color:#FDE8E8;padding:1em;margin-left:10%;margin-right:10%;display:block;border-top:.75em solid #E11;width:80%"><p style="color:#333;margin:1em 0;padding:0;">This is a draft document that was built and uploaded automatically. It may document beta software and be incomplete or even incorrect. <strong>Use this document at your own risk.</strong></p> <div id="betawarn-button-wrap" style="display:none;margin:0;padding:0;"><a href="#" onclick="$('#betawarn').toggle();var d=new Date();d.setTime(d.getTime()+(0.5*24*60*60*1000));document.cookie='betawarn=closed; expires='+d.toUTCString()+'; path=/'; return false;" style="color:#333;text-decoration:underline;float:left;margin-top:.5em;padding:1em;display:block;background-color:#FABEBE;">I understand this is a draft</a></div></div><div class="bypass-block"><a href="#_content">Jump to content</a><a href="#_bottom-pagination">Jump to page navigation: previous page [access key p]/next page [access key n]</a></div><header id="_mainnav"><div class="growth-inhibitor"><img src="static/images/logo.svg" alt="Logo" class="logo"/></div></header><div class="crumbs"><div class="growth-inhibitor"><a class="crumb" href="index.html">Registering CentOS Linux 7 with SUSE Liberty Linux Lite</a><span> / </span><a class="crumb" href="app-temp-script.html">RMT registration script for SUSE Liberty Linux Lite</a></div></div><main id="_content"><nav id="_side-toc-overall" class="side-toc"><div class="side-title">Registering CentOS Linux 7 with <span class="productname"><span class="phrase">SUSE Liberty Linux Lite</span></span></div><ol><li><a href="index.html#introduction-lite-quickstart" class=" "><span class="title-number">1 </span><span class="title-name">Introduction</span></a></li><li><a href="index.html#install-rmt-vm" class=" "><span class="title-number">2 </span><span class="title-name">Installing a virtual machine to host RMT</span></a></li><li><a href="index.html#configure-rmt-server" class=" "><span class="title-number">3 </span><span class="title-name">Configuring the RMT server</span></a></li><li><a href="index.html#mirror-repositories-with-rmt" class=" "><span class="title-number">4 </span><span class="title-name">Mirroring SUSE Liberty Linux LTSS repositories with RMT</span></a></li><li><a href="index.html#register-7-with-rmt" class=" "><span class="title-number">5 </span><span class="title-name">Registering CentOS Linux with RMT</span></a></li><li><a href="index.html#troubleshoot-lite-quickstart" class=" "><span class="title-number">6 </span><span class="title-name">Troubleshooting</span></a></li><li><a href="app-temp-script.html" class=" you-are-here"><span class="title-number">A </span><span class="title-name">RMT registration script for <span class="productname"><span class="phrase">SUSE Liberty Linux Lite</span></span></span></a></li><li><a href="apb.html" class=" "><span class="title-number">B </span><span class="title-name">GNU licenses</span></a></li> </ol> </nav><button id="_open-side-toc-overall" title="Contents"> </button><article class="documentation"><button id="_unfold-side-toc-page">On this page</button><section xml:lang="en" class="appendix" id="app-temp-script" data-id-title="RMT registration script for SUSE Liberty Linux Lite"><div class="titlepage"><div><div class="version-info">Applies to  <span class="productname"><span class="productname"><span class="phrase">SUSE Liberty Linux Lite</span></span></span></div><div><div class="title-container"><h1 class="title"><span class="title-number-name"><span class="title-number">A </span><span class="title-name">RMT registration script for <span class="productname"><span class="phrase">SUSE Liberty Linux Lite</span></span></span></span> <a title="Permalink" class="permalink" href="app-temp-script.html#">#</a></h1><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-liberty/edit/maintenance/SLL7/xml/app-temp-script.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+  Sometimes a new registration script is available for <span class="productname"><span class="phrase">SUSE Liberty Linux Lite</span></span>, but is not yet available from
+  the RMT server because of different release cycles. In this case, the new registration script
+  is shown here. Save this script as <code class="filename">rmt-client-setup-res</code>.
+ </p><div class="verbatim-wrap"><pre class="screen">#!/bin/sh
+
+SUSECONNECT=/usr/bin/SUSEConnect
+RPM=/usr/bin/rpm
+DNF=/usr/bin/dnf
+CURL=/usr/bin/curl
+YUM=/usr/bin/yum
+YUM_CONFIG_MGR=/usr/bin/yum-config-manager
+
+TEMPFILE="/etc/pki/ca-trust/source/anchors/rmt.crt"
+UPDATE_CA_TRUST=/usr/bin/update-ca-trust
+RPM_GPG_KEY_LOCATION="/etc/pki/rpm-gpg"
+
+PARAMS=$@
+YES_PARAM=""
+
+import_rpm_signing_keys() {
+    $RPM --import ${RPM_GPG_KEY_LOCATION}/*
+}
+
+usage() {
+    cat &lt;&lt; EOT &gt;&amp;2
+
+   $1
+
+   $0 script installs SUSEConnect and its dependencies and calls rmt-client-setup script that registers to rmt
+
+  Usage: $0 &lt;registration URL&gt; [--regcert &lt;url&gt;] [--regdata &lt;filename&gt;] [--de-register] [--yes]
+  Usage: $0 --host &lt;hostname of the RMT server&gt; [--regcert &lt;url&gt;] [--regdata &lt;filename&gt;] [--de-register] [--yes]
+  Usage: $0 --host &lt;hostname of the RMT server&gt; [--fingerprint &lt;fingerprint of server cert&gt;] [--regdata &lt;filename&gt;] [--de-register] [--yes]
+         configures a SLE client to register against a different registration server
+
+  Example: $0 https://rmt.example.com/
+  Example: $0 --host rmt.example.com --regcert http://rmt.example.com/certs/rmt.crt --yes
+
+EOT
+
+    exit 1
+}
+
+# We need only REGURL and RMTNAME, all other parameters are just passed to rmt-client-setup script
+REGURL=""
+RMTNAME=""
+
+while true; do
+    case "$1" in
+        --fingerprint | --regcert | --regdata)
+             test -z "$2" &amp;&amp; usage "Option $1 needs an argument"
+             shift
+             ;;
+        --host)
+             test -z "$2" &amp;&amp; usage "Option $1 needs an argument"
+             RMTNAME="$2"
+             REGURL="http://${RMTNAME}"
+             shift
+             ;;
+        --de-register)
+             DE_REGISTER="Y"
+             ;;
+        --yes)
+             YES_PARAM="--yes"
+             ;;
+        "")
+             break
+             ;;
+        -h|--help)
+             usage
+             ;;
+        https://*)
+             RMTNAME="${1:8}"
+             REGURL="$1"
+             ;;
+        http://*)
+             REGURL="$1"
+             RMTNAME="${REGURL:7}"
+             ;;
+        *)
+             usage "Unknown option $1"
+             ;;
+    esac
+    shift
+done
+
+if [ "$(id -u)" != "0" ]; then
+    echo "You must be root. Abort."
+    exit 1
+fi
+
+if [ -z "$REGURL" ]; then
+    echo "Missing registration URL. Abort."
+    exit 1
+fi
+
+if [ ! -x $RPM ]; then
+    echo "rpm command not found. Abort."
+    exit 1
+fi
+
+if [ ! -x $CURL ]; then
+    echo "curl command not found. Abort."
+    exit 1
+fi
+
+if [ ! -e /etc/os-release ]; then
+    echo "/etc/os-release file not found. Couldn't determine OS. Abort."
+    exit 1
+fi
+
+# Import Self-signed CERT as Trusted
+if [ -z "$REGCERT" ]; then
+    CERTURL=$(echo "$REGURL" | awk -F/ '{print "https://" $3 "/rmt.crt"}')
+else
+    CERTURL="$REGCERT"
+fi
+
+$CURL --tlsv1.2 --silent --insecure --connect-timeout 10 --output $TEMPFILE $CERTURL
+if [ $? -ne 0 ]; then
+    echo "Download failed. Abort."
+    exit 1
+fi
+
+if [ -x $UPDATE_CA_TRUST ]; then
+    $UPDATE_CA_TRUST enable
+    $UPDATE_CA_TRUST extract
+fi
+
+SLL_version=$(grep "VERSION_ID" /etc/os-release | cut -d\" -f2 | cut -d\. -f1)
+SLL_name=$(grep "^ID=" /etc/os-release | cut -d\" -f2 | cut -d\. -f1)
+if [[ ${SLL_version} -gt 8 ]]; then
+   SLL_name="SLL"
+   SLL_release_package="sll-release"
+elif [[ ${SLL_version} -eq 7 ]]; then
+   # if RES7 is present we always assume customer has bought LTSS, if he does not, script fails
+   # so no LTSS customers have to edit the script manually
+   if [ "${SLL_name}" = "ol" ]; then
+      SLL_name="RES-OL-LTSS"
+      SLL_version="7"
+      SLL_release_package="sles_es-release-server-ol"
+   else
+      SLL_name="RES-LTSS"
+      SLL_version="7"
+      SLL_release_package="sles_es-release-server"
+   fi
+   # stop when HA, because HA is not supported within LTSS for SLL7
+   if [ -f /etc/product.d/RES-HA.prod ]; then
+        usage "HA product is not supported in RES7 LTSS, please remove the product"
+   fi
+elif [[ ${SLL_version} -eq 8 ]]; then
+    SLL_name="RES"
+    SLL_release_package="sles_es-release"
+else
+   echo "Unsupported or unknown base version. Abort"
+   exit 1
+fi
+
+echo "Detected ${SLL_name} version: ${SLL_version}"
+
+echo "Importing repomd.xml.key"
+if [[ ${SLL_version} -eq 7 ]]; then
+  $CURL --silent --show-error --insecure ${REGURL}/repo/SUSE/Updates/${SLL_name%%-LTSS}/${SLL_version}-LTSS/x86_64/update/repodata/repomd.xml.key --output repomd.xml.key
+else
+  $CURL --silent --show-error --insecure ${REGURL}/repo/SUSE/Updates/${SLL_name}/${SLL_version}/x86_64/update/repodata/repomd.xml.key --output repomd.xml.key
+fi
+$RPM --import repomd.xml.key
+
+if [ ! -x $SUSECONNECT ]; then
+    echo "Downloading SUSEConnect"
+if [[ ${SLL_version} -gt 7 ]]; then
+
+    if [ ! -x $DNF ]; then
+        echo "dnf command not found. Abort."
+        exit 1
+    fi
+
+    echo "Disabling all repositories"
+    $DNF config-manager --disable $(dnf repolist -q | awk '{ print $1 }' | grep -v repo)
+    # sed -i 's/^enabled=1/enabled=0/' /etc/yum.repos.d/*
+    # on RHEL9 (not RHEL8) redhat-release is protected and cannot be updated to sll-release
+    if [ -f /etc/dnf/protected.d/redhat-release.conf ]; then
+       rm -f /etc/dnf/protected.d/redhat-release.conf
+    fi
+
+    $DNF config-manager --add-repo ${REGURL}/repo/SUSE/Updates/${SLL_name}/${SLL_version}/x86_64/update
+    $DNF config-manager --add-repo ${REGURL}/repo/SUSE/Updates/${SLL_name}-AS/${SLL_version}/x86_64/update
+    $DNF install -y --allowerasing ${SLL_release_package}
+
+    # For RHEL8/CentOS8, remove all old signing keys and import SUSE keys installed with sles_es-release package
+    if [[ ${SLL_version} -eq 8 ]]; then
+        import_rpm_signing_keys
+    fi
+
+    $DNF install SUSEConnect librepo
+    $DNF config-manager --set-disabled "${RMTNAME}_repo_SUSE_Updates_${SLL_name}_${SLL_version}_x86_64_update"
+    $DNF config-manager --set-disabled "${RMTNAME}_repo_SUSE_Updates_${SLL_name}-AS_${SLL_version}_x86_64_update"
+
+elif [[ ${SLL_version} -eq 7 ]]; then
+    # For SLL7 we need to have yum, yum_config_mgr, sles_os-release-server, etc..
+    if [ ! -x "$YUM_CONFIG_MGR" ]; then
+        echo "YUM config manager is not installed. Please install yum-config-manager and retry. Abort."
+        exit 1
+    fi
+
+    echo "Disabling all repositories"
+    $YUM_CONFIG_MGR --disable \* &gt; /dev/null
+
+    # on Centos /usr/share/redhat-release is a file, on RHEL and RES it is a directory
+    # so this is CentOS only workaround (on some system it is a normal file, on some systems a symlink)
+    if [ -f /usr/share/redhat-release ] || [ -h /usr/share/redhat-release ]; then
+       rm -f /usr/share/redhat-release
+    fi
+
+    $YUM_CONFIG_MGR --add-repo ${REGURL}/repo/SUSE/Updates/${SLL_name%%-LTSS}/${SLL_version}-LTSS/x86_64/update
+    if [ ${SLL_name} = "RES-OL-LTSS" ]; then
+    	$YUM_CONFIG_MGR --add-repo ${REGURL}/repo/SUSE/Updates/RES-BASE/${SLL_version}/x86_64/update
+    fi
+    $YUM_CONFIG_MGR --enable *suse.* &gt; /dev/null
+
+    $YUM install -y ${SLL_release_package} suseconnect-ng librepo
+    $YUM update -y yum
+    $YUM_CONFIG_MGR --disable \* &gt; /dev/null
+fi
+elif [[ ${SLL_version} -eq 8 ]]; then
+    # For SLL8, the release package is already installed, just import the keys
+    import_rpm_signing_keys
+fi
+
+$CURL --silent --show-error --insecure $REGURL/tools/rmt-client-setup --output rmt-client-setup
+echo "Running rmt-client-setup $PARAMS"
+if [ -n "$YES_PARAM" ]; then
+    PARAMS=$(echo $PARAMS | sed 's/--yes//')
+    yes | sh rmt-client-setup $PARAMS
+else
+    sh rmt-client-setup $PARAMS
+fi
+
+if [[ ${SLL_version} -gt 8 ]]; then
+    systemctl start suseconnect-keepalive.timer
+    systemctl enable suseconnect-keepalive.timer
+fi</pre></div></section><nav class="bottom-pagination"><div><a class="pagination-link prev" href="index.html"><span class="pagination-relation">Previous</span><span class="pagination-label">Registering CentOS Linux 7 with <span class="productname"><span class="phrase">SUSE Liberty Linux Lite</span></span></span></a> </div><div><a class="pagination-link next" href="apb.html"><span class="pagination-relation">Next</span><span class="pagination-label"><span class="title-number">Appendix B </span>GNU licenses</span></a> </div></nav></article><aside id="_side-toc-page" class="side-toc"><div class="side-title">Share this page</div><ul class="share"><li><a id="_share-fb" href="#" title="Facebook"> </a></li><li><a id="_share-in" href="#" title="LinkedIn"> </a></li><li><a id="_share-tw" href="#" title="Twitter/X"> </a></li><li><a id="_share-mail" href="#" title="E-Mail"> </a></li><li><a id="_print-button" href="#" title="Print this page"> </a></li></ul> </aside></main><footer id="_footer"><div class="growth-inhibitor"><div class="copy"><span class="copy__rights">© SUSE
+                 2024</span></div></div></footer></body></html>
