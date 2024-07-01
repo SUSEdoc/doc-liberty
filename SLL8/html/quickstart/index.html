@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><title>SLL | Registering RHEL 8 or CentOS Linux 8 with RMT</title><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"/><link rel="stylesheet" type="text/css" href="static/css/style.css"/>
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"/><link rel="schema.DCTERMS" href="http://purl.org/dc/terms/"/>
+<meta name="title" content="Registering RHEL 8 or CentOS Linux 8 with RMT | SLL"/>
+<meta name="description" content="How to use SUSE Liberty Linux to update Red Hat Enterprise Linux 8 or CentOS Linux 8."/>
+<meta name="product-name" content="SUSE Liberty Linux"/>
+<meta name="book-title" content="Registering RHEL 8 or CentOS Linux 8 with RMT"/>
+<meta name="tracker-url" content="https://github.com/SUSE/doc-liberty/issues/new"/>
+<meta name="tracker-type" content="gh"/>
+<meta name="tracker-gh-assignee" content="tahliar"/>
+<meta name="tracker-gh-labels" content="documentation,issue"/>
+<meta name="tracker-gh-milestone" content="8"/>
+<meta name="publisher" content="SUSE"/><meta property="og:title" content="Registering RHEL 8 or CentOS Linux 8 with RMT"/>
+<meta property="og:description" content="Use SUSE Liberty Linux to update RHEL 8 or CentOS 8."/>
+<meta property="og:type" content="article"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Registering RHEL 8 or CentOS Linux 8 with RMT"/>
+<meta name="twitter:description" content="Use SUSE Liberty Linux to update RHEL 8 or CentOS 8."/>
+<script type="application/ld+json">{
+    "@context": "http://schema.org",
+    "@type": ["TechArticle"],
+    "image": "https://www.suse.com/assets/img/suse-white-logo-green.svg",
+    
+     "isPartOf": {
+      "@type": "CreativeWorkSeries",
+      "name": "Product &amp; Solutions"
+    },
+    
+    "inLanguage": "en",
+    
+
+    "headline": "Registering RHEL 8 or CentOS Linux 8 with RMT",
+  
+    "description": "How to use SUSE Liberty Linux to update Red Hat Enterprise Linux 8 or CentOS Linux 8.",
+      
+    "author": [
+      {
+        "@type": "Corporation",
+        "name": "SUSE Product &amp; Solution Documentation Team",
+        "url": "https://www.suse.com/assets/img/suse-white-logo-green.svg"
+      }
+    ],
+      
+    "dateModified": "2024-06-27T00:00+02:00",
+      
+    "datePublished": "2022-04-01T00:00+02:00",
+      
+
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "Upgrade &amp; Update"
+      },
+      {
+        "@type": "Thing",
+        "name": "Administration"
+      }
+    ],
+  
+    "mentions": [
+      
+      { "@type": "SoftwareApplication",
+        "name": "SUSE Liberty Linux",
+        
+        "applicationCategory": "Operating System",
+        "operatingSystem": "Linux"
+      }
+      
+    ],
+    
+    "sameAs": [
+          "https://www.facebook.com/SUSEWorldwide/about",
+          "https://www.youtube.com/channel/UCHTfqIzPKz4f_dri36lAQGA",
+          "https://twitter.com/SUSE",
+          "https://www.linkedin.com/company/suse"
+    ],
+    "publisher": {
+      "@type": "Corporation",
+      "name": "SUSE",
+      "url": "https://documentation.suse.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.suse.com/assets/img/suse-white-logo-green.svg"
+      }
+    }
+  }</script>
+<link rel="next" href="apa.html" title="A. GNU licenses"/><script type="text/javascript">
+
+if ( window.location.protocol.toLowerCase() != 'file:' ) {
+  document.write('<link rel="stylesheet" type="text/css" href="https://documentation.suse.com/docserv/res/fonts/poppins/poppins.css"></link>');
+};
+
+</script><noscript><link rel="stylesheet" type="text/css" href="https://documentation.suse.com/docserv/res/fonts/poppins/poppins.css"/></noscript><script src="static/js/script-purejs.js" type="text/javascript"> </script><script src="static/js/highlight.min.js" type="text/javascript"> </script><script>
+
+$(document).ready(function() {
+  $('.verbatim-wrap.highlight').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+});
+hljs.configure({
+  useBR: false
+});
+
+</script><meta name="edit-url" content="https://github.com/SUSE/doc-liberty/edit/main/xml/art-quickstart.xml"/></head><body class="draft wide offline js-off" onload="$('#betawarn-button-wrap').toggle();if (document.cookie.length > 0) {if (document.cookie.indexOf('betawarn=closed') != -1){$('#betawarn').toggle()}};"><div id="betawarn" style="position:fixed;bottom:0;z-index:9025;background-color:#FDE8E8;padding:1em;margin-left:10%;margin-right:10%;display:block;border-top:.75em solid #E11;width:80%"><p style="color:#333;margin:1em 0;padding:0;">This is a draft document that was built and uploaded automatically. It may document beta software and be incomplete or even incorrect. <strong>Use this document at your own risk.</strong></p> <div id="betawarn-button-wrap" style="display:none;margin:0;padding:0;"><a href="#" onclick="$('#betawarn').toggle();var d=new Date();d.setTime(d.getTime()+(0.5*24*60*60*1000));document.cookie='betawarn=closed; expires='+d.toUTCString()+'; path=/'; return false;" style="color:#333;text-decoration:underline;float:left;margin-top:.5em;padding:1em;display:block;background-color:#FABEBE;">I understand this is a draft</a></div></div><div class="bypass-block"><a href="#_content">Jump to content</a><a href="#_bottom-pagination">Jump to page navigation: previous page [access key p]/next page [access key n]</a></div><header id="_mainnav"><div class="growth-inhibitor"><img src="static/images/logo.svg" alt="Logo" class="logo"/></div></header><div class="crumbs"><div class="growth-inhibitor"><a class="crumb" href="index.html">Registering RHEL 8 or CentOS Linux 8 with RMT</a></div></div><main id="_content"><nav id="_side-toc-overall" class="side-toc"><div class="side-title">Registering RHEL 8 or CentOS Linux 8 with RMT</div> </nav><button id="_open-side-toc-overall" title="Contents"> </button><article class="documentation"><button id="_unfold-side-toc-page">On this page</button><section xml:lang="en" class="article" id="art-quickstart" data-id-title="Registering RHEL 8 or CentOS Linux 8 with RMT"><div class="titlepage"><div><div class="big-version-info"><span class="productname">SUSE Liberty Linux</span></div><div><h1 class="title">Registering RHEL 8 or CentOS Linux 8 with RMT</h1></div><div class="date"><span class="imprint-label">Publication Date: </span>June 27, 2024
+</div><div><div class="abstract"><p>
+    This guide describes how to use SUSE Liberty Linux to update Red Hat Enterprise Linux 8
+    or CentOS Linux 8.
+   </p></div></div><div><div class="titlepage-revhistory"><a aria-label="Revision History" hreflang="en" href="rh-art-quickstart.html" target="_blank">Revision History: Registering RHEL 8 or CentOS Linux 8 with RMT</a></div></div></div></div><div><div xml:lang="en" class="legalnotice" id="id-1.1.5"><p>
+  Copyright © 2022–2024
+
+  SUSE LLC and contributors. All rights reserved.
+ </p><p>
+  Permission is granted to copy, distribute and/or modify this document under
+  the terms of the GNU Free Documentation License, Version 1.2 or (at your
+  option) version 1.3; with the Invariant Section being this copyright notice
+  and license. A copy of the license version 1.2 is included in the section
+  entitled <span class="quote">“<span class="quote">GNU Free Documentation License</span>”</span>.
+ </p><p>
+  For SUSE trademarks, see
+  <a class="link" href="https://www.suse.com/company/legal/" target="_blank">https://www.suse.com/company/legal/</a>. All
+  third-party trademarks are the property of their respective owners. Trademark
+  symbols (®, ™ etc.) denote trademarks of SUSE and its affiliates.
+  Asterisks (*) denote third-party trademarks.
+ </p><p>
+  All information found in this book has been compiled with utmost attention to
+  detail. However, this does not guarantee complete accuracy. Neither
+  SUSE LLC, its affiliates, the authors nor the translators shall be
+  held liable for possible errors or the consequences thereof.
+ </p></div></div><section class="sect1" id="introduction-quickstart" data-id-title="Introduction"><div class="titlepage"><div><div><div class="title-container"><h2 class="title"><span class="title-number-name"><span class="title-number">1 </span><span class="title-name">Introduction</span></span> <a title="Permalink" class="permalink" href="index.html#introduction-quickstart">#</a></h2><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-liberty/edit/main/xml/art-quickstart.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+    SUSE Liberty Linux is a technology and support solution for mixed Linux environments.
+    With a SUSE Liberty Linux subscription, you can register and receive updates for
+    Red Hat Enterprise Linux, CentOS Linux, and SUSE Linux Enterprise Server. An optional High Availability extension is also available.
+   </p><div id="id-1.2.3" class="admonition important compact"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.svg"/><p>
+     CentOS Stream is not supported.
+    </p></div><p>
+    You can register RHEL 8 or CentOS Linux 8 with one of the
+    following tools:
+   </p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
+         Repository Mirroring Tool (RMT)
+       </p></li><li class="listitem"><p>
+         SUSE Manager
+       </p></li></ul></div><p>
+    This guide describes how to register with an RMT server. RMT is a proxy system for the
+    SUSE Customer Center. The RMT server is registered with the SUSE Customer Center, and other systems in the network are
+    registered with the RMT server and receive packages from it directly.
+   </p><div class="itemizedlist"><div class="title-container"><div class="itemizedlist-title-wrap"><div class="itemizedlist-title"><span class="title-number-name"><span class="title-name">Procedure overview </span></span><a title="Permalink" class="permalink" href="index.html#id-1.2.7">#</a></div></div><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-liberty/edit/main/xml/art-quickstart.xml" title="Edit source document"> </a></div></div><ul class="itemizedlist"><li class="listitem"><p>
+      If you already have an RMT server and only need to <span class="bold"><strong>register your
+      RHEL 8 or CentOS Linux 8 system</strong></span>,
+      skip straight to <a class="xref" href="index.html#register-8-with-rmt" title="5. Registering RHEL or CentOS Linux with RMT">Section 5, “Registering RHEL or CentOS Linux with RMT”</a>.
+     </p></li><li class="listitem"><p>
+      If you already have an RMT server but still need to <span class="bold"><strong>mirror the
+      SUSE Liberty Linux 8 repositories</strong></span>, go to
+      <a class="xref" href="index.html#mirror-repositories-with-rmt" title="4. Mirroring SUSE Liberty Linux repositories with RMT">Section 4, “Mirroring SUSE Liberty Linux repositories with RMT”</a>.
+     </p></li><li class="listitem"><p>
+      If you still need to <span class="bold"><strong>set up the RMT server</strong></span>, start with
+      <a class="xref" href="index.html#install-rmt-vm" title="2. Installing a virtual machine to host RMT">Section 2, “Installing a virtual machine to host RMT”</a> and <a class="xref" href="index.html#configure-rmt-server" title="3. Configuring the RMT server">Section 3, “Configuring the RMT server”</a>.
+     </p></li></ul></div><div id="id-1.2.8" data-id-title="SUSE Liberty Linux and SUSE Linux Enterprise Server with Expanded Support" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.svg"/><div class="admon-title">Note: <span class="emphasis"><em>SUSE Liberty Linux</em></span> and <span class="emphasis"><em>SUSE Linux Enterprise Server with Expanded Support</em></span></div><p>
+     <span class="emphasis"><em>SUSE Liberty Linux</em></span> now provides what used to be covered by
+     the <span class="emphasis"><em>SUSE Linux Enterprise Server with Expanded Support</em></span> subscription. Some
+     components might still use the <span class="emphasis"><em>Expanded Support</em></span> name
+     during the transition period.
+    </p></div><div class="itemizedlist"><div class="title-container"><div class="itemizedlist-title-wrap"><div class="itemizedlist-title"><span class="title-number-name"><span class="title-name">Related information </span></span><a title="Permalink" class="permalink" href="index.html#id-1.2.9">#</a></div></div><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-liberty/edit/main/xml/art-quickstart.xml" title="Edit source document"> </a></div></div><ul class="itemizedlist"><li class="listitem"><p>
+      <a class="link" href="https://documentation.suse.com/sles-15/html/SLES-all/book-rmt.html" target="_blank">
+      <em class="citetitle">Repository Mirroring Tool Guide</em></a>
+     </p></li><li class="listitem"><p>
+      <a class="link" href="https://documentation.suse.com/liberty/7/html/quickstart-smt/art-quickstart-smt.html" target="_blank">
+      <em class="citetitle">Registering RHEL 7 or CentOS Linux 7 with SMT</em></a>
+     </p></li><li class="listitem"><p>
+      <a class="link" href="https://documentation.suse.com/liberty/7/html/quickstart/art-quickstart.html" target="_blank">
+      <em class="citetitle">Registering RHEL 7 or CentOS Linux 7 with RMT</em></a>
+     </p></li><li class="listitem"><p>
+      <a class="link" href="https://documentation.suse.com/liberty/9/html/quickstart/art-quickstart.html" target="_blank">
+      <em class="citetitle">Registering RHEL 9 with RMT</em></a>
+     </p></li><li class="listitem"><p>
+        <a class="link" href="https://documentation.suse.com/suma/en/suse-manager/client-configuration/clients-sleses.html" target="_blank">
+        <em class="citetitle">SUSE Manager Client Configuration Guide: Registering SUSE Liberty Linux Clients</em></a>
+      </p></li></ul></div></section><section xml:lang="en" class="sect1" id="install-rmt-vm" data-id-title="Installing a virtual machine to host RMT"><div class="titlepage"><div><div><div class="title-container"><h2 class="title"><span class="title-number-name"><span class="title-number">2 </span><span class="title-name">Installing a virtual machine to host RMT</span></span> <a title="Permalink" class="permalink" href="index.html#install-rmt-vm">#</a></h2><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-liberty/edit/main/xml/install-rmt-vm.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+    Use this procedure to install a SLES Minimal VM, a preconfigured virtual machine image that contains a
+    slimmed-down version of SUSE Linux Enterprise Server (SLES). This machine will be the Repository Mirroring Tool (RMT) server.
+    You can use your SUSE Liberty Linux subscription to register this machine.
+  </p><div id="id-1.3.4" class="admonition tip compact"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.svg"/><p>
+      If you would prefer to install a full SLES machine on bare metal, see
+      <a class="link" href="https://documentation.suse.com/sles-15/html/SLES-all/article-installation.html" target="_blank">
+      <em class="citetitle">Installation Quick Start</em></a>.
+    </p></div><div class="itemizedlist"><div class="title-container"><div class="itemizedlist-title-wrap"><div class="itemizedlist-title"><span class="title-number-name"><span class="title-name">Requirements </span></span><a title="Permalink" class="permalink" href="index.html#id-1.3.5">#</a></div></div><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-liberty/edit/main/xml/install-rmt-vm.xml" title="Edit source document"> </a></div></div><ul class="itemizedlist"><li class="listitem"><p>
+        You have a SUSE Liberty Linux subscription.
+      </p></li><li class="listitem"><p>
+        You have a <a class="link" href="https://scc.suse.com/" target="_blank">SUSE Customer Center</a> account.
+      </p></li><li class="listitem"><p>
+        The VM must have a static IP address and host name. This guide includes steps for configuring
+        the VM's network setup, but you must have basic networking knowledge to fill in the details.
+      </p></li><li class="listitem"><p>
+        You have the infrastructure to run virtual machines. This guide explains
+        how to set up the VM to host RMT, but does not describe how to use different
+        virtualization products. See the relevant documentation for your product.
+      </p></li><li class="listitem"><p>
+        The RMT server needs enough available disk space to mirror the SUSE Liberty Linux 8
+        repositories. Downloaded packages are stored in <code class="filename">/var/lib/rmt/public/repo/</code>.
+        The amount of storage required depends on the number of repositories you mirror.
+        We recommend at least 1.5 times the total size of all enabled repositories.
+      </p><div id="id-1.3.5.6.2" data-id-title="SUSE Liberty Linux 8 repository size" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.svg"/><div class="admon-title">Important: SUSE Liberty Linux 8 repository size</div><p>
+          The SUSE Liberty Linux repositories will grow substantially over time, because older package
+          versions are not removed. To meet the 1.5x size recommendation, based on the
+          current<a href="#ftn.id-1.3.5.6.2.2.1" class="footnote"><sup class="footnote" id="id-1.3.5.6.2.2.1">[1]</sup></a>
+          size of the SUSE Liberty Linux 8 repositories, you will need approximately
+          450 GB of disk space available for the RMT server.
+        </p></div></li></ul></div><div class="procedure" id="pro-install-rmt-vm" data-id-title="Installing a virtual machine to host RMT"><div class="title-container"><div class="procedure-title-wrap"><div class="procedure-title"><span class="title-number-name"><span class="title-number">Procedure 1: </span><span class="title-name">Installing a virtual machine to host RMT </span></span><a title="Permalink" class="permalink" href="index.html#pro-install-rmt-vm">#</a></div></div><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-liberty/edit/main/xml/install-rmt-vm.xml" title="Edit source document"> </a></div></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step"><p>
+        Download the appropriate <code class="literal">Minimal-VM</code> image for your virtualization
+        infrastructure from <a class="link" href="https://www.suse.com/download/sles/" target="_blank">https://www.suse.com/download/sles/</a>.
+      </p></li><li class="step"><p>
+        Use the <code class="literal">Minimal-VM</code> image to start the virtual machine.
+      </p><p>
+        The default disk size for SLES Minimal VM is 24 GB. If you can customize the configuration
+        before the installation begins, increase the available storage so there is enough
+        disk space for repository mirroring.
+      </p></li><li class="step"><p>
+        When the <code class="literal">JeOS Firstboot</code> screen appears, select <span class="guimenu">Start</span>.
+      </p></li><li class="step"><p>
+        Choose your keyboard layout and select <span class="guimenu">OK</span>.
+      </p></li><li class="step"><p>
+        Review the <code class="literal">End User License Agreement</code> and select <span class="guimenu">EXIT</span>.
+        To agree with the terms of the license, select <span class="guimenu">Yes</span>.
+      </p></li><li class="step"><p>
+        Choose your time zone and select <span class="guimenu">OK</span>.
+      </p></li><li class="step"><p>
+        Enter a <code class="systemitem">root</code> password and select <span class="guimenu">OK</span>, then confirm the password
+        and select <span class="guimenu">OK</span> again.
+      </p></li><li class="step"><p>
+        JeOS Firstboot shows the command to use to register this VM. You do not need to write this
+        down; the command is explained in this procedure. Select <span class="guimenu">OK</span>.
+      </p></li><li class="step"><p>
+        When the VM is ready, log in as the <code class="systemitem">root</code> user with the password you entered
+        during setup.
+      </p></li><li class="step"><p>
+        Register the VM using your SUSE Customer Center email address and the registration code for SUSE Liberty Linux:
+      </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">SUSEConnect -e <em class="replaceable">EMAIL_ADDRESS</em> -r <em class="replaceable">REGISTRATION_CODE</em></code></pre></div><p>
+        This activates the <code class="literal">Basesystem</code>, <code class="literal">Server Applications</code>,
+        and <code class="literal">Python 3</code> modules.
+      </p></li><li class="step"><p>
+        If you did not already increase the VM's disk space before the installation began,
+        increase it now. You might need to shut down the VM to do so. The VM must have enough
+        space to mirror the SUSE Liberty Linux 8 repository.
+      </p></li></ol></div></div><p>
+    You must also configure a static IP address and host name for the VM. If you are familiar
+    with any networking tools in SLES, configure the network with your preferred tool.
+    If not, use the YaST graphical interface:
+  </p><div class="procedure" id="pro-pro-install-rmt-vm-network" data-id-title="Setting a static IP address in YaST"><div class="title-container"><div class="procedure-title-wrap"><div class="procedure-title"><span class="title-number-name"><span class="title-number">Procedure 2: </span><span class="title-name">Setting a static IP address in YaST </span></span><a title="Permalink" class="permalink" href="index.html#pro-pro-install-rmt-vm-network">#</a></div></div><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-liberty/edit/main/xml/install-rmt-vm.xml" title="Edit source document"> </a></div></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step"><p>
+        Install YaST and the YaST <code class="literal">network</code> module:
+      </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">zypper install yast2 yast2-network</code></pre></div></li><li class="step"><p>
+        Start the YaST <code class="literal">network</code> module:
+      </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">yast2 lan</code></pre></div></li><li class="step"><p>
+        In the <span class="guimenu">Overview</span> tab, select <span class="guimenu">Edit</span> to change the settings
+        of the <code class="literal">eth0</code> device. The <span class="guimenu">Network Card Setup</span> dialog opens.
+      </p></li><li class="step"><p>
+        In the <span class="guimenu">Address</span> tab, activate <span class="guimenu">Statically Assigned IP Address</span>.
+      </p></li><li class="step"><p>
+        Fill in the <span class="guimenu">IP Address</span>, <span class="guimenu">Subnet Mask</span>, and
+        <span class="guimenu">Hostname</span> fields.
+      </p></li><li class="step"><p>
+        Select <span class="guimenu">Next</span>.
+      </p></li><li class="step"><p>
+        Switch to the <span class="guimenu">Hostname/DNS</span> tab and fill in the
+        <span class="guimenu">Static Hostname</span> field.
+      </p></li><li class="step"><p>
+        Change <span class="guimenu">Set Hostname via DHCP</span> to <code class="literal">no</code>.
+      </p></li><li class="step"><p>
+        Fill in at least one <span class="guimenu">Name Server</span> field.
+      </p></li><li class="step"><p>
+        Switch to the <span class="guimenu">Routing</span> tab and select <span class="guimenu">Add</span>. A new
+        dialog opens.
+      </p></li><li class="step"><p>
+        Fill in the <span class="guimenu">Gateway</span> field. Make sure to remove the <code class="literal">-</code>
+        character.
+      </p></li><li class="step"><p>
+        From the <span class="guimenu">Device</span> drop-down list, select <code class="literal">eth0</code>.
+      </p></li><li class="step"><p>
+        Select <span class="guimenu">OK</span> to close the dialog.
+      </p></li><li class="step"><p>
+        Select <span class="guimenu">OK</span> to complete the configuration and close YaST.
+      </p></li><li class="step"><p>
+        Check the network settings:
+      </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">ip addr</code></pre></div><p>
+        Check that the network interface can access external networks:
+      </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">ping www.suse.com</code></pre></div><p>
+        Cancel the ping with <span class="keycap">Ctrl</span><span class="key-connector">–</span><span class="keycap">C</span>.
+      </p></li></ol></div></div><p>
+    You can now install RMT on the virtual machine.
+  </p><div class="itemizedlist"><div class="title-container"><div class="itemizedlist-title-wrap"><div class="itemizedlist-title"><span class="title-number-name"><span class="title-name">More information </span></span><a title="Permalink" class="permalink" href="index.html#id-1.3.10">#</a></div></div><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-liberty/edit/main/xml/install-rmt-vm.xml" title="Edit source document"> </a></div></div><ul class="itemizedlist"><li class="listitem"><p>
+        <a class="link" href="https://documentation.suse.com/smart/virtualization-cloud/html/minimal-vm/" target="_blank">
+        Introduction to SLES Minimal VM</a>
+      </p></li><li class="listitem"><p>
+        <a class="link" href="https://documentation.suse.com/sles/15-SP5/html/SLES-all/book-virtualization.html" target="_blank">
+        Virtualization Guide</a>
+      </p></li></ul></div></section><section xml:lang="en" class="sect1" id="configure-rmt-server" data-id-title="Configuring the RMT server"><div class="titlepage"><div><div><div class="title-container"><h2 class="title"><span class="title-number-name"><span class="title-number">3 </span><span class="title-name">Configuring the RMT server</span></span> <a title="Permalink" class="permalink" href="index.html#configure-rmt-server">#</a></h2><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-liberty/edit/main/xml/configure-rmt-server.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+  Use this procedure to configure the Repository Mirroring Tool (RMT) on SUSE Linux Enterprise Server (SLES) 15.
+ </p><div class="itemizedlist"><div class="title-container"><div class="itemizedlist-title-wrap"><div class="itemizedlist-title"><span class="title-number-name"><span class="title-name">Requirements </span></span><a title="Permalink" class="permalink" href="index.html#id-1.4.4">#</a></div></div><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-liberty/edit/main/xml/configure-rmt-server.xml" title="Edit source document"> </a></div></div><ul class="itemizedlist"><li class="listitem"><p>
+    A SLES 15 virtual machine is installed as described in <a class="xref" href="index.html#install-rmt-vm" title="2. Installing a virtual machine to host RMT">Section 2, “Installing a virtual machine to host RMT”</a>.
+   </p></li><li class="listitem"><p>
+      The SLES machine has a static IP address and host name.
+    </p></li><li class="listitem"><p>
+    You have a <a class="link" href="https://scc.suse.com/" target="_blank">SUSE Customer Center</a> account and organization credentials.
+   </p></li></ul></div><div class="procedure" id="pro-configure-rmt-server" data-id-title="Configuring the RMT server"><div class="title-container"><div class="procedure-title-wrap"><div class="procedure-title"><span class="title-number-name"><span class="title-number">Procedure 3: </span><span class="title-name">Configuring the RMT server </span></span><a title="Permalink" class="permalink" href="index.html#pro-configure-rmt-server">#</a></div></div><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-liberty/edit/main/xml/configure-rmt-server.xml" title="Edit source document"> </a></div></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step"><p>
+    On the SLES machine, install RMT:
+   </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">zypper in rmt-server</code></pre></div></li><li class="step"><p>
+      Install the following packages, which are not installed by default on a SLES Minimal VM:
+    </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">zypper install yast2-rmt mariadb nginx</code></pre></div></li><li class="step"><p>
+    Start the YaST <code class="literal">rmt</code>:
+   </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">yast2 rmt</code></pre></div></li><li class="step"><p>
+    Enter your <span class="guimenu">Organization Credentials</span>, then select
+    <span class="guimenu">Next</span>.
+   </p><div id="id-1.4.5.5.2" class="admonition tip compact"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.svg"/><p>
+     To find your organization credentials, log in to the
+     <a class="link" href="https://scc.suse.com" target="_blank">SUSE Customer Center</a>, select your
+     organization from <span class="guimenu">My Organizations</span>, and click
+     <span class="guimenu">Proxies</span>. Your organization's <span class="guimenu">Mirroring
+      credentials</span> are in the top right corner.
+    </p></div></li><li class="step"><p>
+    Enter <span class="guimenu">Database Credentials</span> for a new MariaDB database user,
+    then select <span class="guimenu">Next</span>. The new user is created.
+   </p></li><li class="step"><p>
+    When prompted, enter and confirm a new password for the MariaDB root user, then select
+    <span class="guimenu">OK</span>.
+   </p></li><li class="step"><p>
+    Enter a <span class="guimenu">Common Name</span> for the SSL certificates. The common
+    name is usually the host name of the server.
+   </p></li><li class="step"><p>
+    If the server has other domain names or IP addresses, enter these as
+    <span class="guimenu">Alternative common names</span>. Select <span class="guimenu">Add</span>
+    to add new names. When all common names are entered, select <span class="guimenu">Next</span>.
+   </p></li><li class="step"><p>
+    If prompted, enter and confirm a password for the CA private key, then select
+    <span class="guimenu">OK</span>.
+   </p></li><li class="step"><p>
+    Activate the check box <span class="guimenu">Open Ports for HTTP and HTTPS in Firewall</span>,
+    then select <span class="guimenu">Next</span>.
+   </p></li><li class="step"><p>
+    YaST displays the <span class="guimenu">RMT Service Status</span>. If there are no issues,
+    select <span class="guimenu">Next</span>.
+   </p></li><li class="step"><p>
+    Review the <span class="guimenu">Configuration Summary</span>, then select
+    <span class="guimenu">Finish</span> to close YaST.
+   </p></li></ol></div></div><p>
+  YaST enables and starts all RMT <code class="systemitem">systemd</code> services and timers.
+ </p><div class="itemizedlist"><div class="title-container"><div class="itemizedlist-title-wrap"><div class="itemizedlist-title"><span class="title-number-name"><span class="title-name">More information </span></span><a title="Permalink" class="permalink" href="index.html#id-1.4.7">#</a></div></div><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-liberty/edit/main/xml/configure-rmt-server.xml" title="Edit source document"> </a></div></div><ul class="itemizedlist"><li class="listitem"><p>
+    <a class="link" href="https://documentation.suse.com/sles-15/html/SLES-all/cha-rmt-installation.html" target="_blank">
+    RMT installation and configuration</a>
+   </p></li></ul></div></section><section xml:lang="en" class="sect1" id="mirror-repositories-with-rmt" data-id-title="Mirroring SUSE Liberty Linux repositories with RMT"><div class="titlepage"><div><div><div class="title-container"><h2 class="title"><span class="title-number-name"><span class="title-number">4 </span><span class="title-name">Mirroring SUSE Liberty Linux repositories with RMT</span></span> <a title="Permalink" class="permalink" href="index.html#mirror-repositories-with-rmt">#</a></h2><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-liberty/edit/main/xml/mirror-repositories-with-rmt.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+  Use this procedure to mirror the SUSE Liberty Linux repositories for Red Hat Enterprise Linux 8
+  and CentOS Linux 8.
+ </p><div class="itemizedlist"><div class="title-container"><div class="itemizedlist-title-wrap"><div class="itemizedlist-title"><span class="title-number-name"><span class="title-name">Requirements </span></span><a title="Permalink" class="permalink" href="index.html#id-1.5.4">#</a></div></div><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-liberty/edit/main/xml/mirror-repositories-with-rmt.xml" title="Edit source document"> </a></div></div><ul class="itemizedlist"><li class="listitem"><p>
+        The RMT server is installed and up to date.
+   </p></li><li class="listitem"><p>
+    The RMT server has enough storage available for repository mirroring. The amount of storage
+    required depends on the number of repositories you mirror. We recommend at least 1.5 times
+    the total size of all enabled repositories. Be aware that the SUSE Liberty Linux repositories will
+    grow substantially over time.
+   </p></li><li class="listitem"><p>
+    Your organization credentials appear correctly in <code class="filename">/etc/rmt.conf</code>.
+   </p></li><li class="listitem"><p>
+    You have a SUSE Liberty Linux subscription activated in the <a class="link" href="https://scc.suse.com/" target="_blank">SUSE Customer Center</a>.
+   </p></li></ul></div><div class="procedure" id="pro-mirror-repositories-with-rmt" data-id-title="Mirroring the SUSE Liberty Linux repositories with RMT"><div class="title-container"><div class="procedure-title-wrap"><div class="procedure-title"><span class="title-number-name"><span class="title-number">Procedure 4: </span><span class="title-name">Mirroring the SUSE Liberty Linux repositories with RMT </span></span><a title="Permalink" class="permalink" href="index.html#pro-mirror-repositories-with-rmt">#</a></div></div><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-liberty/edit/main/xml/mirror-repositories-with-rmt.xml" title="Edit source document"> </a></div></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step"><p>
+    On the RMT server, update the available product and repository metadata:
+   </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">rmt-cli sync</code></pre></div><p>
+    Synchronization is also performed automatically by
+    <code class="systemitem">rmt-server-sync.timer</code>. You can check the status and
+    the next scheduled synchronization time with the following command:
+   </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">systemctl status rmt-server-sync.timer</code></pre></div></li><li class="step"><p>
+    Enable SUSE Liberty Linux 8 using the product ID <code class="literal">1921</code>:
+   </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">rmt-cli product enable 1921</code></pre></div><p>
+    This enables all the default repositories associated with the product.
+   </p></li><li class="step"><p>
+    If your subscription includes the High Availability extension, enable the extension using
+    the product ID <code class="literal">1922</code>:
+   </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">rmt-cli product enable 1922</code></pre></div><div id="id-1.5.5.4.3" class="admonition tip compact"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.svg"/><p>
+     To check whether the High Availability extension is available, run this
+     command: <code class="command">rmt-cli products list --all --name="Liberty" --version=8</code>
+    </p></div></li><li class="step"><p>
+    If you also need the <code class="literal">Source</code> or <code class="literal">Debug</code>
+    repositories, find and enable them with the following commands:
+   </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">rmt-cli repo list --all | grep RES-</code>
+<code class="prompt root"># </code><code class="command">rmt-cli repo enable <em class="replaceable">REPO_ID</em></code></pre></div></li><li class="step"><p>
+    Start package mirroring for the enabled repositories:
+   </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">rmt-cli mirror</code></pre></div><p>
+    Packages are downloaded to the RMT server once per day by
+    <code class="systemitem">rmt-server-mirror.timer</code>. You can check the status
+    and the next scheduled download time with the following command:
+   </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">systemctl status rmt-server-mirror.timer</code></pre></div></li></ol></div></div><div class="itemizedlist"><div class="title-container"><div class="itemizedlist-title-wrap"><div class="itemizedlist-title"><span class="title-number-name"><span class="title-name">More information </span></span><a title="Permalink" class="permalink" href="index.html#id-1.5.6">#</a></div></div><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-liberty/edit/main/xml/mirror-repositories-with-rmt.xml" title="Edit source document"> </a></div></div><ul class="itemizedlist"><li class="listitem"><p>
+    <a class="link" href="https://documentation.suse.com/sles-15/html/SLES-all/cha-rmt-mirroring.html" target="_blank">
+    Mirroring repositories on the RMT server</a>
+   </p></li></ul></div></section><section xml:lang="en" class="sect1" id="register-8-with-rmt" data-id-title="Registering RHEL or CentOS Linux with RMT"><div class="titlepage"><div><div><div class="title-container"><h2 class="title"><span class="title-number-name"><span class="title-number">5 </span><span class="title-name">Registering RHEL or CentOS Linux with RMT</span></span> <a title="Permalink" class="permalink" href="index.html#register-8-with-rmt">#</a></h2><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-liberty/edit/main/xml/register-with-rmt.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+  Use this procedure to register Red Hat Enterprise Linux 8 or CentOS Linux 8
+  with the RMT server.
+ </p><div id="id-1.6.4" class="admonition important compact"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.svg"/><p>
+   CentOS Stream is not supported.
+  </p></div><div class="itemizedlist"><div class="title-container"><div class="itemizedlist-title-wrap"><div class="itemizedlist-title"><span class="title-number-name"><span class="title-name">Requirements </span></span><a title="Permalink" class="permalink" href="index.html#id-1.6.5">#</a></div></div><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-liberty/edit/main/xml/register-with-rmt.xml" title="Edit source document"> </a></div></div><ul class="itemizedlist"><li class="listitem"><p>
+    The RMT server is running <span class="package">rmt-server</span> version 2.10 or later.
+   </p></li><li class="listitem"><p>
+    The SUSE Liberty Linux 8 repositories are available on the RMT server.
+   </p></li><li class="listitem"><p>
+    The system you want to register can access the RMT server.
+   </p></li><li class="listitem"><p>
+    The system you want to register is up to date. SUSE Liberty Linux only supports the latest
+    minor release of RHEL 8 or CentOS Linux 8.
+   </p></li><li class="listitem"><p>
+    You have a SUSE Liberty Linux subscription activated in the <a class="link" href="https://scc.suse.com/" target="_blank">SUSE Customer Center</a>.
+   </p></li><li class="listitem"><p>
+    You have removed the system from any Red Hat subscription services it was registered to.
+   </p></li></ul></div><div class="procedure" id="pro-register-rhel-with-rmt" data-id-title="Registering RHEL or CentOS Linux with RMT"><div class="title-container"><div class="procedure-title-wrap"><div class="procedure-title"><span class="title-number-name"><span class="title-number">Procedure 5: </span><span class="title-name">Registering RHEL or CentOS Linux with RMT </span></span><a title="Permalink" class="permalink" href="index.html#pro-register-rhel-with-rmt">#</a></div></div><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-liberty/edit/main/xml/register-with-rmt.xml" title="Edit source document"> </a></div></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step"><p>
+    Download the <code class="filename">rmt-client-setup-res</code> script:
+   </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">curl http://<em class="replaceable">RMT_SERVER</em>/tools/rmt-client-setup-res --output rmt-client-setup-res</code></pre></div></li><li class="step"><p>
+    Run the <code class="filename">rmt-client-setup-res</code> script with
+    the URL of the RMT server as a parameter:
+   </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">sh rmt-client-setup-res https://<em class="replaceable">RMT_SERVER</em></code></pre></div><p>
+    The script installs <code class="command">SUSEConnect</code> and its dependencies,
+    then downloads and runs the <code class="filename">rmt-client-setup</code> script,
+    which performs the following tasks:
+   </p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
+      Downloads all keys from
+      <code class="literal">http://<em class="replaceable">RMT_SERVER</em>/repo/keys</code>.
+     </p></li><li class="listitem"><p>
+      Imports the keys with <code class="command">gpg --import</code> and
+      <code class="command">rpm --import</code>.
+     </p></li><li class="listitem"><p>
+      Downloads the CA certificate from
+      <code class="literal">https://<em class="replaceable">RMT_SERVER</em>/rmt.crt</code>.
+     </p></li><li class="listitem"><p>
+      Imports the CA certificate to the trust store.
+     </p></li><li class="listitem"><p>
+      Uses <code class="command">SUSEConnect</code> to register the system with the
+      RMT server. Registering the system using <code class="command">SUSEConnect</code>
+      adds and enables all default repositories.
+     </p></li></ul></div><p>
+    You should see <code class="literal">Successfully registered system</code>.
+   </p></li><li class="step"><p>
+    Verify the installed product:
+   </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">SUSEConnect --status-text</code></pre></div><p>
+    You should see the following output:
+   </p><div class="verbatim-wrap"><pre class="screen">Installed Products:
+------------------------------------------
+
+  SLES Expanded Support platform release file
+  (RES/8/x86_64)
+
+  Registered
+
+------------------------------------------</pre></div></li><li class="step"><p>
+    Verify the available repositories:
+   </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">dnf repolist</code></pre></div><p>
+    You should see <code class="literal">RES-8-Updates</code>,
+    <code class="literal">RES-AS-8-Updates</code>,
+    and <code class="literal">RES-CB-8-Updates</code>.
+   </p></li><li class="step"><p>
+    If your subscription includes the High Availability extension, activate it with the
+    following command:
+   </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">SUSEConnect -p RES-HA/8/x86_64</code></pre></div><div id="id-1.6.6.6.3" class="admonition tip compact"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.svg"/><p>
+     To check whether the extension is available, run the
+     <code class="command">SUSEConnect --list-extensions</code> command.
+    </p></div></li><li class="step"><p>
+    Run the update command to make sure there are no errors:
+   </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">dnf update</code></pre></div></li></ol></div></div><p>
+  You can now keep your system up to date from repositories provided by SUSE Liberty Linux.
+ </p></section><section class="sect1" id="troubleshoot-quickstart" data-id-title="Troubleshooting"><div class="titlepage"><div><div><div class="title-container"><h2 class="title"><span class="title-number-name"><span class="title-number">6 </span><span class="title-name">Troubleshooting</span></span> <a title="Permalink" class="permalink" href="index.html#troubleshoot-quickstart">#</a></h2><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-liberty/edit/main/xml/art-quickstart.xml" title="Edit source document"> </a></div></div></div></div></div><div class="variablelist"><dl class="variablelist"><dt id="id-1.7.2.1"><span class="term"><code class="systemitem">nginx.service</code> is inactive after installing the
+    <span class="package">rmt-server</span> package</span></dt><dd><p>
+      Continue the procedure to configure RMT in YaST. This often resolves
+      the issue. If that fails, Apache might be installed on your server, and
+      must be disabled. Apache conflicts with NGINX because both web servers
+      listen on port 80.
+     </p></dd><dt id="id-1.7.2.2"><span class="term">SUSE Liberty Linux doesn't appear in <code class="command">rmt-cli products list</code>
+     after <code class="command">rmt-cli sync</code></span></dt><dd><p>
+      Check your network. If the network is down, <code class="command">rmt-cli sync</code> fails without
+      showing an error.
+     </p></dd><dt id="id-1.7.2.3"><span class="term">Mirroring completes with errors</span></dt><dd><p>
+      If some packages could not be downloaded because of timeouts, rerun the
+      <code class="command">rmt-cli mirror</code> command until all packages are downloaded.
+     </p></dd><dt id="id-1.7.2.4"><span class="term">Setup script cannot access the SUSE Liberty Linux repository</span></dt><dd><p>
+      The <code class="filename">repodata</code> directory on the RMT server will not
+      be available until all of the packages for that repository are downloaded.
+      If some packages could not be downloaded to the RMT server because of timeouts
+      during the first mirroring, rerun the <code class="command">rmt-cli mirror</code>
+      command until all packages are downloaded.
+     </p></dd><dt id="id-1.7.2.5"><span class="term">Setup script cannot install <span class="package">SUSEConnect</span> because of
+    package dependencies</span></dt><dd><p>
+      SUSE Liberty Linux only supports the latest minor release of RHEL or CentOS Linux.
+      If your system is running the latest version and <span class="package">SUSEConnect</span>
+      still has package dependency issues, try the following workaround:
+     </p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>
+        Edit the <code class="filename">rmt-client-setup-res</code> script to add
+        <code class="literal">--skip-broken</code> to the following line:
+       </p><div class="verbatim-wrap"><pre class="screen">$DNF install SUSEConnect librepo <span class="bold"><strong>--skip-broken</strong></span></pre></div></li><li class="listitem"><p>
+        Run the script and accept any proposed package changes.
+        <span class="package">SUSEConnect</span> will be skipped.
+       </p></li><li class="listitem"><p>
+        Run the script a second time. The package changes from the first attempt
+        can sometimes resolve the package dependency issues, allowing the second
+        attempt to successfully install <span class="package">SUSEConnect</span>.
+       </p></li></ol></div></dd></dl></div></section><div class="footnotes"><br/><hr class="footnote-hr"/><div id="ftn.id-1.3.5.6.2.2.1" class="footnote"><p><a href="#id-1.3.5.6.2.2.1" class="para"><sup class="para">[1] </sup></a>As of 27 June, 2024</p></div></div></section><nav class="bottom-pagination"><div> </div><div><a class="pagination-link next" href="apa.html"><span class="pagination-relation">Next</span><span class="pagination-label"><span class="title-number">Appendix A </span>GNU licenses</span></a> </div></nav></article><aside id="_side-toc-page" class="side-toc"><div class="side-title">On this page</div><div class="toc"><ul><li><span class="section"><a href="index.html#introduction-quickstart"><span class="title-number">1 </span><span class="title-name">Introduction</span></a></span></li><li><span class="section"><a href="index.html#install-rmt-vm"><span class="title-number">2 </span><span class="title-name">Installing a virtual machine to host RMT</span></a></span></li><li><span class="section"><a href="index.html#configure-rmt-server"><span class="title-number">3 </span><span class="title-name">Configuring the RMT server</span></a></span></li><li><span class="section"><a href="index.html#mirror-repositories-with-rmt"><span class="title-number">4 </span><span class="title-name">Mirroring SUSE Liberty Linux repositories with RMT</span></a></span></li><li><span class="section"><a href="index.html#register-8-with-rmt"><span class="title-number">5 </span><span class="title-name">Registering RHEL or CentOS Linux with RMT</span></a></span></li><li><span class="section"><a href="index.html#troubleshoot-quickstart"><span class="title-number">6 </span><span class="title-name">Troubleshooting</span></a></span></li><li><span class="appendix"><a href="apa.html"><span class="title-number">A </span><span class="title-name">GNU licenses</span></a></span><ul><li><span class="sect1"><a href="apa.html#id-1.8.4"><span class="title-number">A.1 </span><span class="title-name">GNU Free Documentation License</span></a></span></li></ul></li></ul></div><div class="side-title">Share this page</div><ul class="share"><li><a id="_share-fb" href="#" title="Facebook"> </a></li><li><a id="_share-in" href="#" title="LinkedIn"> </a></li><li><a id="_share-tw" href="#" title="Twitter/X"> </a></li><li><a id="_share-mail" href="#" title="E-Mail"> </a></li><li><a id="_print-button" href="#" title="Print this page"> </a></li></ul> </aside></main><footer id="_footer"><div class="growth-inhibitor"><div class="copy"><span class="copy__rights">© SUSE
+                 2024</span></div></div></footer></body></html>
