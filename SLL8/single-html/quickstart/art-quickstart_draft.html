@@ -133,17 +133,13 @@ hljs.configure({
    </p><div id="id-1.2.3" class="admonition important compact"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.svg"/><p>
      CentOS Stream is not supported.
     </p></div><p>
-    You can register RHEL 8 or CentOS Linux 8 with one of the
-    following tools:
-   </p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
-         Repository Mirroring Tool (RMT)
-       </p></li><li class="listitem"><p>
-         SUSE Manager
-       </p></li></ul></div><p>
+    You can register RHEL 8 or CentOS Linux 8 with either SUSE Manager
+    or the Repository Mirroring Tool (RMT). Registering directly with the SUSE Customer Center is not currently supported.
+   </p><p>
     This guide describes how to register with an RMT server. RMT is a proxy system for the
     SUSE Customer Center. The RMT server is registered with the SUSE Customer Center, and other systems in the network are
     registered with the RMT server and receive packages from it directly.
-   </p><div class="itemizedlist"><div class="title-container"><div class="itemizedlist-title-wrap"><div class="itemizedlist-title"><span class="title-number-name"><span class="title-name">Procedure overview </span></span><a title="Permalink" class="permalink" href="#id-1.2.7">#</a></div></div><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-liberty/edit/main/xml/art-quickstart.xml" title="Edit source document"> </a></div></div><ul class="itemizedlist"><li class="listitem"><p>
+   </p><div class="itemizedlist"><div class="title-container"><div class="itemizedlist-title-wrap"><div class="itemizedlist-title"><span class="title-number-name"><span class="title-name">Procedure overview </span></span><a title="Permalink" class="permalink" href="#id-1.2.6">#</a></div></div><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-liberty/edit/main/xml/art-quickstart.xml" title="Edit source document"> </a></div></div><ul class="itemizedlist"><li class="listitem"><p>
       If you already have an RMT server and only need to <span class="bold"><strong>register your
       RHEL 8 or CentOS Linux 8 system</strong></span>,
       skip straight to <a class="xref" href="#register-8-with-rmt" title="5. Registering RHEL or CentOS Linux with RMT">Section 5, “Registering RHEL or CentOS Linux with RMT”</a>.
@@ -154,12 +150,12 @@ hljs.configure({
      </p></li><li class="listitem"><p>
       If you still need to <span class="bold"><strong>set up the RMT server</strong></span>, start with
       <a class="xref" href="#install-rmt-vm" title="2. Installing a virtual machine to host RMT">Section 2, “Installing a virtual machine to host RMT”</a> and <a class="xref" href="#configure-rmt-server" title="3. Configuring the RMT server">Section 3, “Configuring the RMT server”</a>.
-     </p></li></ul></div><div id="id-1.2.8" data-id-title="SUSE Liberty Linux and SUSE Linux Enterprise Server with Expanded Support" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.svg"/><div class="admon-title">Note: <span class="emphasis"><em>SUSE Liberty Linux</em></span> and <span class="emphasis"><em>SUSE Linux Enterprise Server with Expanded Support</em></span></div><p>
+     </p></li></ul></div><div id="id-1.2.7" data-id-title="SUSE Liberty Linux and SUSE Linux Enterprise Server with Expanded Support" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.svg"/><div class="admon-title">Note: <span class="emphasis"><em>SUSE Liberty Linux</em></span> and <span class="emphasis"><em>SUSE Linux Enterprise Server with Expanded Support</em></span></div><p>
      <span class="emphasis"><em>SUSE Liberty Linux</em></span> now provides what used to be covered by
      the <span class="emphasis"><em>SUSE Linux Enterprise Server with Expanded Support</em></span> subscription. Some
      components might still use the <span class="emphasis"><em>Expanded Support</em></span> name
      during the transition period.
-    </p></div><div class="itemizedlist"><div class="title-container"><div class="itemizedlist-title-wrap"><div class="itemizedlist-title"><span class="title-number-name"><span class="title-name">Related information </span></span><a title="Permalink" class="permalink" href="#id-1.2.9">#</a></div></div><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-liberty/edit/main/xml/art-quickstart.xml" title="Edit source document"> </a></div></div><ul class="itemizedlist"><li class="listitem"><p>
+    </p></div><div class="itemizedlist"><div class="title-container"><div class="itemizedlist-title-wrap"><div class="itemizedlist-title"><span class="title-number-name"><span class="title-name">Related information </span></span><a title="Permalink" class="permalink" href="#id-1.2.8">#</a></div></div><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-liberty/edit/main/xml/art-quickstart.xml" title="Edit source document"> </a></div></div><ul class="itemizedlist"><li class="listitem"><p>
       <a class="link" href="https://documentation.suse.com/sles-15/html/SLES-all/book-rmt.html" target="_blank">
       <em class="citetitle">Repository Mirroring Tool Guide</em></a>
      </p></li><li class="listitem"><p>
