@@ -1,0 +1,767 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><title>Running OpenSCAP Compliance Scans for SUSE Multi-Linux Support 10 | SMLS</title><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"/><link rel="stylesheet" type="text/css" href="static/css/style-new.css"/>
+<link rel="schema.dc" href="http://purl.org/dc/elements/1.1/"/><link rel="schema.dcterms" href="http://purl.org/dc/terms/"/>
+<meta name="dcterms.created" content="2026-06-30"/>
+<meta name="dcterms.modified" content="2026-06-30"/>
+<meta name="dcterms.dateSubmitted" content="2026-06-29"/>
+<meta name="title" content="Running OpenSCAP Compliance Scans for SUSE Multi-Linux…"/>
+<meta name="description" content="How to use OpenSCAP to run compliance scans on systems registered with SUSE Multi-Linux Support 10."/>
+<meta name="product-name" content="SUSE Multi-Linux Support"/>
+<meta name="book-title" content="Running OpenSCAP Compliance Scans for SUSE Multi-Linux Support 10"/>
+<meta name="tracker-url" content="https://github.com/SUSE/doc-liberty/issues/new"/>
+<meta name="tracker-type" content="gh"/>
+<meta name="tracker-gh-assignee" content="tahliar"/>
+<meta name="tracker-gh-labels" content="documentation,issue"/>
+<meta name="tracker-gh-milestone" content="10"/>
+<meta name="publisher" content="SUSE"/><meta property="og:title" content="Running OpenSCAP compliance scans for SUSE Multi-Linux…"/>
+<meta property="og:description" content="Run compliance scans for SUSE Multi-Linux Support 10."/>
+<meta property="og:type" content="article"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Running OpenSCAP compliance scans for SUSE Multi-Linux…"/>
+<meta name="twitter:description" content="Run compliance scans for SUSE Multi-Linux Support 10."/>
+<script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": ["TechArticle"],
+    "image": "https://www.suse.com/assets/img/suse-white-logo-green.svg",
+    "name": "Running OpenSCAP compliance scans for SUSE Multi-Linux Support 10 | SMLS ",
+     "isPartOf": {
+      "@type": "CreativeWorkSeries",
+      "name": "Products &amp; Solutions"
+    },
+    
+    "inLanguage": "en",
+    
+
+    "headline": "Running OpenSCAP compliance scans for SUSE Multi-Linux Support 10",
+  
+    "description": "How to use OpenSCAP to run compliance scans on systems registered with SUSE Multi-Linux Support 10.",
+      
+    "author": [
+      {
+        "@type": "Corporation",
+        "name": "SUSE Product &amp; Solution Documentation Team",
+        "url": "https://documentation.suse.com"
+      }
+    ],
+      
+    "dateCreated": "2026-06-30T00:00+02:00",
+    "dateModified": "2026-06-30T00:00+02:00",
+    "datePublished": "2026-06-29T23:57+02:00",
+
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "Auditing"
+      },
+      {
+        "@type": "Thing",
+        "name": "Compliance"
+      }
+    ],
+    "mentions": [
+      { "@type": "SoftwareApplication",
+        "name": "SMLS",
+        "applicationCategory": "Operating System",
+        "operatingSystem": "Linux"
+      }
+    ],
+    
+    "sameAs": [
+          "https://www.facebook.com/SUSEWorldwide/about",
+          "https://www.youtube.com/channel/UCHTfqIzPKz4f_dri36lAQGA",
+          "https://twitter.com/SUSE",
+          "https://www.linkedin.com/company/suse"
+    ],
+    "publisher": {
+      "@type": "Corporation",
+      "name": "SUSE",
+      "url": "https://documentation.suse.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.suse.com/assets/img/suse-white-logo-green.svg"
+      }
+    }
+  }</script>
+<link type="text/css" rel="preload" as="style" onload="this.rel='stylesheet'" href="https://documentation.suse.com/docserv/res/fonts/suse/suse.css"/><script src="static/js/script-purejs.js" type="text/javascript"></script><script src="static/js/highlight.js" type="text/javascript"></script><script>hljs.highlightAll();</script><script src="static/js/ui-modifiers.js" type="text/javascript"></script><meta name="edit-url" content="https://github.com/SUSE/doc-liberty/edit/maintenance/SLL10/xml/art-compliance-scans.xml"/></head><body class="draft single normal offline js-off" onload="$('#betawarn-button-wrap').toggle();if (document.cookie.length > 0) {if (document.cookie.indexOf('betawarn=closed') != -1){$('#betawarn').toggle()}};"><div id="betawarn" style="position:fixed;bottom:0;z-index:9025;background-color:#FDE8E8;padding:1em;margin-left:10%;margin-right:10%;display:block;border-top:.75em solid #E11;width:80%"><p style="color:#333;margin:1em 0;padding:0;">This is a draft document that was built and uploaded automatically. It may document beta software and be incomplete or even incorrect. <strong>Use this document at your own risk.</strong></p> <div id="betawarn-button-wrap" style="display:none;margin:0;padding:0;"><a href="#" onclick="$('#betawarn').toggle();var d=new Date();d.setTime(d.getTime()+(0.5*24*60*60*1000));document.cookie='betawarn=closed; expires='+d.toUTCString()+'; path=/'; return false;" style="color:#333;text-decoration:underline;float:left;margin-top:.5em;padding:1em;display:block;background-color:#FABEBE;">I understand this is a draft</a></div></div><div class="bypass-block"><a href="#_content">Jump to content</a></div><header id="_mainnav"><div class="growth-inhibitor"><img src="static/images/logo.svg" alt="Logo" class="logo"/></div></header><div class="crumbs"><div class="growth-inhibitor"><a class="crumb" href="#art-compliance-scans">Running OpenSCAP Compliance Scans for SUSE Multi-Linux Support 10</a></div></div><main id="_content"><nav class="side-toc placebo" id="_side-toc-overall"> </nav><article class="documentation"><button id="_unfold-side-toc-page">On this page</button><section xml:lang="en" class="article" id="art-compliance-scans" data-id-title="Running OpenSCAP Compliance Scans for SUSE Multi-Linux Support 10"><div class="titlepage"><div><div class="big-version-info"><span class="productname">SUSE Multi-Linux Support</span></div><div><h1 class="title">Running OpenSCAP Compliance Scans for SUSE Multi-Linux Support 10</h1></div><div class="date"><span class="imprint-label">Publication Date: </span>June 29, 2026
+</div><div><div class="abstract"><p>
+    This guide explains how to use OpenSCAP to run compliance scans on
+    Enterprise Linux systems registered with SUSE Multi-Linux Support 10.
+   </p></div></div><div><div class="titlepage-revhistory"><a aria-label="Revision History: Running OpenSCAP Compliance Scans for SUSE Multi-Linux Support 10" hreflang="en" href="rh-art-compliance-scans.html" target="_blank">Revision History: Running OpenSCAP Compliance Scans for SUSE Multi-Linux Support 10</a></div></div></div></div><div><div xml:lang="en" class="legalnotice" id="id-1.1.5"><p>
+  Copyright © 2022–2026
+
+  SUSE LLC and contributors. All rights reserved.
+ </p><p>
+  Permission is granted to copy, distribute and/or modify this document under
+  the terms of the GNU Free Documentation License, Version 1.2 or (at your
+  option) version 1.3; with the Invariant Section being this copyright notice
+  and license. A copy of the license version 1.2 is included in the section
+  entitled <span class="quote">“<span class="quote">GNU Free Documentation License</span>”</span>.
+ </p><p>
+  For SUSE trademarks, see
+  <a class="link" href="https://www.suse.com/company/legal/" target="_blank">https://www.suse.com/company/legal/</a>. All
+  third-party trademarks are the property of their respective owners. Trademark
+  symbols (®, ™ etc.) denote trademarks of SUSE and its affiliates.
+  Asterisks (*) denote third-party trademarks.
+ </p><p>
+  All information found in this book has been compiled with utmost attention to
+  detail. However, this does not guarantee complete accuracy. Neither
+  SUSE LLC, its affiliates, the authors nor the translators shall be
+  held liable for possible errors or the consequences thereof.
+ </p></div></div><div id="id-1.2" data-id-title="Disclaimer" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.svg"/><div class="admon-title">Important: Disclaimer</div><p>
+    SUSE seeks to provide customers with quick and easy guides that can
+    assist them in maintaining security compliance. Implementation of the
+    settings contained within this guide without its prior testing in a
+    non-operational environment is highly discouraged. The developers of
+    these profiles and documentation have made reasonable efforts to ensure
+    overall compliance. They assume no responsibility for its use by other
+    parties, and make no guarantee, expressed or implied, about its quality,
+    reliability or any other characteristic.
+  </p></div><section class="sect1" id="sec-compliance-scans-introduction" data-id-title="Introduction"><div class="titlepage"><div><div><div class="title-container"><h2 class="title"><span class="title-number-name"><span class="title-number">1 </span><span class="title-name">Introduction</span></span> <a title="Permalink" class="permalink" href="#sec-compliance-scans-introduction">#</a></h2><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-liberty/edit/maintenance/SLL10/xml/art-compliance-scans.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+  SUSE Multi-Linux Support is a technology and support solution for mixed Linux environments. With a
+  SUSE Multi-Linux Support subscription, you can update Red Hat Enterprise Linux from repositories provided by SUSE.
+  This means you get support from SUSE with no requirement to migrate your existing
+  infrastructure to a different operating system.
+</p><p>
+      Because SUSE Multi-Linux Support uses its own branding and paths that are different from RHEL,
+      it also uses different profiles for running compliance scans with OpenSCAP.
+    </p><p>
+      SCAP is a framework of specifications that support automated configuration, vulnerability
+      scanning, and policy compliance evaluation of systems deployed in an organization.
+      OpenSCAP is a collection of open source tools that implement the SCAP framework for Linux.
+    </p><p>
+      SUSE Multi-Linux Support provides the following components in its software update repositories:
+    </p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
+          The OpenSCAP scanner and utilities.
+        </p></li><li class="listitem"><p>
+          The SCAP Security Guide, a collection of security guidance and baselines from
+          <a class="link" href="https://github.com/ComplianceAsCode/content" target="_blank">https://github.com/ComplianceAsCode/content</a>
+          to apply against systems for compliance.
+        </p></li><li class="listitem"><p>
+          SCAP Workbench, a utility with a graphical user interface for
+          SCAP content tailoring, editing, and validation.
+        </p></li></ul></div><p>
+      This guide describes running compliance scans locally using the <code class="command">oscap</code>
+      command-line tool. To run scans remotely or with the SCAP Workbench GUI tool,
+      see the list of <a class="xref" href="#compliance-scans-related-information" title="Related information">Related information</a>.
+    </p><div id="id-1.3.8" data-id-title="Third-party compliance tools are not supported" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.svg"/><div class="admon-title">Important: Third-party compliance tools are not supported</div><p>
+        Third-party compliance tools, such as proprietary security scanners and upstream builds
+        of <code class="literal">ComplianceAsCode</code> content, might not recognize SUSE Multi-Linux Support properly
+        and are not currently supported.
+      </p></div><div class="orderedlist" id="compliance-scans-procedure-overview" data-id-title="Overview of procedures"><div class="title-container"><div class="orderedlist-title-wrap"><div class="orderedlist-title"><span class="title-number-name"><span class="title-name">Overview of procedures </span></span><a title="Permalink" class="permalink" href="#compliance-scans-procedure-overview">#</a></div></div><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-liberty/edit/maintenance/SLL10/xml/art-compliance-scans.xml" title="Edit source document"> </a></div></div><ol class="orderedlist" type="1"><li class="listitem"><p>
+          Review <a class="xref" href="#compliance-scans-requirements" title="2. Requirements">Section 2, “Requirements”</a> to make sure your
+          system has the registration and packages required to run compliance scans
+          with SUSE Multi-Linux Support profiles.
+        </p></li><li class="listitem"><p>
+          Choose a profile for running compliance scans in
+          <a class="xref" href="#compliance-scans-list-profiles" title="3. Choosing an OpenSCAP compliance profile">Section 3, “Choosing an OpenSCAP compliance profile”</a>.
+        </p></li><li class="listitem"><p>
+          Run the compliance scan, as described in <a class="xref" href="#compliance-scans-generate-report" title="4. Running an OpenSCAP compliance scan">Section 4, “Running an OpenSCAP compliance scan”</a>.
+          If you need to include remote resources in the compliance scan, use
+          <a class="xref" href="#compliance-scans-remote-resources" title="5. Including remote resources in an OpenSCAP scan">Section 5, “Including remote resources in an OpenSCAP scan”</a> instead.
+        </p></li><li class="listitem"><p>
+          Review the report generated by the compliance scan.
+          <a class="xref" href="#compliance-scans-use-report" title="6. Reviewing the OpenSCAP evaluation report">Section 6, “Reviewing the OpenSCAP evaluation report”</a> shows examples of the main sections
+          of the report.
+        </p></li></ol></div><div id="id-1.3.10" data-id-title="SUSE Multi-Linux Support and SUSE Liberty Linux" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.svg"/><div class="admon-title">Note: <span><em class="emphasis">SUSE Multi-Linux Support</em></span> and <span><em class="emphasis">SUSE Liberty Linux</em></span></div><p>
+    <span><em class="emphasis">SUSE Multi-Linux Support</em></span> was previously named <span><em class="emphasis">SUSE Liberty Linux</em></span>.
+    During the transition period, some components might still use the name
+    <span><em class="emphasis">SUSE Liberty Linux</em></span>.
+  </p></div><div class="itemizedlist" id="compliance-scans-related-information" data-id-title="Related information"><div class="title-container"><div class="itemizedlist-title-wrap"><div class="itemizedlist-title"><span class="title-number-name"><span class="title-name">Related information </span></span><a title="Permalink" class="permalink" href="#compliance-scans-related-information">#</a></div></div><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-liberty/edit/maintenance/SLL10/xml/art-compliance-scans.xml" title="Edit source document"> </a></div></div><ul class="itemizedlist"><li class="listitem"><p>
+          <em class="citetitle">OpenSCAP User Manual</em>:
+          <a class="link" href="https://static.open-scap.org/openscap-1.2/oscap_user_manual.html" target="_blank">https://static.open-scap.org/openscap-1.2/oscap_user_manual.html</a>
+        </p></li><li class="listitem"><p>
+          <em class="citetitle">SCAP Security Guide</em>:
+          <a class="link" href="https://www.open-scap.org/security-policies/scap-security-guide/" target="_blank">https://www.open-scap.org/security-policies/scap-security-guide/</a>
+        </p></li><li class="listitem"><p>
+          <code class="literal">ComplianceAsCode</code> README:
+          <a class="link" href="https://github.com/ComplianceAsCode/content/" target="_blank">https://github.com/ComplianceAsCode/content/</a>
+        </p></li><li class="listitem"><p>
+          <a class="link" href="https://documentation.suse.com/compliance/all/html/SLES-openscap/article-openscap.html" target="_blank">
+          <em class="citetitle">Hardening SUSE Linux Enterprise with OpenSCAP</em></a>
+        </p></li></ul></div></section><section class="sect1" id="compliance-scans-requirements" data-id-title="Requirements"><div class="titlepage"><div><div><div class="title-container"><h2 class="title"><span class="title-number-name"><span class="title-number">2 </span><span class="title-name">Requirements</span></span> <a title="Permalink" class="permalink" href="#compliance-scans-requirements">#</a></h2><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-liberty/edit/maintenance/SLL10/xml/art-compliance-scans.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+      Before running compliance scans, make sure your system meets the following requirements:
+    </p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
+          You can log in to the target system as either the <code class="systemitem">root</code> user or a user with
+          <code class="command">sudo</code> privileges. Without <code class="systemitem">root</code> access, some tests in the
+          compliance scan might not run correctly.
+        </p></li><li class="listitem"><p>
+          The target system is registered with SUSE Multi-Linux Support, as described in one
+          of the following guides:
+        </p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
+              <a class="link" href="https://documentation.suse.com/liberty/10/html/quickstart-rmt/art-quickstart-rmt.html" target="_blank">
+              Registering RHEL 10 with RMT</a>
+            </p></li><li class="listitem"><p>
+              <a class="link" href="https://documentation.suse.com/liberty/10/html/quickstart-smlm/art-quickstart-smlm.html" target="_blank">
+              Registering RHEL 10 with SUSE Multi-Linux Manager</a>
+            </p></li></ul></div></li><li class="listitem"><p>
+          The most recent versions of the following packages are installed:
+        </p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
+              <span class="package">sll-release</span>
+            </p></li><li class="listitem"><p>
+              <span class="package">openscap</span>
+            </p></li><li class="listitem"><p>
+              <span class="package">openscap-scanner</span>
+            </p></li><li class="listitem"><p>
+              <span class="package">scap-security-guide</span>
+            </p></li></ul></div><p>
+          Installing these packages might also install additional dependencies.
+        </p></li><li class="listitem"><p>
+          The installed packages are provided by SUSE. You can use <code class="command">rpm -qi</code>
+          to check the vendor. For example:
+        </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">rpm -qi openscap-scanner | grep -i vendor</code>
+Vendor      : SUSE LLC &lt;https://www.suse.com/&gt;</pre></div><p>
+          You can also check the distribution name. For example:
+        </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">rpm -q --queryformat '%{DISTRIBUTION}\n' openscap</code>
+SUSE Liberty Linux</pre></div><p>
+          If the vendor or distribution is different from the output shown above,
+          reinstall the packages from the SUSE Multi-Linux Support 10 repositories,
+          and make sure no other repository overrides SUSE Multi-Linux Support.
+        </p></li></ul></div><div id="id-1.4.4" data-id-title="SCAP Workbench" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.svg"/><div class="admon-title">Tip: SCAP Workbench</div><p>
+        The optional package <span class="package">scap-workbench</span> is also available,
+        but is not required to run scans locally from the command line.
+      </p><p>
+        As a security best practice, avoid installing an application software such as
+        SCAP Workbench on the target system. Instead, install SCAP Workbench on a
+        client machine and scan the target system remotely.
+      </p></div></section><section class="sect1" id="compliance-scans-list-profiles" data-id-title="Choosing an OpenSCAP compliance profile"><div class="titlepage"><div><div><div class="title-container"><h2 class="title"><span class="title-number-name"><span class="title-number">3 </span><span class="title-name">Choosing an OpenSCAP compliance profile</span></span> <a title="Permalink" class="permalink" href="#compliance-scans-list-profiles">#</a></h2><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-liberty/edit/maintenance/SLL10/xml/art-compliance-scans.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+      The SCAP Security Guide contains the latest set of security polices for Linux systems. Each security policy
+      includes multiple compliance profiles, which contain sets of rules to test the system against.
+      Before you can run a compliance scan, you must choose the appropriate compliance profile
+      for your system.
+    </p><div id="id-1.5.3" data-id-title="Security policy compatibility" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.svg"/><div class="admon-title">Tip: Security policy compatibility</div><p>
+        The security policies are installed in <code class="filename">/usr/share/xml/scap/ssg/content/</code>.
+        For compatibility, builds of the SCAP Security Guide for SUSE Multi-Linux Support also provide RHEL policies in
+        the same location.
+      </p></div><p>
+      To list the profiles for SUSE Multi-Linux Support 10, query
+      the <code class="literal">ssg-sl_linux10-ds</code> security policy:
+    </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">oscap info /usr/share/xml/scap/ssg/content/ssg-sl_linux10-ds.xml</code></pre></div><p>
+      You can use <code class="command">grep</code> to narrow down the results. For example,
+      to see only CIS profiles, run the following command:
+    </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">oscap info /usr/share/xml/scap/ssg/content/ssg-sl_linux10-ds.xml | grep -i cis</code>
+      Title: <span><span class="emphasis"><strong>CIS</strong></span></span> SUSE Liberty Linux 10 Benchmark for Level 2 - Server
+        Id: xccdf_org.ssgproject.content_profile_<span><span class="emphasis"><strong>cis</strong></span></span>
+      Title: <span><span class="emphasis"><strong>CIS</strong></span></span> SUSE Liberty Linux 10 Benchmark for Level 1 - Server
+        Id: xccdf_org.ssgproject.content_profile_<span><span class="emphasis"><strong>cis</strong></span></span>_server_l1
+      Title: <span><span class="emphasis"><strong>CIS</strong></span></span> SUSE Liberty Linux 10 Benchmark for Level 1 - Workstation
+        Id: xccdf_org.ssgproject.content_profile_<span><span class="emphasis"><strong>cis</strong></span></span>_workstation_l1
+      Title: <span><span class="emphasis"><strong>CIS</strong></span></span> SUSE Liberty Linux 10 Benchmark for Level 2 - Workstation
+        Id: xccdf_org.ssgproject.content_profile_<span><span class="emphasis"><strong>cis</strong></span></span>_workstation_l2</pre></div><p>
+      Select the profile to use. You will specify this profile when you run the compliance scan.
+    </p><p>
+      The output of <code class="command">oscap info</code> also includes a <code class="literal">WARNING</code>
+      if the security policy includes a reference to remote resources from
+      <a class="link" href="https://ftp.suse.com" target="_blank">https://ftp.suse.com</a>. Using remote resources in the compliance scan
+      is not compulsory, but can provide useful data about known security vulnerabilities.
+      You can continue with either of the following options:
+    </p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
+          Ignore the warning and perform the compliance scan without remote resources, as
+          described in <a class="xref" href="#compliance-scans-generate-report" title="4. Running an OpenSCAP compliance scan">Section 4, “Running an OpenSCAP compliance scan”</a>.
+        </p></li><li class="listitem"><p>
+          Download the remote resources and use them in the compliance scan, as described in
+          <a class="xref" href="#compliance-scans-remote-resources" title="5. Including remote resources in an OpenSCAP scan">Section 5, “Including remote resources in an OpenSCAP scan”</a>.
+        </p></li></ul></div></section><section class="sect1" id="compliance-scans-generate-report" data-id-title="Running an OpenSCAP compliance scan"><div class="titlepage"><div><div><div class="title-container"><h2 class="title"><span class="title-number-name"><span class="title-number">4 </span><span class="title-name">Running an OpenSCAP compliance scan</span></span> <a title="Permalink" class="permalink" href="#compliance-scans-generate-report">#</a></h2><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-liberty/edit/maintenance/SLL10/xml/art-compliance-scans.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+      After choosing a profile, run a compliance scan on the target system with the
+      <code class="command">oscap xccdf eval</code> command. Specify the profile as shown in
+      the following example:
+    </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">oscap xccdf eval \</code>
+<code class="command">--profile xccdf_org.ssgproject.content_profile_cis \</code><span class="callout" id="co-compliance-scans-profile">1</span>
+<code class="command">--report /tmp/report.html \</code><span class="callout" id="co-compliance-scans-report">2</span>
+<code class="command">--results-arf /tmp/results-arf.xml \</code><span class="callout" id="co-compliance-scans-results">3</span>
+<code class="command">/usr/share/xml/scap/ssg/content/ssg-sl_linux10-ds.xml</code><span class="callout" id="co-compliance-scans-content">4</span></pre></div><div class="calloutlist"><table style="border: 0; "><tr><td style="width: 5%; vertical-align: top; text-align: left; "><p><a href="#co-compliance-scans-profile"><span class="callout">1</span></a> </p></td><td style="vertical-align: top; text-align: left; "><p>
+          The compliance profile to use for the scan.
+        </p></td></tr><tr><td style="width: 5%; vertical-align: top; text-align: left; "><p><a href="#co-compliance-scans-report"><span class="callout">2</span></a> </p></td><td style="vertical-align: top; text-align: left; "><p>
+          Where to save the HTML report with test results and recommended remediations.
+        </p></td></tr><tr><td style="width: 5%; vertical-align: top; text-align: left; "><p><a href="#co-compliance-scans-results"><span class="callout">3</span></a> </p></td><td style="vertical-align: top; text-align: left; "><p>
+          Where to save the XML report, which can be used later in automation and
+          report generation.
+        </p></td></tr><tr><td style="width: 5%; vertical-align: top; text-align: left; "><p><a href="#co-compliance-scans-content"><span class="callout">4</span></a> </p></td><td style="vertical-align: top; text-align: left; "><p>
+          The SCAP Security Guide policy file that the compliance profile belongs to.
+        </p></td></tr></table></div><p>
+      The compliance scan collects information from the target system and evaluates it against
+      rules set by the selected compliance profile. The scan will take some time to complete.
+      The results are saved in the specified files and also appear on screen, as shown
+      in this example snippet:
+    </p><div class="verbatim-wrap"><pre class="screen">Title   Configure auditd Max Log File Size
+Rule    xccdf_org.ssgproject.content_rule_auditd_data_retention_max_log_file
+Result  pass
+
+Title   Configure auditd max_log_file_action Upon Reaching Maximum Log Size
+Rule    xccdf_org.ssgproject.content_rule_auditd_data_retention_max_log_file_action
+Result  fail</pre></div><p>
+      When the scan is complete, you can review the report by opening
+      <code class="filename">/tmp/report.html</code> in a browser. See
+      <a class="xref" href="#compliance-scans-use-report" title="6. Reviewing the OpenSCAP evaluation report">Section 6, “Reviewing the OpenSCAP evaluation report”</a> for examples of the report.
+    </p></section><section class="sect1" id="compliance-scans-remote-resources" data-id-title="Including remote resources in an OpenSCAP scan"><div class="titlepage"><div><div><div class="title-container"><h2 class="title"><span class="title-number-name"><span class="title-number">5 </span><span class="title-name">Including remote resources in an OpenSCAP scan</span></span> <a title="Permalink" class="permalink" href="#compliance-scans-remote-resources">#</a></h2><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-liberty/edit/maintenance/SLL10/xml/art-compliance-scans.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+      SUSE Multi-Linux Support provides external OVAL-formatted content for use in scans. This content is
+      downloaded from <a class="link" href="https://ftp.suse.com/pub/projects/security/oval/" target="_blank">https://ftp.suse.com/pub/projects/security/oval/</a> and
+      includes information such as recently addressed security vulnerabilities.
+      Scans using remote resources take longer and generate larger reports.
+    </p><p>
+      To include remote content in a compliance scan, use one of the following procedures:
+    </p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
+          Directly download the remote content during the compliance scan, as described in
+          <a class="xref" href="#pro-compliance-scans-remote-resources-realtime" title="Fetching remote resources during a compliance scan">Procedure 1, “Fetching remote resources during a compliance scan”</a>.
+        </p></li><li class="listitem"><p>
+          Download the remote content and save it as a local file, as described
+          in <a class="xref" href="#pro-compliance-scans-remote-resources-download" title="Saving remote resources locally to use in a compliance scan">Procedure 2, “Saving remote resources locally to use in a compliance scan”</a>.
+          This can be useful for systems with stricter security policies
+          (for example, if OpenSCAP cannot access external networks).
+        </p></li></ul></div><div class="procedure" id="pro-compliance-scans-remote-resources-realtime" data-id-title="Fetching remote resources during a compliance scan"><div class="title-container"><div class="procedure-title-wrap"><div class="procedure-title"><span class="title-number-name"><span class="title-number">Procedure 1: </span><span class="title-name">Fetching remote resources during a compliance scan </span></span><a title="Permalink" class="permalink" href="#pro-compliance-scans-remote-resources-realtime">#</a></div></div><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-liberty/edit/maintenance/SLL10/xml/art-compliance-scans.xml" title="Edit source document"> </a></div></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step"><p>
+          Make sure the machine you run the scan from has access to
+          <a class="link" href="https://ftp.suse.com" target="_blank">https://ftp.suse.com</a>:
+        </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">nc -zv ftp.suse.com 21</code>
+Connection to ftp.suse.com 21 port [tcp/ftp] succeeded!</pre></div></li><li class="step"><p>
+          Run the compliance scan with the <code class="literal">--fetch-remote-resources</code> option:
+        </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">oscap xccdf eval --fetch-remote-resources \</code><span class="callout" id="co-fetch-remote-option">1</span>
+<code class="command">--profile xccdf_org.ssgproject.content_profile_cis \</code><span class="callout" id="co-fetch-remote-profile">2</span>
+<code class="command">--report /tmp/report.html \</code><span class="callout" id="co-fetch-remote-report">3</span>
+<code class="command">--results-arf /tmp/results-arf.xml \</code><span class="callout" id="co-fetch-remote-results">4</span>
+<code class="command">/usr/share/xml/scap/ssg/content/ssg-sl_linux10-ds.xml</code><span class="callout" id="co-fetch-remote-content">5</span></pre></div><div class="calloutlist"><table style="border: 0; "><tr><td style="width: 5%; vertical-align: top; text-align: left; "><p><a href="#co-fetch-remote-option"><span class="callout">1</span></a> </p></td><td style="vertical-align: top; text-align: left; "><p>
+              Fetches remote resources from <a class="link" href="https://ftp.suse.com" target="_blank">https://ftp.suse.com</a> for use in the
+              compliance scan.
+            </p></td></tr><tr><td style="width: 5%; vertical-align: top; text-align: left; "><p><a href="#co-fetch-remote-profile"><span class="callout">2</span></a> </p></td><td style="vertical-align: top; text-align: left; "><p>
+              The compliance profile to use for the scan.
+            </p></td></tr><tr><td style="width: 5%; vertical-align: top; text-align: left; "><p><a href="#co-fetch-remote-report"><span class="callout">3</span></a> </p></td><td style="vertical-align: top; text-align: left; "><p>
+              Where to save the HTML report with test results and recommended remediations.
+            </p></td></tr><tr><td style="width: 5%; vertical-align: top; text-align: left; "><p><a href="#co-fetch-remote-results"><span class="callout">4</span></a> </p></td><td style="vertical-align: top; text-align: left; "><p>
+              Where to save the XML report, which can be used later in automation and
+              report generation.
+            </p></td></tr><tr><td style="width: 5%; vertical-align: top; text-align: left; "><p><a href="#co-fetch-remote-content"><span class="callout">5</span></a> </p></td><td style="vertical-align: top; text-align: left; "><p>
+              The SCAP Security Guide policy file that the compliance profile belongs to.
+            </p></td></tr></table></div></li></ol></div></div><div class="procedure" id="pro-compliance-scans-remote-resources-download" data-id-title="Saving remote resources locally to use in a compliance scan"><div class="title-container"><div class="procedure-title-wrap"><div class="procedure-title"><span class="title-number-name"><span class="title-number">Procedure 2: </span><span class="title-name">Saving remote resources locally to use in a compliance scan </span></span><a title="Permalink" class="permalink" href="#pro-compliance-scans-remote-resources-download">#</a></div></div><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-liberty/edit/maintenance/SLL10/xml/art-compliance-scans.xml" title="Edit source document"> </a></div></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step"><p>
+          Create a directory for storing downloaded resources:
+        </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">mkdir /tmp/scap-files</code></pre></div></li><li class="step"><p>
+          Find the link to the remote resource by querying the <code class="literal">ssg-sl_linux10-ds</code>
+          security policy:
+        </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">oscap info /usr/share/xml/scap/ssg/content/ssg-sl_linux10-ds.xml</code></pre></div><p>
+          The output of this command includes a <code class="literal">WARNING</code> that contains the link.
+        </p></li><li class="step"><p>
+          Using the link found in the previous command, download the remote resource and save it as
+          a local file in the <code class="filename">/tmp/scap-files</code> directory. For example:
+        </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">wget -O /tmp/scap-files/pub-projects-security-oval-suse.liberty.linux.10.xml \</code>
+<code class="command">https://ftp.suse.com/pub/projects/security/oval/suse.liberty.linux.10.xml</code></pre></div></li><li class="step"><p>
+          Run the compliance scan with the <code class="literal">--local-files</code> option:
+        </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">oscap xccdf eval --local-files /tmp/scap-files \</code><span class="callout" id="co-download-remote-option">1</span>
+<code class="command">--profile xccdf_org.ssgproject.content_profile_cis \</code><span class="callout" id="co-download-remote-profile">2</span>
+<code class="command">--report /tmp/report.html \</code><span class="callout" id="co-download-remote-report">3</span>
+<code class="command">--results-arf /tmp/results-arf.xml \</code><span class="callout" id="co-download-remote-results">4</span>
+<code class="command">/usr/share/xml/scap/ssg/content/ssg-sl_linux10-ds.xml</code><span class="callout" id="co-download-remote-content">5</span></pre></div><div class="calloutlist"><table style="border: 0; "><tr><td style="width: 5%; vertical-align: top; text-align: left; "><p><a href="#co-download-remote-option"><span class="callout">1</span></a> </p></td><td style="vertical-align: top; text-align: left; "><p>
+              The directory where downloaded resources are stored.
+            </p></td></tr><tr><td style="width: 5%; vertical-align: top; text-align: left; "><p><a href="#co-download-remote-profile"><span class="callout">2</span></a> </p></td><td style="vertical-align: top; text-align: left; "><p>
+              The compliance profile to use for the scan.
+            </p></td></tr><tr><td style="width: 5%; vertical-align: top; text-align: left; "><p><a href="#co-download-remote-report"><span class="callout">3</span></a> </p></td><td style="vertical-align: top; text-align: left; "><p>
+              Where to save the HTML report with test results and recommended remediations.
+            </p></td></tr><tr><td style="width: 5%; vertical-align: top; text-align: left; "><p><a href="#co-download-remote-results"><span class="callout">4</span></a> </p></td><td style="vertical-align: top; text-align: left; "><p>
+              Where to save the XML report, which can be used later in automation and
+              report generation.
+            </p></td></tr><tr><td style="width: 5%; vertical-align: top; text-align: left; "><p><a href="#co-download-remote-content"><span class="callout">5</span></a> </p></td><td style="vertical-align: top; text-align: left; "><p>
+              The SCAP Security Guide policy file that the compliance profile belongs to.
+            </p></td></tr></table></div></li></ol></div></div><p>
+      The compliance scan collects information from the target system and evaluates it against
+      rules set by the selected compliance profile. The scan will take some time to complete.
+      The results are saved in the specified files and also appear on screen, as shown
+      in this example snippet:
+    </p><div class="verbatim-wrap"><pre class="screen">Title   Configure auditd Max Log File Size
+Rule    xccdf_org.ssgproject.content_rule_auditd_data_retention_max_log_file
+Result  pass
+
+Title   Configure auditd max_log_file_action Upon Reaching Maximum Log Size
+Rule    xccdf_org.ssgproject.content_rule_auditd_data_retention_max_log_file_action
+Result  fail</pre></div><p>
+      After the scan is complete, you can review the report by opening
+      <code class="filename">/tmp/report.html</code> in a browser. See
+      <a class="xref" href="#compliance-scans-use-report" title="6. Reviewing the OpenSCAP evaluation report">Section 6, “Reviewing the OpenSCAP evaluation report”</a> for examples of the report.
+    </p></section><section class="sect1" id="compliance-scans-use-report" data-id-title="Reviewing the OpenSCAP evaluation report"><div class="titlepage"><div><div><div class="title-container"><h2 class="title"><span class="title-number-name"><span class="title-number">6 </span><span class="title-name">Reviewing the OpenSCAP evaluation report</span></span> <a title="Permalink" class="permalink" href="#compliance-scans-use-report">#</a></h2><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-liberty/edit/maintenance/SLL10/xml/art-compliance-scans.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+      The HTML-formatted OpenSCAP report shows the results of the compliance scan in a
+      human-readable format. These examples show the main features of the report.
+    </p><div class="variablelist"><dl class="variablelist"><dt id="id-1.8.3.1"><span class="term">Report header</span></dt><dd><p>
+            The header of the report shows information about the chosen compliance profile.
+          </p><div class="figure" id="fig-openscap-report-header-example"><div class="figure-contents"><div class="mediaobject"><a href="images/openscap-report-header-example.png"><img src="images/openscap-report-header-example.png" width="90%" alt="The header of a typical HTML-formatted report generated by OpenSCAP. This example report is titled &quot;Guide to the Secure Configuration of SUSE Liberty Linux 10&quot; and uses the profile &quot;CIS SUSE Liberty Linux 10 Benchmark for Level 2 - Server&quot;." title="The header of a typical HTML-formatted report generated by OpenSCAP. This example report is titled &quot;Guide to the Secure Configuration of SUSE Liberty Linux 10&quot; and uses the profile &quot;CIS SUSE Liberty Linux 10 Benchmark for Level 2 - Server&quot;."/></a></div></div><div class="title-container"><div class="figure-title-wrap"><div class="figure-title"><span class="title-number-name"><span class="title-number">Figure 1: </span><span class="title-name">Header of a typical OpenSCAP report </span></span><a title="Permalink" class="permalink" href="#fig-openscap-report-header-example">#</a></div></div><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-liberty/edit/maintenance/SLL10/xml/art-compliance-scans.xml" title="Edit source document"> </a></div></div></div></dd><dt id="id-1.8.3.2"><span class="term">Compliance and Scoring</span></dt><dd><p>
+            The <em class="citetitle">Compliance and Scoring</em> section shows a summary of the
+            scan's results, including the number of passed and failed rules and the severity of
+            the failures.
+          </p><div class="figure" id="fig-openscap-report-summary-example"><div class="figure-contents"><div class="mediaobject"><a href="images/openscap-report-summary-example.png"><img src="images/openscap-report-summary-example.png" width="90%" alt="The Compliance and Scoring section shows a green and red color-coded bar indicating the number of passed and failed rules. It also shows a color-coded bar indicating the severity of the failed rules, in this example mostly blue (low) and yellow (medium). There is also a percentage score of passed rules. This example shows 71.74%." title="The Compliance and Scoring section shows a green and red color-coded bar indicating the number of passed and failed rules. It also shows a color-coded bar indicating the severity of the failed rules, in this example mostly blue (low) and yellow (medium). There is also a percentage score of passed rules. This example shows 71.74%."/></a></div></div><div class="title-container"><div class="figure-title-wrap"><div class="figure-title"><span class="title-number-name"><span class="title-number">Figure 2: </span><span class="title-name">Summary of results in a typical OpenSCAP report </span></span><a title="Permalink" class="permalink" href="#fig-openscap-report-summary-example">#</a></div></div><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-liberty/edit/maintenance/SLL10/xml/art-compliance-scans.xml" title="Edit source document"> </a></div></div></div></dd><dt id="id-1.8.3.3"><span class="term">Rule Overview</span></dt><dd><p>
+            The <em class="citetitle">Rule Overview</em> section shows a list of rules included with the
+            compliance profile, along with the severity and test result of each rule. This section is
+            interactive. You can check and uncheck filter options, group rules by different criteria,
+            search the list with a search bar, and click the rule names to see more details.
+            You can also expand the details for every rule by clicking
+            <span class="guimenu">Show all result details</span> at the bottom of the report.
+          </p><div class="figure" id="fig-openscap-report-rules-example"><div class="figure-contents"><div class="mediaobject"><a href="images/openscap-report-rules-example.png"><img src="images/openscap-report-rules-example.png" width="90%" alt="This Rule Overview example shows a small selection of rules along with their severity and test results. Above the list is a group of check boxes for filtering the rule list, a search bar to search the list, and a drop-down list of different ways to group the rules in the list." title="This Rule Overview example shows a small selection of rules along with their severity and test results. Above the list is a group of check boxes for filtering the rule list, a search bar to search the list, and a drop-down list of different ways to group the rules in the list."/></a></div></div><div class="title-container"><div class="figure-title-wrap"><div class="figure-title"><span class="title-number-name"><span class="title-number">Figure 3: </span><span class="title-name">Partial list of rules in a typical OpenSCAP report </span></span><a title="Permalink" class="permalink" href="#fig-openscap-report-rules-example">#</a></div></div><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-liberty/edit/maintenance/SLL10/xml/art-compliance-scans.xml" title="Edit source document"> </a></div></div></div></dd><dt id="id-1.8.3.4"><span class="term">Rule details and remediation</span></dt><dd><p>
+            Clicking the name of a rule opens a window showing detailed information about that rule.
+            Depending on the rule, the detail window might also include multiple remediation options.
+            Click a remediation option to expand it.
+          </p><div class="figure" id="fig-openscap-report-rule-details-example"><div class="figure-contents"><div class="mediaobject"><a href="images/openscap-report-rule-details-example.png"><img src="images/openscap-report-rule-details-example.png" width="90%" alt="This example shows details about the rule Ensure Sudo Logfile Exists - sudo logfile, including the result, the time the test ran, the severity of the rule, clickable references, a description of the rule, and a rationale for the rule. This example window shows an expandable Remediation Shell snippet and Remediation Ansible script. The bottom of the window also shows specific details about the test result: in this example, the scan did not find a log file in the /etc/sudoers directory." title="This example shows details about the rule Ensure Sudo Logfile Exists - sudo logfile, including the result, the time the test ran, the severity of the rule, clickable references, a description of the rule, and a rationale for the rule. This example window shows an expandable Remediation Shell snippet and Remediation Ansible script. The bottom of the window also shows specific details about the test result: in this example, the scan did not find a log file in the /etc/sudoers directory."/></a></div></div><div class="title-container"><div class="figure-title-wrap"><div class="figure-title"><span class="title-number-name"><span class="title-number">Figure 4: </span><span class="title-name">Detailed information about a rule in a typical OpenSCAP report </span></span><a title="Permalink" class="permalink" href="#fig-openscap-report-rule-details-example">#</a></div></div><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-liberty/edit/maintenance/SLL10/xml/art-compliance-scans.xml" title="Edit source document"> </a></div></div></div></dd></dl></div></section><div class="legal-section"><section class="appendix" id="id-1.9" data-id-title="GNU licenses"><div class="titlepage"><div><div><div class="title-container"><h1 class="title"><span class="title-number-name"><span class="title-number">A </span><span class="title-name">GNU licenses</span></span> <a title="Permalink" class="permalink" href="#id-1.9">#</a></h1><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-liberty/edit/maintenance/SLL10/xml/common_legal.xml" title="Edit source document"> </a></div></div></div><div><div class="titlepage-revhistory"><a aria-label="Revision History: Running OpenSCAP Compliance Scans for SUSE Multi-Linux Support 10" hreflang="en" href="rh-id1729.html" target="_blank">Revision History: Running OpenSCAP Compliance Scans for SUSE Multi-Linux Support 10</a></div></div></div></div><p>
+  This appendix contains the GNU Free Documentation License version 1.2.
+ </p><section class="sect1" id="id-1.9.4" data-id-title="GNU Free Documentation License"><div class="titlepage"><div><div><div class="title-container"><h2 class="title legal"><span class="title-number-name"><span class="title-name">GNU Free Documentation License</span></span> <a title="Permalink" class="permalink" href="#id-1.9.4">#</a></h2><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-liberty/edit/maintenance/SLL10/xml/common_license_gfdl1.2.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+  Copyright (C) 2000, 2001, 2002 Free Software Foundation, Inc. 51 Franklin St,
+  Fifth Floor, Boston, MA 02110-1301 USA. Everyone is permitted to copy and
+  distribute verbatim copies of this license document, but changing it is not
+  allowed.
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="id-1.9.4.4"><span class="name">
+    0. PREAMBLE
+  </span><a title="Permalink" class="permalink" href="#id-1.9.4.4">#</a></h5></div><p>
+  The purpose of this License is to make a manual, textbook, or other
+  functional and useful document "free" in the sense of freedom: to assure
+  everyone the effective freedom to copy and redistribute it, with or without
+  modifying it, either commercially or non-commercially. Secondarily, this
+  License preserves for the author and publisher a way to get credit for their
+  work, while not being considered responsible for modifications made by
+  others.
+ </p><p>
+  This License is a kind of "copyleft", which means that derivative works of
+  the document must themselves be free in the same sense. It complements the
+  GNU General Public License, which is a copyleft license designed for free
+  software.
+ </p><p>
+  We have designed this License to use it for manuals for free software,
+  because free software needs free documentation: a free program should come
+  with manuals providing the same freedoms that the software does. But this
+  License is not limited to software manuals; it can be used for any textual
+  work, regardless of subject matter or whether it is published as a printed
+  book. We recommend this License principally for works whose purpose is
+  instruction or reference.
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="id-1.9.4.8"><span class="name">
+    1. APPLICABILITY AND DEFINITIONS
+  </span><a title="Permalink" class="permalink" href="#id-1.9.4.8">#</a></h5></div><p>
+  This License applies to any manual or other work, in any medium, that
+  contains a notice placed by the copyright holder saying it can be distributed
+  under the terms of this License. Such a notice grants a world-wide,
+  royalty-free license, unlimited in duration, to use that work under the
+  conditions stated herein. The "Document", below, refers to any such manual or
+  work. Any member of the public is a licensee, and is addressed as "you". You
+  accept the license if you copy, modify or distribute the work in a way
+  requiring permission under copyright law.
+ </p><p>
+  A "Modified Version" of the Document means any work containing the Document
+  or a portion of it, either copied verbatim, or with modifications and/or
+  translated into another language.
+ </p><p>
+  A "Secondary Section" is a named appendix or a front-matter section of the
+  Document that deals exclusively with the relationship of the publishers or
+  authors of the Document to the Document's overall subject (or to related
+  matters) and contains nothing that could fall directly within that overall
+  subject. (Thus, if the Document is in part a textbook of mathematics, a
+  Secondary Section may not explain any mathematics.) The relationship could be
+  a matter of historical connection with the subject or with related matters,
+  or of legal, commercial, philosophical, ethical or political position
+  regarding them.
+ </p><p>
+  The "Invariant Sections" are certain Secondary Sections whose titles are
+  designated, as being those of Invariant Sections, in the notice that says
+  that the Document is released under this License. If a section does not fit
+  the above definition of Secondary then it is not allowed to be designated as
+  Invariant. The Document may contain zero Invariant Sections. If the Document
+  does not identify any Invariant Sections then there are none.
+ </p><p>
+  The "Cover Texts" are certain short passages of text that are listed, as
+  Front-Cover Texts or Back-Cover Texts, in the notice that says that the
+  Document is released under this License. A Front-Cover Text may be at most 5
+  words, and a Back-Cover Text may be at most 25 words.
+ </p><p>
+  A "Transparent" copy of the Document means a machine-readable copy,
+  represented in a format whose specification is available to the general
+  public, that is suitable for revising the document straightforwardly with
+  generic text editors or (for images composed of pixels) generic paint
+  programs or (for drawings) some widely available drawing editor, and that is
+  suitable for input to text formatters or for automatic translation to a
+  variety of formats suitable for input to text formatters. A copy made in an
+  otherwise Transparent file format whose markup, or absence of markup, has
+  been arranged to thwart or discourage subsequent modification by readers is
+  not Transparent. An image format is not Transparent if used for any
+  substantial amount of text. A copy that is not "Transparent" is called
+  "Opaque".
+ </p><p>
+  Examples of suitable formats for Transparent copies include plain ASCII
+  without markup, Texinfo input format, LaTeX input format, SGML or XML using a
+  publicly available DTD, and standard-conforming simple HTML, PostScript or
+  PDF designed for human modification. Examples of transparent image formats
+  include PNG, XCF and JPG. Opaque formats include proprietary formats that can
+  be read and edited only by proprietary word processors, SGML or XML for which
+  the DTD and/or processing tools are not generally available, and the
+  machine-generated HTML, PostScript or PDF produced by some word processors
+  for output purposes only.
+ </p><p>
+  The "Title Page" means, for a printed book, the title page itself, plus such
+  following pages as are needed to hold, legibly, the material this License
+  requires to appear in the title page. For works in formats which do not have
+  any title page as such, "Title Page" means the text near the most prominent
+  appearance of the work's title, preceding the beginning of the body of the
+  text.
+ </p><p>
+  A section "Entitled XYZ" means a named subunit of the Document whose title
+  either is precisely XYZ or contains XYZ in parentheses following text that
+  translates XYZ in another language. (Here XYZ stands for a specific section
+  name mentioned below, such as "Acknowledgements", "Dedications",
+  "Endorsements", or "History".) To "Preserve the Title" of such a section when
+  you modify the Document means that it remains a section "Entitled XYZ"
+  according to this definition.
+ </p><p>
+  The Document may include Warranty Disclaimers next to the notice which states
+  that this License applies to the Document. These Warranty Disclaimers are
+  considered to be included by reference in this License, but only as regards
+  disclaiming warranties: any other implication that these Warranty Disclaimers
+  may have is void and has no effect on the meaning of this License.
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="id-1.9.4.19"><span class="name">
+    2. VERBATIM COPYING
+  </span><a title="Permalink" class="permalink" href="#id-1.9.4.19">#</a></h5></div><p>
+  You may copy and distribute the Document in any medium, either commercially
+  or non-commercially, provided that this License, the copyright notices, and
+  the license notice saying this License applies to the Document are reproduced
+  in all copies, and that you add no other conditions whatsoever to those of
+  this License. You may not use technical measures to obstruct or control the
+  reading or further copying of the copies you make or distribute. However, you
+  may accept compensation in exchange for copies. If you distribute a large
+  enough number of copies you must also follow the conditions in section 3.
+ </p><p>
+  You may also lend copies, under the same conditions stated above, and you may
+  publicly display copies.
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="id-1.9.4.22"><span class="name">
+    3. COPYING IN QUANTITY
+  </span><a title="Permalink" class="permalink" href="#id-1.9.4.22">#</a></h5></div><p>
+  If you publish printed copies (or copies in media that commonly have printed
+  covers) of the Document, numbering more than 100, and the Document's license
+  notice requires Cover Texts, you must enclose the copies in covers that
+  carry, clearly and legibly, all these Cover Texts: Front-Cover Texts on the
+  front cover, and Back-Cover Texts on the back cover. Both covers must also
+  clearly and legibly identify you as the publisher of these copies. The front
+  cover must present the full title with all words of the title equally
+  prominent and visible. You may add other material on the covers in addition.
+  Copying with changes limited to the covers, as long as they preserve the
+  title of the Document and satisfy these conditions, can be treated as
+  verbatim copying in other respects.
+ </p><p>
+  If the required texts for either cover are too voluminous to fit legibly, you
+  should put the first ones listed (as many as fit reasonably) on the actual
+  cover, and continue the rest onto adjacent pages.
+ </p><p>
+  If you publish or distribute Opaque copies of the Document numbering more
+  than 100, you must either include a machine-readable Transparent copy along
+  with each Opaque copy, or state in or with each Opaque copy a
+  computer-network location from which the general network-using public has
+  access to download using public-standard network protocols a complete
+  Transparent copy of the Document, free of added material. If you use the
+  latter option, you must take reasonably prudent steps, when you begin
+  distribution of Opaque copies in quantity, to ensure that this Transparent
+  copy will remain thus accessible at the stated location until at least one
+  year after the last time you distribute an Opaque copy (directly or through
+  your agents or retailers) of that edition to the public.
+ </p><p>
+  It is requested, but not required, that you contact the authors of the
+  Document well before redistributing any large number of copies, to give them
+  a chance to provide you with an updated version of the Document.
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="id-1.9.4.27"><span class="name">
+    4. MODIFICATIONS
+  </span><a title="Permalink" class="permalink" href="#id-1.9.4.27">#</a></h5></div><p>
+  You may copy and distribute a Modified Version of the Document under the
+  conditions of sections 2 and 3 above, provided that you release the Modified
+  Version under precisely this License, with the Modified Version filling the
+  role of the Document, thus licensing distribution and modification of the
+  Modified Version to whoever possesses a copy of it. In addition, you must do
+  these things in the Modified Version:
+ </p><div class="orderedlist"><ol class="orderedlist" type="A"><li class="listitem"><p>
+    Use in the Title Page (and on the covers, if any) a title distinct from
+    that of the Document, and from those of previous versions (which should, if
+    there were any, be listed in the History section of the Document). You may
+    use the same title as a previous version if the original publisher of that
+    version gives permission.
+   </p></li><li class="listitem"><p>
+    List on the Title Page, as authors, one or more persons or entities
+    responsible for authorship of the modifications in the Modified Version,
+    together with at least five of the principal authors of the Document (all
+    of its principal authors, if it has fewer than five), unless they release
+    you from this requirement.
+   </p></li><li class="listitem"><p>
+    State on the Title page the name of the publisher of the Modified Version,
+    as the publisher.
+   </p></li><li class="listitem"><p>
+    Preserve all the copyright notices of the Document.
+   </p></li><li class="listitem"><p>
+    Add an appropriate copyright notice for your modifications adjacent to the
+    other copyright notices.
+   </p></li><li class="listitem"><p>
+    Include, immediately after the copyright notices, a license notice giving
+    the public permission to use the Modified Version under the terms of this
+    License, in the form shown in the Addendum below.
+   </p></li><li class="listitem"><p>
+    Preserve in that license notice the full lists of Invariant Sections and
+    required Cover Texts given in the Document's license notice.
+   </p></li><li class="listitem"><p>
+    Include an unaltered copy of this License.
+   </p></li><li class="listitem"><p>
+    Preserve the section Entitled "History", Preserve its Title, and add to it
+    an item stating at least the title, year, new authors, and publisher of the
+    Modified Version as given on the Title Page. If there is no section
+    Entitled "History" in the Document, create one stating the title, year,
+    authors, and publisher of the Document as given on its Title Page, then add
+    an item describing the Modified Version as stated in the previous sentence.
+   </p></li><li class="listitem"><p>
+    Preserve the network location, if any, given in the Document for public
+    access to a Transparent copy of the Document, and likewise the network
+    locations given in the Document for previous versions it was based on.
+    These may be placed in the "History" section. You may omit a network
+    location for a work that was published at least four years before the
+    Document itself, or if the original publisher of the version it refers to
+    gives permission.
+   </p></li><li class="listitem"><p>
+    For any section Entitled "Acknowledgements" or "Dedications", Preserve the
+    Title of the section, and preserve in the section all the substance and
+    tone of each of the contributor acknowledgements and/or dedications given
+    therein.
+   </p></li><li class="listitem"><p>
+    Preserve all the Invariant Sections of the Document, unaltered in their
+    text and in their titles. Section numbers or the equivalent are not
+    considered part of the section titles.
+   </p></li><li class="listitem"><p>
+    Delete any section Entitled "Endorsements". Such a section may not be
+    included in the Modified Version.
+   </p></li><li class="listitem"><p>
+    Do not retitle any existing section to be Entitled "Endorsements" or to
+    conflict in title with any Invariant Section.
+   </p></li><li class="listitem"><p>
+    Preserve any Warranty Disclaimers.
+   </p></li></ol></div><p>
+  If the Modified Version includes new front-matter sections or appendices that
+  qualify as Secondary Sections and contain no material copied from the
+  Document, you may at your option designate some or all of these sections as
+  invariant. To do this, add their titles to the list of Invariant Sections in
+  the Modified Version's license notice. These titles must be distinct from any
+  other section titles.
+ </p><p>
+  You may add a section Entitled "Endorsements", provided it contains nothing
+  but endorsements of your Modified Version by various parties--for example,
+  statements of peer review or that the text has been approved by an
+  organization as the authoritative definition of a standard.
+ </p><p>
+  You may add a passage of up to five words as a Front-Cover Text, and a
+  passage of up to 25 words as a Back-Cover Text, to the end of the list of
+  Cover Texts in the Modified Version. Only one passage of Front-Cover Text and
+  one of Back-Cover Text may be added by (or through arrangements made by) any
+  one entity. If the Document already includes a cover text for the same cover,
+  previously added by you or by arrangement made by the same entity you are
+  acting on behalf of, you may not add another; but you may replace the old
+  one, on explicit permission from the previous publisher that added the old
+  one.
+ </p><p>
+  The author(s) and publisher(s) of the Document do not by this License give
+  permission to use their names for publicity for or to assert or imply
+  endorsement of any Modified Version.
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="id-1.9.4.34"><span class="name">
+    5. COMBINING DOCUMENTS
+  </span><a title="Permalink" class="permalink" href="#id-1.9.4.34">#</a></h5></div><p>
+  You may combine the Document with other documents released under this
+  License, under the terms defined in section 4 above for modified versions,
+  provided that you include in the combination all of the Invariant Sections of
+  all of the original documents, unmodified, and list them all as Invariant
+  Sections of your combined work in its license notice, and that you preserve
+  all their Warranty Disclaimers.
+ </p><p>
+  The combined work need only contain one copy of this License, and multiple
+  identical Invariant Sections may be replaced with a single copy. If there are
+  multiple Invariant Sections with the same name but different contents, make
+  the title of each such section unique by adding at the end of it, in
+  parentheses, the name of the original author or publisher of that section if
+  known, or else a unique number. Make the same adjustment to the section
+  titles in the list of Invariant Sections in the license notice of the
+  combined work.
+ </p><p>
+  In the combination, you must combine any sections Entitled "History" in the
+  various original documents, forming one section Entitled "History"; likewise
+  combine any sections Entitled "Acknowledgements", and any sections Entitled
+  "Dedications". You must delete all sections Entitled "Endorsements".
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="id-1.9.4.38"><span class="name">
+    6. COLLECTIONS OF DOCUMENTS
+  </span><a title="Permalink" class="permalink" href="#id-1.9.4.38">#</a></h5></div><p>
+  You may make a collection consisting of the Document and other documents
+  released under this License, and replace the individual copies of this
+  License in the various documents with a single copy that is included in the
+  collection, provided that you follow the rules of this License for verbatim
+  copying of each of the documents in all other respects.
+ </p><p>
+  You may extract a single document from such a collection, and distribute it
+  individually under this License, provided you insert a copy of this License
+  into the extracted document, and follow this License in all other respects
+  regarding verbatim copying of that document.
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="id-1.9.4.41"><span class="name">
+    7. AGGREGATION WITH INDEPENDENT WORKS
+  </span><a title="Permalink" class="permalink" href="#id-1.9.4.41">#</a></h5></div><p>
+  A compilation of the Document or its derivatives with other separate and
+  independent documents or works, in or on a volume of a storage or
+  distribution medium, is called an "aggregate" if the copyright resulting from
+  the compilation is not used to limit the legal rights of the compilation's
+  users beyond what the individual works permit. When the Document is included
+  in an aggregate, this License does not apply to the other works in the
+  aggregate which are not themselves derivative works of the Document.
+ </p><p>
+  If the Cover Text requirement of section 3 is applicable to these copies of
+  the Document, then if the Document is less than one half of the entire
+  aggregate, the Document's Cover Texts may be placed on covers that bracket
+  the Document within the aggregate, or the electronic equivalent of covers if
+  the Document is in electronic form. Otherwise they must appear on printed
+  covers that bracket the whole aggregate.
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="id-1.9.4.44"><span class="name">
+    8. TRANSLATION
+  </span><a title="Permalink" class="permalink" href="#id-1.9.4.44">#</a></h5></div><p>
+  Translation is considered a kind of modification, so you may distribute
+  translations of the Document under the terms of section 4. Replacing
+  Invariant Sections with translations requires special permission from their
+  copyright holders, but you may include translations of some or all Invariant
+  Sections in addition to the original versions of these Invariant Sections.
+  You may include a translation of this License, and all the license notices in
+  the Document, and any Warranty Disclaimers, provided that you also include
+  the original English version of this License and the original versions of
+  those notices and disclaimers. In case of a disagreement between the
+  translation and the original version of this License or a notice or
+  disclaimer, the original version will prevail.
+ </p><p>
+  If a section in the Document is Entitled "Acknowledgements", "Dedications",
+  or "History", the requirement (section 4) to Preserve its Title (section 1)
+  will typically require changing the actual title.
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="id-1.9.4.47"><span class="name">
+    9. TERMINATION
+  </span><a title="Permalink" class="permalink" href="#id-1.9.4.47">#</a></h5></div><p>
+  You may not copy, modify, sublicense, or distribute the Document except as
+  expressly provided for under this License. Any other attempt to copy, modify,
+  sublicense or distribute the Document is void, and will automatically
+  terminate your rights under this License. However, parties who have received
+  copies, or rights, from you under this License will not have their licenses
+  terminated so long as such parties remain in full compliance.
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="id-1.9.4.49"><span class="name">
+    10. FUTURE REVISIONS OF THIS LICENSE
+  </span><a title="Permalink" class="permalink" href="#id-1.9.4.49">#</a></h5></div><p>
+  The Free Software Foundation may publish new, revised versions of the GNU
+  Free Documentation License from time to time. Such new versions will be
+  similar in spirit to the present version, but may differ in detail to address
+  new problems or concerns. See
+  <a class="link" href="https://www.gnu.org/copyleft/" target="_blank">https://www.gnu.org/copyleft/</a>.
+ </p><p>
+  Each version of the License is given a distinguishing version number. If the
+  Document specifies that a particular numbered version of this License "or any
+  later version" applies to it, you have the option of following the terms and
+  conditions either of that specified version or of any later version that has
+  been published (not as a draft) by the Free Software Foundation. If the
+  Document does not specify a version number of this License, you may choose
+  any version ever published (not as a draft) by the Free Software Foundation.
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="id-1.9.4.52"><span class="name">
+    ADDENDUM: How to use this License for your documents
+  </span><a title="Permalink" class="permalink" href="#id-1.9.4.52">#</a></h5></div><div class="verbatim-wrap"><pre class="screen">Copyright (c) YEAR YOUR NAME.
+Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.2
+or any later version published by the Free Software Foundation;
+with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+A copy of the license is included in the section entitled “GNU
+Free Documentation License”.</pre></div><p>
+  If you have Invariant Sections, Front-Cover Texts and Back-Cover Texts,
+  replace the “with...Texts.” line with this:
+ </p><div class="verbatim-wrap"><pre class="screen">with the Invariant Sections being LIST THEIR TITLES, with the
+Front-Cover Texts being LIST, and with the Back-Cover Texts being LIST.</pre></div><p>
+  If you have Invariant Sections without Cover Texts, or some other combination
+  of the three, merge those two alternatives to suit the situation.
+ </p><p>
+  If your document contains nontrivial examples of program code, we recommend
+  releasing these examples in parallel under your choice of free software
+  license, such as the GNU General Public License, to permit their use in free
+  software.
+ </p></section></section></div></section></article><aside id="_side-toc-page" class="side-toc"><div class="side-title">On this page</div><div class="toc"><ul><li><span class="section"><a href="#sec-compliance-scans-introduction"><span class="title-number">1 </span><span class="title-name">Introduction</span></a></span></li><li><span class="section"><a href="#compliance-scans-requirements"><span class="title-number">2 </span><span class="title-name">Requirements</span></a></span></li><li><span class="section"><a href="#compliance-scans-list-profiles"><span class="title-number">3 </span><span class="title-name">Choosing an OpenSCAP compliance profile</span></a></span></li><li><span class="section"><a href="#compliance-scans-generate-report"><span class="title-number">4 </span><span class="title-name">Running an OpenSCAP compliance scan</span></a></span></li><li><span class="section"><a href="#compliance-scans-remote-resources"><span class="title-number">5 </span><span class="title-name">Including remote resources in an OpenSCAP scan</span></a></span></li><li><span class="section"><a href="#compliance-scans-use-report"><span class="title-number">6 </span><span class="title-name">Reviewing the OpenSCAP evaluation report</span></a></span></li><li><span class="appendix"><a href="#id-1.9"><span class="title-number">A </span><span class="title-name">GNU licenses</span></a></span><ul><li><span class="sect1"><a href="#id-1.9.4"><span class="title-number">A1 </span><span class="title-name">GNU Free Documentation License</span></a></span></li></ul></li></ul></div><div class="side-title">Share this page</div><ul class="share"><li><a id="_share-mail" href="#" title="E-Mail"> </a></li><li><a id="_print-button" href="#" title="Print this page"> </a></li></ul> </aside></main><footer id="_footer"><div class="growth-inhibitor"><div class="copy"><span class="copy__rights">© SUSE  2026</span></div></div></footer>
+<script type="text/javascript" src="static/js/language-switcher.js"> </script></body></html>
