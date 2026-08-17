@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><title>Registering RHEL 8 or CentOS Linux 8 with SUSE Multi-Linux Manager | SMLS</title><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"/><link rel="stylesheet" type="text/css" href="static/css/style-new.css"/>
+<link rel="schema.dc" href="http://purl.org/dc/elements/1.1/"/><link rel="schema.dcterms" href="http://purl.org/dc/terms/"/>
+<meta name="dcterms.created" content="2024-10-31"/>
+<meta name="dcterms.modified" content="2025-10-27"/>
+<meta name="dcterms.dateSubmitted" content="2026-08-17"/>
+<meta name="title" content="Registering RHEL 8 or CentOS Linux 8 with SUSE Multi-L…"/>
+<meta name="description" content="How to use SUSE Multi-Linux Support and SUSE Multi-Linux Manager to update RHEL 8 or CentOS Linux 8."/>
+<meta name="product-name" content="SUSE Multi-Linux Support"/>
+<meta name="book-title" content="Registering RHEL 8 or CentOS Linux 8 with SUSE Multi-Linux Manager"/>
+<meta name="tracker-url" content="https://github.com/SUSE/doc-liberty/issues/new"/>
+<meta name="tracker-type" content="gh"/>
+<meta name="tracker-gh-assignee" content="tahliar"/>
+<meta name="tracker-gh-labels" content="documentation,issue"/>
+<meta name="tracker-gh-milestone" content="8"/>
+<meta name="publisher" content="SUSE"/><meta property="og:title" content="Registering RHEL 8 or CentOS Linux 8 with SUSE Multi-L…"/>
+<meta property="og:description" content="Use SUSE Multi-Linux Manager to update RHEL 8 or CentOS Linu"/>
+<meta property="og:type" content="article"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Registering RHEL 8 or CentOS Linux 8 with SUSE Multi-L…"/>
+<meta name="twitter:description" content="Use SUSE Multi-Linux Manager to update RHEL 8 or CentOS Linu"/>
+<script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": ["TechArticle"],
+    "image": "https://www.suse.com/assets/img/suse-white-logo-green.svg",
+    "name": "Registering RHEL 8 or CentOS Linux 8 with SUSE Multi-Linux Manager | SMLS",
+    "isPartOf": {
+      "@type": "CreativeWorkSeries",
+      "name": "Products &amp; Solutions"
+    },
+    "inLanguage": "en",
+    "headline": "Registering RHEL 8 or CentOS Linux 8 with SUSE Multi-Linux Manager",
+    "description": "How to use SUSE Multi-Linux Support and SUSE Multi-Linux Manager to update RHEL 8 or CentOS Linux 8.",
+    "author": [
+      {
+        "@type": "Corporation",
+        "name": "SUSE Product &amp; Solution Documentation Team",
+        "url": "https://documentation.suse.com"
+      }
+    ],
+    "dateCreated": "2024-10-31T00:00+02:00",
+    "dateModified": "2025-10-27T00:00+02:00",
+    "datePublished": "2026-08-17T04:06+02:00",
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "Upgrade &amp; Update"
+      },
+      {
+        "@type": "Thing",
+        "name": "Administration"
+      }
+    ],
+    "mentions": [
+      { "@type": "SoftwareApplication",
+        "name": "SMLS",
+        "applicationCategory": "Operating System",
+        "operatingSystem": "Linux"
+      }
+    ],
+    "sameAs": [
+          "https://www.facebook.com/SUSEWorldwide/about",
+          "https://www.youtube.com/channel/UCHTfqIzPKz4f_dri36lAQGA",
+          "https://twitter.com/SUSE",
+          "https://www.linkedin.com/company/suse"
+    ],
+    "publisher": {
+      "@type": "Corporation",
+      "name": "SUSE",
+      "url": "https://documentation.suse.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.suse.com/assets/img/suse-white-logo-green.svg"
+      }
+    }
+  }</script>
+<link rel="next" href="apa.html" title="A. GNU licenses"/><link type="text/css" rel="preload" as="style" onload="this.rel='stylesheet'" href="https://documentation.suse.com/docserv/res/fonts/suse/suse.css"/><script src="static/js/script-purejs.js" type="text/javascript"></script><script src="static/js/highlight.js" type="text/javascript"></script><script>hljs.highlightAll();</script><script src="static/js/ui-modifiers.js" type="text/javascript"></script><meta name="edit-url" content="https://github.com/SUSE/doc-liberty/edit/maintenance/SLL8/xml/art-suma-quickstart.xml"/></head><body class="draft wide offline js-off" onload="$('#betawarn-button-wrap').toggle();if (document.cookie.length > 0) {if (document.cookie.indexOf('betawarn=closed') != -1){$('#betawarn').toggle()}};"><div id="betawarn" style="position:fixed;bottom:0;z-index:9025;background-color:#FDE8E8;padding:1em;margin-left:10%;margin-right:10%;display:block;border-top:.75em solid #E11;width:80%"><p style="color:#333;margin:1em 0;padding:0;">This is a draft document that was built and uploaded automatically. It may document beta software and be incomplete or even incorrect. <strong>Use this document at your own risk.</strong></p> <div id="betawarn-button-wrap" style="display:none;margin:0;padding:0;"><a href="#" onclick="$('#betawarn').toggle();var d=new Date();d.setTime(d.getTime()+(0.5*24*60*60*1000));document.cookie='betawarn=closed; expires='+d.toUTCString()+'; path=/'; return false;" style="color:#333;text-decoration:underline;float:left;margin-top:.5em;padding:1em;display:block;background-color:#FABEBE;">I understand this is a draft</a></div></div><div class="bypass-block"><a href="#_content">Jump to content</a><a href="#_bottom-pagination">Jump to page navigation: previous page [access key p]/next page [access key n]</a></div><header id="_mainnav"><div class="growth-inhibitor"><img src="static/images/logo.svg" alt="Logo" class="logo"/></div></header><div class="crumbs"><div class="growth-inhibitor"><a class="crumb" href="index.html">Registering RHEL 8 or CentOS Linux 8 with SUSE Multi-Linux Manager</a></div></div><main id="_content"><nav id="_side-toc-overall" tabindex="0" class="side-toc"><div class="side-title">Registering RHEL 8 or CentOS Linux 8 with SUSE Multi-Linux Manager</div> </nav><button id="_open-side-toc-overall" title="Contents"> </button><article class="documentation"><button id="_unfold-side-toc-page">On this page</button><section xml:lang="en" class="article" id="art-suma-quickstart" data-id-title="Registering RHEL 8 or CentOS Linux 8 with SUSE Multi-Linux Manager"><div class="titlepage"><div><div class="big-version-info"><span class="productname">SUSE Multi-Linux Support</span></div><div><h1 class="title">Registering RHEL 8 or CentOS Linux 8 with SUSE Multi-Linux Manager</h1></div><div class="date"><span class="imprint-label">Publication Date: </span>August 17, 2026
+</div><div><div class="abstract"><p>
+    This guide explains how to register and update Red Hat Enterprise Linux 8 or
+    CentOS Linux 8 with SUSE Multi-Linux Manager.
+   </p><p>
+    To register with RMT, see <a class="link" href="https://documentation.suse.com/liberty/8/html/quickstart/art-quickstart.html" target="_blank">
+    <em class="citetitle">Registering RHEL 8 or CentOS Linux 8 with RMT</em></a>.
+   </p></div></div><div><div class="titlepage-revhistory"><a aria-label="Revision History: Registering RHEL 8 or CentOS Linux 8 with SUSE Multi-Linux Manager" hreflang="en" href="rh-art-suma-quickstart.html" target="_blank">Revision History: Registering RHEL 8 or CentOS Linux 8 with SUSE Multi-Linux Manager</a></div></div></div></div><div><div xml:lang="en" class="legalnotice" id="id-1.1.5"><p>
+  Copyright © 2022–2026
+
+  SUSE LLC and contributors. All rights reserved.
+ </p><p>
+  Permission is granted to copy, distribute and/or modify this document under
+  the terms of the GNU Free Documentation License, Version 1.2 or (at your
+  option) version 1.3; with the Invariant Section being this copyright notice
+  and license. A copy of the license version 1.2 is included in the section
+  entitled <span class="quote">“<span class="quote">GNU Free Documentation License</span>”</span>.
+ </p><p>
+  For SUSE trademarks, see
+  <a class="link" href="https://www.suse.com/company/legal/" target="_blank">https://www.suse.com/company/legal/</a>. All
+  third-party trademarks are the property of their respective owners. Trademark
+  symbols (®, ™ etc.) denote trademarks of SUSE and its affiliates.
+  Asterisks (*) denote third-party trademarks.
+ </p><p>
+  All information found in this book has been compiled with utmost attention to
+  detail. However, this does not guarantee complete accuracy. Neither
+  SUSE LLC, its affiliates, the authors nor the translators shall be
+  held liable for possible errors or the consequences thereof.
+ </p></div></div><section xml:lang="en" class="sect1" id="introduction" data-id-title="Introduction"><div class="titlepage"><div><div><div class="title-container"><h2 class="title"><span class="title-number-name"><span class="title-number">1 </span><span class="title-name">Introduction</span></span> <a title="Permalink" class="permalink" href="index.html#introduction">#</a></h2><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-liberty/edit/maintenance/SLL8/xml/introduction.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+  SUSE Multi-Linux Support is a technology and support solution for mixed Linux environments. With a
+  SUSE Multi-Linux Support subscription, you can update Red Hat Enterprise Linux and CentOS Linux from repositories
+  provided by SUSE. This means you get support from SUSE with no requirement to migrate
+  your existing infrastructure to a different operating system.
+</p><p>
+    An optional High Availability extension is also available.
+  </p><p>
+    The following table shows which Linux distributions are supported. SUSE Multi-Linux Support
+    subscriptions also include an entitlement for a registration tool to manage package updates.
+  </p><div class="table" id="supported-distros-and-reg-tools" data-id-title="Supported distributions and registration options"><div class="title-container"><div class="table-title-wrap"><div class="table-title"><span class="title-number-name"><span class="title-number">Table 1: </span><span class="title-name">Supported distributions and registration options </span></span><a title="Permalink" class="permalink" href="index.html#supported-distros-and-reg-tools">#</a></div></div><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-liberty/edit/maintenance/SLL8/xml/introduction.xml" title="Edit source document"> </a></div></div><div class="table-contents"><table style="width: 100%; border-collapse: collapse; border-top: 1px solid ; border-bottom: 1px solid ; border-left: 1px solid ; border-right: 1px solid ; "><colgroup><col class="c1"/><col class="c2"/><col class="c3"/></colgroup><thead><tr><th style="border-right: 1px solid ; border-bottom: 1px solid ; ">Subscription</th><th style="border-right: 1px solid ; border-bottom: 1px solid ; ">Supported distributions</th><th style="border-bottom: 1px solid ; ">Registration options</th></tr></thead><tbody><tr><td style="border-right: 1px solid ; border-bottom: 1px solid ; "><p><span><em class="emphasis">SUSE Multi-Linux Support Enterprise</em></span></p></td><td style="border-right: 1px solid ; border-bottom: 1px solid ; ">
+            <div class="itemizedlist"><ul class="itemizedlist compact"><li class="listitem"><p>
+                  CentOS Linux
+                </p></li><li class="listitem"><p>
+                  Red Hat Enterprise Linux
+                </p></li><li class="listitem"><p>
+                  SUSE Linux Enterprise Server
+                </p></li></ul></div>
+           </td><td style="border-bottom: 1px solid ; ">
+            <div class="itemizedlist"><ul class="itemizedlist compact"><li class="listitem"><p>
+                  SUSE Multi-Linux Manager
+                </p></li><li class="listitem"><p>
+                  Repository Mirroring Tool
+                </p></li></ul></div>
+           </td></tr><tr><td style="border-right: 1px solid ; border-bottom: 1px solid ; "><p><span><em class="emphasis">SUSE Multi-Linux Support Professional</em></span></p></td><td style="border-right: 1px solid ; border-bottom: 1px solid ; ">
+            <div class="itemizedlist"><ul class="itemizedlist compact"><li class="listitem"><p>
+                  CentOS Linux
+                </p></li><li class="listitem"><p>
+                  Red Hat Enterprise Linux
+                </p></li></ul></div>
+           </td><td style="border-bottom: 1px solid ; ">
+            <div class="itemizedlist"><ul class="itemizedlist compact"><li class="listitem"><p>
+                  SUSE Multi-Linux Manager
+                </p></li><li class="listitem"><p>
+                  Repository Mirroring Tool
+                </p></li></ul></div>
+           </td></tr><tr><td style="border-right: 1px solid ; border-bottom: 1px solid ; "><p><span><em class="emphasis">SUSE Multi-Linux Support Basic</em></span></p></td><td style="border-right: 1px solid ; border-bottom: 1px solid ; ">
+            <div class="itemizedlist"><ul class="itemizedlist compact"><li class="listitem"><p>
+                  CentOS Linux
+                </p></li></ul></div>
+          </td><td style="border-bottom: 1px solid ; ">
+            <div class="itemizedlist"><ul class="itemizedlist compact"><li class="listitem"><p>
+                  SUSE Multi-Linux Manager
+                </p></li><li class="listitem"><p>
+                  Repository Mirroring Tool
+                </p></li></ul></div>
+           </td></tr><tr><td style="border-right: 1px solid ; "><p><span><em class="emphasis">SUSE Multi-Linux Support Lite</em></span></p></td><td style="border-right: 1px solid ; ">
+            <div class="itemizedlist"><ul class="itemizedlist compact"><li class="listitem"><p>
+                  CentOS Linux
+                </p></li></ul></div>
+           </td><td>
+            <div class="itemizedlist"><ul class="itemizedlist compact"><li class="listitem"><p>
+                  Repository Mirroring Tool
+                </p></li></ul></div>
+          </td></tr></tbody></table></div></div><div id="id-1.2.7" class="admonition important compact"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.svg"/><p>
+     CentOS Stream is not supported.
+    </p></div><div id="id-1.2.8" class="admonition important compact"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.svg"/><p>
+      Registering RHEL 8 or CentOS Linux 8 directly to
+      the SUSE Customer Center is not currently supported.
+    </p></div><p>
+    This guide describes how to register with SUSE Multi-Linux Manager. SUSE Multi-Linux Manager is a lifecycle management system for
+    mixed Linux environments. The SUSE Multi-Linux Manager Server is registered to the SUSE Customer Center, and other systems are
+    registered as clients of SUSE Multi-Linux Manager and receive packages from it directly.
+   </p><div class="itemizedlist"><div class="title-container"><div class="itemizedlist-title-wrap"><div class="itemizedlist-title"><span class="title-number-name"><span class="title-name">Procedure overview </span></span><a title="Permalink" class="permalink" href="index.html#id-1.2.10">#</a></div></div><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-liberty/edit/maintenance/SLL8/xml/introduction.xml" title="Edit source document"> </a></div></div><ul class="itemizedlist"><li class="listitem"><p>
+      If you still need to <span><span class="emphasis"><strong>set up SUSE Multi-Linux Manager</strong></span></span>, start with
+      <a class="xref" href="index.html#deploy-suma" title="2. Deploying SUSE Multi-Linux Manager">Section 2, “Deploying SUSE Multi-Linux Manager”</a>.
+     </p></li><li class="listitem"><p>
+      If SUSE Multi-Linux Manager is already set up and you only need to <span><span class="emphasis"><strong>register your
+      RHEL 8 or CentOS Linux 8 system</strong></span></span>, skip
+      straight to <a class="xref" href="index.html#register-with-suma" title="3. Registering RHEL or CentOS Linux with SUSE Multi-Linux Manager">Section 3, “Registering RHEL or CentOS Linux with SUSE Multi-Linux Manager”</a>.
+     </p></li></ul></div><div id="id-1.2.11" data-id-title="SUSE Multi-Linux Support and SUSE Liberty Linux or Expanded Support" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.svg"/><div class="admon-title">Note: <span><em class="emphasis">SUSE Multi-Linux Support</em></span> and <span><em class="emphasis">SUSE Liberty Linux</em></span> or <span><em class="emphasis">Expanded Support</em></span></div><p>
+    <span><em class="emphasis">SUSE Multi-Linux Support</em></span> was previously named <span><em class="emphasis">SUSE Liberty Linux</em></span>
+    and <span><em class="emphasis">SUSE Linux Enterprise Server with Expanded Support</em></span>. During the transition period, some
+    components might still use one of these names.
+  </p></div><div class="itemizedlist"><div class="title-container"><div class="itemizedlist-title-wrap"><div class="itemizedlist-title"><span class="title-number-name"><span class="title-name">Related information </span></span><a title="Permalink" class="permalink" href="index.html#id-1.2.12">#</a></div></div><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-liberty/edit/maintenance/SLL8/xml/introduction.xml" title="Edit source document"> </a></div></div><ul class="itemizedlist"><li class="listitem"><p>
+        <a class="link" href="https://documentation.suse.com/multi-linux-manager/" target="_blank">SUSE Multi-Linux Manager documentation</a>
+      </p></li><li class="listitem"><p>
+      <a class="link" href="https://documentation.suse.com/liberty/8/html/quickstart/art-quickstart.html" target="_blank">
+      <em class="citetitle">Registering RHEL 8 or CentOS Linux 8 with RMT</em></a>
+     </p></li><li class="listitem"><p>
+      <a class="link" href="https://documentation.suse.com/liberty/9/" target="_blank">SUSE Multi-Linux Support 9 documentation</a>
+     </p></li><li class="listitem"><p>
+      <a class="link" href="https://documentation.suse.com/liberty/7/" target="_blank">SUSE Multi-Linux Support 7 documentation</a>
+     </p></li></ul></div></section><section class="sect1" id="deploy-suma" data-id-title="Deploying SUSE Multi-Linux Manager"><div class="titlepage"><div><div><div class="title-container"><h2 class="title"><span class="title-number-name"><span class="title-number">2 </span><span class="title-name">Deploying SUSE Multi-Linux Manager</span></span> <a title="Permalink" class="permalink" href="index.html#deploy-suma">#</a></h2><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-liberty/edit/maintenance/SLL8/xml/art-suma-quickstart.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+      See the following guide to install SUSE Multi-Linux Manager:
+      <a class="link" href="https://documentation.suse.com/multi-linux-manager/en/docs/installation-and-upgrade/installation-and-upgrade-overview.html" target="_blank">
+      <em class="citetitle">SUSE Multi-Linux Manager Installation and Upgrade Guide</em></a>.
+    </p><p>
+      You can use most SUSE Multi-Linux Support subscriptions to register this machine. However,
+      the <span><em class="emphasis">Lite</em></span> subscription only includes an entitlement for RMT,
+      so if you want to use SUSE Multi-Linux Manager instead you will need a separate SUSE Multi-Linux Manager subscription.
+    </p><div id="id-1.3.4" data-id-title="Other installation options" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.svg"/><div class="admon-title">Tip: Other installation options</div><p>
+        To deploy SUSE Multi-Linux Manager in the public cloud, see
+        <a class="link" href="https://documentation.suse.com/multi-linux-manager/en/docs/specialized-guides/public-cloud-guide/overview.html" target="_blank">
+        <em class="citetitle">SUSE Multi-Linux Manager Public Cloud Guide</em></a>.
+      </p></div><div id="id-1.3.5" data-id-title="SUSE Multi-Linux Support 8 repository size" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.svg"/><div class="admon-title">Important: SUSE Multi-Linux Support 8 repository size</div><p>
+    The SUSE Multi-Linux Support 8 repositories will grow over time because older package
+    versions are not removed. Based on the current<a href="#ftn.id-1.3.5.2.1" class="footnote"><sup class="footnote" id="id-1.3.5.2.1">[1]</sup></a>
+    size of the repositories, to meet the 1.5 times size recommendation you will need
+    approximately 635 GB of disk space for the default repositories.
+  </p><p>
+    If you need the optional <code class="literal">Source</code> and <code class="literal">Debug</code>
+    repositories, you will need an additional 1775 GB available.
+  </p></div></section><section class="sect1" id="register-with-suma" data-id-title="Registering RHEL or CentOS Linux with SUSE Multi-Linux Manager"><div class="titlepage"><div><div><div class="title-container"><h2 class="title"><span class="title-number-name"><span class="title-number">3 </span><span class="title-name">Registering RHEL or CentOS Linux with SUSE Multi-Linux Manager</span></span> <a title="Permalink" class="permalink" href="index.html#register-with-suma">#</a></h2><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-liberty/edit/maintenance/SLL8/xml/art-suma-quickstart.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+      See the following guide to register Red Hat Enterprise Linux 8 or CentOS Linux 8
+      with SUSE Multi-Linux Manager:
+      <a class="link" href="https://documentation.suse.com/multi-linux-manager/en/docs/client-configuration/clients-sleses.html" target="_blank">
+      <em class="citetitle">SUSE Multi-Linux Manager Client Configuration Guide</em>: Registering SUSE Liberty Linux Clients</a>.
+    </p><div id="id-1.4.3" class="admonition important compact"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.svg"/><p>
+      CentOS Stream is not supported.
+      </p></div><div id="id-1.4.4" data-id-title="UEFI Secure Boot requirements" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.svg"/><div class="admon-title">Warning: UEFI Secure Boot requirements</div><p>
+    To use SUSE Multi-Linux Support on systems with UEFI Secure Boot enabled, the complete boot chain stack
+    (shim, GRUB, and kernel) must be provided by SUSE. This is necessary because UEFI Secure Boot
+    requires a strict chain of trust, where each component—from the firmware to the kernel
+    and its drivers—must be signed with a key that the previous component in the chain
+    explicitly trusts. Using non-SUSE components could break this chain and prevent the system
+    from booting.
+  </p></div></section><div class="footnotes"><br/><hr class="footnote-hr"/><div id="ftn.id-1.3.5.2.1" class="footnote"><p><a href="#id-1.3.5.2.1" class="para"><sup class="para">[1] </sup></a>As of 03 December, 2025</p></div></div></section><nav class="bottom-pagination"><div> </div><div><a class="pagination-link next" href="apa.html"><span class="pagination-relation">Next</span><span class="pagination-label"><span class="title-number">Appendix A </span>GNU licenses</span></a> </div></nav></article><aside id="_side-toc-page" class="side-toc"><div class="side-title">On this page</div><div class="toc"><ul><li><span class="section"><a href="index.html#introduction"><span class="title-number">1 </span><span class="title-name">Introduction</span></a></span></li><li><span class="section"><a href="index.html#deploy-suma"><span class="title-number">2 </span><span class="title-name">Deploying SUSE Multi-Linux Manager</span></a></span></li><li><span class="section"><a href="index.html#register-with-suma"><span class="title-number">3 </span><span class="title-name">Registering RHEL or CentOS Linux with SUSE Multi-Linux Manager</span></a></span></li><li><span class="appendix"><a href="apa.html"><span class="title-number">A </span><span class="title-name">GNU licenses</span></a></span><ul><li><span class="sect1"><a href="apa.html#id-1.5.4"><span class="title-number">A1 </span><span class="title-name">GNU Free Documentation License</span></a></span></li></ul></li></ul></div><div class="side-title">Share this page</div><ul class="share"><li><a id="_share-mail" href="#" title="E-Mail"> </a></li><li><a id="_print-button" href="#" title="Print this page"> </a></li></ul> </aside></main><footer id="_footer"><div class="growth-inhibitor"><div class="copy"><span class="copy__rights">© SUSE  2026</span></div></div></footer>
+<script type="text/javascript" src="static/js/language-switcher.js"> </script></body></html>
